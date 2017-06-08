@@ -1,0 +1,43 @@
+Processing bitfile 1 of 4:
+  - id = config_matmul_3b_32x32
+  - file = ./sample_bitstream/config_matmul_3b_32x32.bin
+  - raw bitfile size = 2069052 bytes
+  - 32-bit based entropy = 5.510630 bit
+  - optimum compression = 82.8 percent
+  - compressed bitfile size = 1130864 bytes
+  - real compression = 45.3 percent
+  - BRAM-stream WCET = 559512 clock cycles
+  - CPU-stream WCET = 862306 clock cycles
+
+Processing bitfile 2 of 4:
+  - id = config_matmul_3b_32x32_pblock
+  - file = ./sample_bitstream/config_matmul_3b_32x32_pblock.bin
+  - raw bitfile size = 493268 bytes
+  - 32-bit based entropy = 4.568843 bit
+  - optimum compression = 85.7 percent
+  - compressed bitfile size = 241056 bytes
+  - real compression = 51.1 percent
+  - BRAM-stream WCET = 133433 clock cycles
+  - CPU-stream WCET = 198422 clock cycles
+
+Processing bitfile 3 of 4:
+  - id = config_minver_1b_32x32
+  - file = ./sample_bitstream/config_minver_1b_32x32.bin
+  - raw bitfile size = 2062212 bytes
+  - 32-bit based entropy = 6.096539 bit
+  - optimum compression = 80.9 percent
+  - compressed bitfile size = 1213180 bytes
+  - real compression = 41.2 percent
+  - BRAM-stream WCET = 557402 clock cycles
+  - CPU-stream WCET = 880468 clock cycles
+
+Processing bitfile 4 of 4:
+  - id = config_minver_1b_32x32_pblock
+  - file = ./sample_bitstream/config_minver_1b_32x32_pblock.bin
+  - raw bitfile size = 487140 bytes
+  - 32-bit based entropy = 7.517771 bit
+  - optimum compression = 76.5 percent
+  - compressed bitfile size = 354128 bytes
+  - real compression = 27.3 percent
+  - BRAM-stream WCET = 131416 clock cycles
+  - CPU-stream WCET = 224247 clock cycles

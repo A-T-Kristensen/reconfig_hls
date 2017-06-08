@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<bitfiles>
+	<description>Bitstreams for generating results for the bsc thesis of Andreas.</description>
+
+	<parameters datasize="32" compression="true" bitswapped="true"/>
+
+	<bitfile id="config_matmul_3b_32x32" file="./sample_bitstream/config_matmul_3b_32x32.bin" />
+	<bitfile id="config_matmul_3b_32x32_pblock" file="./sample_bitstream/config_matmul_3b_32x32_pblock.bin" />
+	<bitfile id="config_minver_1b_32x32" file="./sample_bitstream/config_minver_1b_32x32.bin" />
+	<bitfile id="config_minver_1b_32x32_pblock" file="./sample_bitstream/config_minver_1b_32x32_pblock.bin" />	
+</bitfiles>

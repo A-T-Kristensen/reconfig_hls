@@ -1,8 +1,8 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.4 (lin64) Build 1733598 Wed Dec 14 22:35:42 MST 2016
-| Date         : Fri Feb 24 10:16:32 2017
-| Host         : comp-nblpez running 64-bit Ubuntu 14.04.5 LTS
+| Date         : Wed Jun  7 12:11:58 2017
+| Host         : andreas-W54xEU running 64-bit Ubuntu 16.04.2 LTS
 | Command      : report_utilization -file ./synth/Static/patmos_top_utilization_synth.rpt
 | Design       : patmos_top
 | Device       : 7a100tcsg324-1
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 9915 |     0 |     63400 | 15.64 |
-|   LUT as Logic             | 9360 |     0 |     63400 | 14.76 |
+| Slice LUTs*                | 9901 |     0 |     63400 | 15.62 |
+|   LUT as Logic             | 9346 |     0 |     63400 | 14.74 |
 |   LUT as Memory            |  555 |     0 |     19000 |  2.92 |
 |     LUT as Distributed RAM |  536 |     0 |           |       |
 |     LUT as Shift Register  |   19 |     0 |           |       |
-| Slice Registers            | 7660 |     0 |    126800 |  6.04 |
-|   Register as Flip Flop    | 7660 |     0 |    126800 |  6.04 |
+| Slice Registers            | 7665 |     0 |    126800 |  6.04 |
+|   Register as Flip Flop    | 7665 |     0 |    126800 |  6.04 |
 |   Register as Latch        |    0 |     0 |    126800 |  0.00 |
 | F7 Muxes                   |  117 |     0 |     31700 |  0.37 |
 | F8 Muxes                   |   21 |     0 |     15850 |  0.13 |
@@ -59,7 +59,7 @@ Table of Contents
 | 95    |          Yes |           - |          Set |
 | 2     |          Yes |           - |        Reset |
 | 173   |          Yes |         Set |            - |
-| 7390  |          Yes |       Reset |            - |
+| 7395  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -157,13 +157,13 @@ Table of Contents
 +--------------------------+------+---------------------+
 |         Ref Name         | Used | Functional Category |
 +--------------------------+------+---------------------+
-| FDRE                     | 7390 |        Flop & Latch |
-| LUT6                     | 3888 |                 LUT |
-| LUT4                     | 1844 |                 LUT |
-| LUT3                     | 1743 |                 LUT |
-| LUT5                     | 1570 |                 LUT |
+| FDRE                     | 7395 |        Flop & Latch |
+| LUT6                     | 3885 |                 LUT |
+| LUT4                     | 1855 |                 LUT |
+| LUT3                     | 1746 |                 LUT |
+| LUT5                     | 1583 |                 LUT |
 | LUT1                     | 1020 |                 LUT |
-| LUT2                     |  983 |                 LUT |
+| LUT2                     |  915 |                 LUT |
 | RAMD32                   |  756 |  Distributed Memory |
 | CARRY4                   |  527 |          CarryLogic |
 | RAMS32                   |  284 |  Distributed Memory |
@@ -207,11 +207,11 @@ Table of Contents
 8. Black Boxes
 --------------
 
-+------------+------+
-|  Ref Name  | Used |
-+------------+------+
-| ocp_rw_reg |    1 |
-+------------+------+
++--------------+------+
+|   Ref Name   | Used |
++--------------+------+
+| recon_matrix |    1 |
++--------------+------+
 
 
 9. Instantiated Netlists

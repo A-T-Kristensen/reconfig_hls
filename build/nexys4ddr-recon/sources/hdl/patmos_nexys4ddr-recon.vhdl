@@ -95,13 +95,19 @@ architecture rtl of patmos_top is
 			io_nexys4DDRIOPins_MByteEn    : out std_logic_vector(3 downto 0);
 			io_nexys4DDRIOPins_SResp      : in  std_logic_vector(1 downto 0);
 			io_nexys4DDRIOPins_SData      : in  std_logic_vector(31 downto 0);
+
+			io_bRamCtrlPins_MCmd       : out std_logic_vector(2 downto 0);
+			io_bRamCtrlPins_MAddr      : out std_logic_vector(15 downto 0);
+			io_bRamCtrlPins_MData      : out std_logic_vector(31 downto 0);
+			io_bRamCtrlPins_MByteEn    : out std_logic_vector(3 downto 0);
+			io_bRamCtrlPins_SData      : in  std_logic_vector(31 downto 0);			
 		
-			io_bRamCtrlPins_MCmd    : out std_logic_vector(2 downto 0);
-            io_bRamCtrlPins_MAddr   : out std_logic_vector(15 downto 0);
-            io_bRamCtrlPins_MData   : out std_logic_vector(31 downto 0);
-            io_bRamCtrlPins_MByteEn : out std_logic_vector(3 downto 0);
-            io_bRamCtrlPins_SResp   : in  std_logic_vector(1 downto 0);
-            io_bRamCtrlPins_SData   : in  std_logic_vector(31 downto 0);
+			io_bRamCtrlICAPPins_MCmd    : out std_logic_vector(2 downto 0);
+            io_bRamCtrlICAPPins_MAddr   : out std_logic_vector(15 downto 0);
+            io_bRamCtrlICAPPins_MData   : out std_logic_vector(31 downto 0);
+            io_bRamCtrlICAPPins_MByteEn : out std_logic_vector(3 downto 0);
+            io_bRamCtrlICAPPins_SResp   : in  std_logic_vector(1 downto 0);
+            io_bRamCtrlICAPPins_SData   : in  std_logic_vector(31 downto 0);
 
             io_icapCtrlPins_MCmd    : out std_logic_vector(2 downto 0);
             io_icapCtrlPins_MAddr   : out std_logic_vector(15 downto 0);
@@ -109,17 +115,35 @@ architecture rtl of patmos_top is
             io_icapCtrlPins_MByteEn : out std_logic_vector(3 downto 0);
             io_icapCtrlPins_SResp   : in  std_logic_vector(1 downto 0);
             io_icapCtrlPins_SData   : in  std_logic_vector(31 downto 0);
-            
-            io_fpuCtrlPins_MCmd        : out std_logic_vector(2 downto 0); 
-            io_fpuCtrlPins_MAddr        :    out std_logic_vector(15 downto 0);
-            io_fpuCtrlPins_MData        :    out std_logic_vector(31 downto 0);
-            io_fpuCtrlPins_MByteEn    :    out std_logic_vector(3 downto 0);
-            io_fpuCtrlPins_SResp        : in  std_logic_vector(1 downto 0);
-            io_fpuCtrlPins_SData        : in  std_logic_vector(31 downto 0)
-			
-			
+
+            io_hwACtrlPins_ap_start_out : out std_logic;
+			io_hwACtrlPins_ap_reset_out : out std_logic;
+			io_hwACtrlPins_ap_ready_in 	: in std_logic;
+			io_hwACtrlPins_ap_idle_in 	: in std_logic;
+			io_hwACtrlPins_ap_done_in 	: in std_logic	
 		);
 	end component;
+
+
+component recon_matrix is
+	port (
+	    clk     : in  std_logic;
+	    rst 	: in std_logic;
+
+	    -- Patmos side
+	    p_we    : in  std_logic;
+	    p_addr  : in  std_logic_vector(15 downto 0);
+	    p_dout  : in  std_logic_vector(31 downto 0);
+	    p_din   : out std_logic_vector(31 downto 0);
+
+		ap_start_in : in std_logic;
+		ap_reset_in : in std_logic;
+		ap_ready_out 	: out std_logic;
+		ap_idle_out 	: out std_logic;
+		ap_done_out 	: out std_logic		    
+     
+	);
+end component;		
 
 	component nexys4ddr_io is
 		port(
@@ -277,22 +301,6 @@ component icap_ctrl is
 	);
 end component;
 
-component ocp_rw_reg is
-	port(
-		clk        : in  std_logic;
-		rst        : in  std_logic;
-
-		-- OCP IN (slave)
-		MCmd       : in  std_logic_vector(2 downto 0);
-		MAddr      : in  std_logic_vector((16 - 1) downto 0);
-		MData      : in  std_logic_vector((32 - 1) downto 0);
-		MByteEn    : in  std_logic_vector(3 downto 0);
-		SResp      : out std_logic_vector(1 downto 0);
-		SData      : out std_logic_vector((32 - 1) downto 0)
-	);
-end component;
-
-
 	signal clk_int : std_logic;
 	signal clk_200 : std_logic;
 	signal clk_pwm : std_logic;
@@ -304,7 +312,6 @@ end component;
 	signal cpu_reset_btn_debounced, cpu_reset_btn_prev, cpu_reset_btn_sync_int, cpu_reset_btn_sync : std_logic;
     signal debounce_count  : unsigned(12 downto 0);
     constant DEBOUNCE_TIME : integer := 8000;
-
 
 	signal nexys4DDRIO_MCmd    : std_logic_vector(2 downto 0);
 	signal nexys4DDRIO_MAddr   : std_logic_vector(15 downto 0);
@@ -336,6 +343,22 @@ end component;
 	signal app_rd_data_valid_bridge : std_logic;
 	signal app_rdy_bridge           : std_logic;
 	signal app_wdf_rdy_bridge       : std_logic;
+
+	-- Signals for true dual port bram
+
+	signal bRamCtrl_Mcmd    : std_logic_vector(2 downto 0);
+	signal bRamCtrl_MAddr   : std_logic_vector(15 downto 0);
+	signal bRamCtrl_MData   : std_logic_vector(31 downto 0);
+	signal bRamCtrl_MByteEn : std_logic_vector(3 downto 0);
+	signal bRamCtrl_SData   : std_logic_vector(31 downto 0);
+
+	-- Signals for HwA
+
+	signal hwACtrl_ap_start_out : std_logic;
+	signal hwACtrl_ap_reset_out : std_logic;
+	signal hwACtrl_ap_ready_in 	: std_logic;
+	signal hwACtrl_ap_idle_in 	: std_logic;
+	signal hwACtrl_ap_done_in 	: std_logic;	
 
 --  attribute mark_debug : string;
 --  attribute mark_debug of app_addr_bridge             : signal is "true";
@@ -375,29 +398,7 @@ end component;
 	signal icap_I_int : std_logic_vector(31 downto 0); -- 32-bit data input
 	signal icap_WRITE_int : std_logic;      -- Write input
 
-	signal fpuCtrlPins_MCmd			: std_logic_vector(2 downto 0); 
-	signal fpuCtrlPins_MAddr		:	std_logic_vector(15 downto 0);
-	signal fpuCtrlPins_MData		:	std_logic_vector(31 downto 0);
-	signal fpuCtrlPins_MByteEn	:	std_logic_vector(3 downto 0);
-	signal fpuCtrlPins_SResp		: std_logic_vector(1 downto 0);
-	signal fpuCtrlPins_SData		: std_logic_vector(31 downto 0);
-
-	signal fpuCtrlPins_MCmd_pr			: std_logic_vector(2 downto 0); 
-	signal fpuCtrlPins_MAddr_pr		:	std_logic_vector(15 downto 0);
-	signal fpuCtrlPins_MData_pr		:	std_logic_vector(31 downto 0);
-	signal fpuCtrlPins_MByteEn_pr	:	std_logic_vector(3 downto 0);
-	signal fpuCtrlPins_SResp_pr		: std_logic_vector(1 downto 0);
-	signal fpuCtrlPins_SData_pr		: std_logic_vector(31 downto 0);
-
-
 begin
-
-	fpuCtrlPins_MCmd_pr <= fpuCtrlPins_MCmd when switches(0) = '1' else (others => '0');
-	fpuCtrlPins_MAddr_pr <= fpuCtrlPins_MAddr when switches(0) = '1' else (others => '0');
-	fpuCtrlPins_MData_pr <= fpuCtrlPins_MData when switches(0) = '1' else (others => '0');
-	fpuCtrlPins_MByteEn_pr <= fpuCtrlPins_MByteEn when switches(0) = '1' else (others => '0');
-	fpuCtrlPins_SResp <= fpuCtrlPins_SResp_pr when switches(0) = '1' else (others => '0');
-	fpuCtrlPins_SData <= fpuCtrlPins_SData_pr when switches(0) = '1' else (others => '0');
 
 	clk_manager_inst_0 : clk_manager port map(
 			clk_in    => clk_in,
@@ -565,13 +566,19 @@ begin
 			io_nexys4DDRIOPins_MByteEn    => nexys4DDRIO_MByteEn,
 			io_nexys4DDRIOPins_SResp      => nexys4DDRIO_SResp,
 			io_nexys4DDRIOPins_SData      => nexys4DDRIO_SData,
+
+			io_bRamCtrlPins_MCmd       => bRamCtrl_Mcmd,
+			io_bRamCtrlPins_MAddr      => bRamCtrl_MAddr,
+			io_bRamCtrlPins_MData      => bRamCtrl_MData,
+			io_bRamCtrlPins_MByteEn    => bRamCtrl_MByteEn,
+			io_bRamCtrlPins_SData      => bRamCtrl_SData,			
 			
-			io_bRamCtrlPins_MCmd     => bRam_MCmd,
-            io_bRamCtrlPins_MAddr    => bRam_MAddr,
-            io_bRamCtrlPins_MData    => bRam_MData,
-            io_bRamCtrlPins_MByteEn  => bRam_MByteEn,
-            io_bRamCtrlPins_SResp    => bRam_SResp,
-            io_bRamCtrlPins_SData    => bRam_SData,
+			io_bRamCtrlICAPPins_MCmd     => bRam_MCmd,
+            io_bRamCtrlICAPPins_MAddr    => bRam_MAddr,
+            io_bRamCtrlICAPPins_MData    => bRam_MData,
+            io_bRamCtrlICAPPins_MByteEn  => bRam_MByteEn,
+            io_bRamCtrlICAPPins_SResp    => bRam_SResp,
+            io_bRamCtrlICAPPins_SData    => bRam_SData,
                                       
             io_icapCtrlPins_MCmd     => icapCtrl_MCmd,
             io_icapCtrlPins_MAddr    => icapCtrl_MAddr,
@@ -580,26 +587,30 @@ begin
             io_icapCtrlPins_SResp    => icapCtrl_SResp,
             io_icapCtrlPins_SData    => icapCtrl_SData,
                                         
-            io_fpuCtrlPins_MCmd      => fpuCtrlPins_MCmd,
-            io_fpuCtrlPins_MAddr    =>  fpuCtrlPins_MAddr,
-            io_fpuCtrlPins_MData     => fpuCtrlPins_MData,
-            io_fpuCtrlPins_MByteEn   => fpuCtrlPins_MByteEn,
-            io_fpuCtrlPins_SResp     => fpuCtrlPins_SResp,
-            io_fpuCtrlPins_SData     => fpuCtrlPins_SData
+			io_hwACtrlPins_ap_start_out	=> hwACtrl_ap_start_out,
+			io_hwACtrlPins_ap_reset_out => hwACtrl_ap_reset_out,
+			io_hwACtrlPins_ap_ready_in 	=> hwACtrl_ap_ready_in,
+			io_hwACtrlPins_ap_idle_in 	=> hwACtrl_ap_idle_in,
+			io_hwACtrlPins_ap_done_in 	=> hwACtrl_ap_done_in
+
 		);
 
-ocp_rw_reg_inst_0 : ocp_rw_reg 
-	port map(
-		clk => clk_int,
-		rst => reset_int,
 
-		-- OCP IN (slave)
-		MCmd        => fpuCtrlPins_MCmd_pr,   
-		MAddr      =>  fpuCtrlPins_MAddr_pr,  
-		MData       => fpuCtrlPins_MData_pr,  
-		MByteEn     => fpuCtrlPins_MByteEn_pr,
-		SResp       => fpuCtrlPins_SResp_pr,  
-		SData       => fpuCtrlPins_SData_pr   
+recon_matrix_inst_0: recon_matrix 
+	port map(
+	    clk => clk_int,
+	    rst => reset_int,
+
+	    p_we => bRamCtrl_MCmd(0),
+	    p_addr => bRamCtrl_MAddr, 
+	    p_dout => bRamCtrl_MData,
+	    p_din => bramCtrl_SData,
+
+		ap_start_in => hwACtrl_ap_start_out,
+		ap_reset_in => hwACtrl_ap_reset_out,
+		ap_ready_out => hwACtrl_ap_ready_in,
+		ap_idle_out => hwACtrl_ap_idle_in,
+		ap_done_out	=>  hwACtrl_ap_done_in
 	);
 
 	nexys4ddr_io_inst_0 : nexys4ddr_io port map(

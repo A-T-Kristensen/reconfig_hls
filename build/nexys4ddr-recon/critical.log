@@ -1,23 +1,181 @@
+	#HD: Parsing log file "./synth/Static/create_project.log":
+
+
+	#HD: Parsing log file "./synth/Static/patmos_top_synth_design.rds":
+	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
+	CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'recon_matrix' instantiated as 'recon_matrix_inst_0' [/home/andreas/t-crest/reconfig_bsc_thesis/build/nexys4ddr-recon/sources/hdl/patmos_nexys4ddr-recon.vhdl:599]
+
+
+	#HD: Parsing log file "./synth/Static/temp.log":
+
+
+	#HD: Parsing log file "./synth/Static/temp.log":
+
+
+	#HD: Parsing log file "./synth/recon_matmul_3b_32x32/create_project.log":
+
+
+	#HD: Parsing log file "./synth/recon_matmul_3b_32x32/recon_matrix_synth_design.rds":
+
+
+	#HD: Parsing log file "./synth/recon_matmul_3b_32x32/temp.log":
+
+
+	#HD: Parsing log file "./synth/recon_matmul_3b_32x32/temp.log":
+
+
+	#HD: Parsing log file "./synth/recon_minver_1b_32x32/create_project.log":
+
+
+	#HD: Parsing log file "./synth/recon_minver_1b_32x32/recon_matrix_synth_design.rds":
+
+
+	#HD: Parsing log file "./synth/recon_minver_1b_32x32/temp.log":
+
+
+	#HD: Parsing log file "./synth/recon_minver_1b_32x32/temp.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_matmul_3b_32x32_implement/create_project.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_matmul_3b_32x32_implement/patmos_top_link_design.log":
+	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
+	CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-through [get_pins -hier -filter {NAME =~ */u_iodelay_ctrl/sys_rst}]'. [/home/andreas/t-crest/reconfig_bsc_thesis/build/nexys4ddr-recon/sources/hdl/ddr2_ctrl/constraints/ddr2_ctrl.xdc:330]
+
+
+	#HD: Parsing log file "./implement/config_recon_matmul_3b_32x32_implement/read_checkpoint_recon_matmul_3b_32x32_recon_matrix_inst_0.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_matmul_3b_32x32_implement/temp.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_matmul_3b_32x32_implement/patmos_top_opt_design.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_matmul_3b_32x32_implement/temp.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_matmul_3b_32x32_implement/patmos_top_place_design.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_matmul_3b_32x32_implement/temp.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_matmul_3b_32x32_implement/patmos_top_phys_opt_design.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_matmul_3b_32x32_implement/temp.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_matmul_3b_32x32_implement/patmos_top_route_design.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_matmul_3b_32x32_implement/temp.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_matmul_3b_32x32_implement/temp.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_matmul_3b_32x32_implement/temp.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_matmul_3b_32x32_implement/temp.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_matmul_3b_32x32_implement/reports/temp.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_matmul_3b_32x32_implement/reports/patmos_top_design_status.rpt":
+
+
+	#HD: Parsing log file "./implement/config_recon_matmul_3b_32x32_implement/temp.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_matmul_3b_32x32_implement/carve_recon_matrix_inst_0.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_matmul_3b_32x32_implement/lock_design_patmos_top.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_matmul_3b_32x32_implement/temp.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/create_project.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/patmos_top_link_design.log":
+	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
+
+
+	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/read_checkpoint_recon_minver_1b_32x32_recon_matrix_inst_0.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/temp.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/patmos_top_opt_design.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/temp.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/patmos_top_place_design.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/temp.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/patmos_top_phys_opt_design.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/temp.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/patmos_top_route_design.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/temp.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/temp.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/temp.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/temp.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/reports/temp.log":
+
+
+	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/reports/patmos_top_design_status.rpt":
+
+
+	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/temp.log":
+
+
 	#HD: Parsing log file "pr_verify_results.log":
 	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
 	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
 
 
-	#HD: Parsing log file "./bitstreams/open_checkpoint_config_ocp_rw_reg_implement.log":
+	#HD: Parsing log file "./bitstreams/open_checkpoint_config_recon_matmul_3b_32x32_implement.log":
 	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
 
 
-	#HD: Parsing log file "./bitstreams/config_ocp_rw_reg_implement.log":
+	#HD: Parsing log file "./bitstreams/config_recon_matmul_3b_32x32_implement.log":
 
 
 	#HD: Parsing log file "./bitstreams/temp.log":
 
 
-	#HD: Parsing log file "./bitstreams/open_checkpoint_config_ocp_rw_reg_n_import.log":
+	#HD: Parsing log file "./bitstreams/open_checkpoint_config_recon_minver_1b_32x32_import.log":
 	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
 
 
-	#HD: Parsing log file "./bitstreams/config_ocp_rw_reg_n_import.log":
+	#HD: Parsing log file "./bitstreams/config_recon_minver_1b_32x32_import.log":
 
 
 	#HD: Parsing log file "./bitstreams/temp.log":

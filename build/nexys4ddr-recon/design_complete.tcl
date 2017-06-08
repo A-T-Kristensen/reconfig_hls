@@ -40,9 +40,11 @@ set_param project.singleFileAddWarning.Threshold 500
 #set tclParams [list <param1> <value> <param2> <value> ... <paramN> <value>]
 
 ####flow control
-set run.topSynth       0
-set run.rmSynth        0
-set run.prImpl         0
+# 
+#
+set run.topSynth       1 
+set run.rmSynth        1
+set run.prImpl         1
 set run.prVerify       1
 set run.writeBitstream 1
 

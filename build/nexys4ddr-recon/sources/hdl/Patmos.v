@@ -9034,25 +9034,25 @@ module Exceptions(input clk, input reset,
 endmodule
 
 module MemBlock_2(input clk,
-    input [8:0] io_rdAddr,
+    input [10:0] io_rdAddr,
     output[7:0] io_rdData,
-    input [8:0] io_wrAddr,
+    input [10:0] io_wrAddr,
     input  io_wrEna,
     input [7:0] io_wrData
 );
 
   wire[7:0] T0;
-  reg [7:0] mem [511:0];
+  reg [7:0] mem [2047:0];
   wire[7:0] T1;
   wire T2;
-  reg [8:0] rdAddrReg;
+  reg [10:0] rdAddrReg;
 
 `ifndef SYNTHESIS
 // synthesis translate_off
   integer initvar;
   initial begin
     #0.002;
-    for (initvar = 0; initvar < 512; initvar = initvar+1)
+    for (initvar = 0; initvar < 2048; initvar = initvar+1)
       mem[initvar] = {1{$random}};
     rdAddrReg = {1{$random}};
   end
@@ -9072,7 +9072,7 @@ endmodule
 
 module Spm(input clk,
     input [2:0] io_M_Cmd,
-    input [10:0] io_M_Addr,
+    input [12:0] io_M_Addr,
     input [31:0] io_M_Data,
     input [3:0] io_M_ByteEn,
     output[1:0] io_S_Resp,
@@ -9083,20 +9083,20 @@ module Spm(input clk,
   wire T1;
   wire[3:0] T2;
   wire T3;
-  wire[8:0] T4;
-  wire[8:0] T5;
+  wire[10:0] T4;
+  wire[10:0] T5;
   wire[7:0] T6;
   wire T7;
-  wire[8:0] T8;
-  wire[8:0] T9;
+  wire[10:0] T8;
+  wire[10:0] T9;
   wire[7:0] T10;
   wire T11;
-  wire[8:0] T12;
-  wire[8:0] T13;
+  wire[10:0] T12;
+  wire[10:0] T13;
   wire[7:0] T14;
   wire T15;
-  wire[8:0] T16;
-  wire[8:0] T17;
+  wire[10:0] T16;
+  wire[10:0] T17;
   wire[31:0] T18;
   wire[23:0] T19;
   wire[15:0] T20;
@@ -9124,20 +9124,20 @@ module Spm(input clk,
   assign T1 = T2[2'h3:2'h3];
   assign T2 = T3 ? io_M_ByteEn : 4'h0;
   assign T3 = io_M_Cmd == 3'h1;
-  assign T4 = io_M_Addr[4'ha:2'h2];
-  assign T5 = io_M_Addr[4'ha:2'h2];
+  assign T4 = io_M_Addr[4'hc:2'h2];
+  assign T5 = io_M_Addr[4'hc:2'h2];
   assign T6 = io_M_Data[5'h17:5'h10];
   assign T7 = T2[2'h2:2'h2];
-  assign T8 = io_M_Addr[4'ha:2'h2];
-  assign T9 = io_M_Addr[4'ha:2'h2];
+  assign T8 = io_M_Addr[4'hc:2'h2];
+  assign T9 = io_M_Addr[4'hc:2'h2];
   assign T10 = io_M_Data[4'hf:4'h8];
   assign T11 = T2[1'h1:1'h1];
-  assign T12 = io_M_Addr[4'ha:2'h2];
-  assign T13 = io_M_Addr[4'ha:2'h2];
+  assign T12 = io_M_Addr[4'hc:2'h2];
+  assign T13 = io_M_Addr[4'hc:2'h2];
   assign T14 = io_M_Data[3'h7:1'h0];
   assign T15 = T2[1'h0:1'h0];
-  assign T16 = io_M_Addr[4'ha:2'h2];
-  assign T17 = io_M_Addr[4'ha:2'h2];
+  assign T16 = io_M_Addr[4'hc:2'h2];
+  assign T17 = io_M_Addr[4'hc:2'h2];
   assign io_S_Data = T18;
   assign T18 = {MemBlock_3_io_rdData, T19};
   assign T19 = {MemBlock_2_io_rdData, T20};
@@ -9823,35 +9823,7 @@ module Nexys4DDRIO(
   assign io_ocp_S_Resp = io_nexys4DDRIOPins_SResp;
 endmodule
 
-module FpuCtrl(
-    input  io_superMode,
-    input [2:0] io_ocp_M_Cmd,
-    input [31:0] io_ocp_M_Addr,
-    input [31:0] io_ocp_M_Data,
-    input [3:0] io_ocp_M_ByteEn,
-    output[1:0] io_ocp_S_Resp,
-    output[31:0] io_ocp_S_Data,
-    output[2:0] io_fpuCtrlPins_MCmd,
-    output[15:0] io_fpuCtrlPins_MAddr,
-    output[31:0] io_fpuCtrlPins_MData,
-    output[3:0] io_fpuCtrlPins_MByteEn,
-    input [1:0] io_fpuCtrlPins_SResp,
-    input [31:0] io_fpuCtrlPins_SData
-);
-
-  wire[15:0] T0;
-
-
-  assign io_fpuCtrlPins_MByteEn = io_ocp_M_ByteEn;
-  assign io_fpuCtrlPins_MData = io_ocp_M_Data;
-  assign io_fpuCtrlPins_MAddr = T0;
-  assign T0 = io_ocp_M_Addr[4'hf:1'h0];
-  assign io_fpuCtrlPins_MCmd = io_ocp_M_Cmd;
-  assign io_ocp_S_Data = io_fpuCtrlPins_SData;
-  assign io_ocp_S_Resp = io_fpuCtrlPins_SResp;
-endmodule
-
-module BRamCtrl(
+module BRamCtrl(input clk, input reset,
     input  io_superMode,
     input [2:0] io_ocp_M_Cmd,
     input [31:0] io_ocp_M_Addr,
@@ -9863,12 +9835,26 @@ module BRamCtrl(
     output[15:0] io_bRamCtrlPins_MAddr,
     output[31:0] io_bRamCtrlPins_MData,
     output[3:0] io_bRamCtrlPins_MByteEn,
-    input [1:0] io_bRamCtrlPins_SResp,
     input [31:0] io_bRamCtrlPins_SData
 );
 
   wire[15:0] T0;
+  reg [1:0] respReg;
+  wire[1:0] T5;
+  wire[1:0] T1;
+  wire T2;
+  wire T3;
+  wire T4;
 
+`ifndef SYNTHESIS
+// synthesis translate_off
+  integer initvar;
+  initial begin
+    #0.002;
+    respReg = {1{$random}};
+  end
+// synthesis translate_on
+`endif
 
   assign io_bRamCtrlPins_MByteEn = io_ocp_M_ByteEn;
   assign io_bRamCtrlPins_MData = io_ocp_M_Data;
@@ -9876,7 +9862,50 @@ module BRamCtrl(
   assign T0 = io_ocp_M_Addr[4'hf:1'h0];
   assign io_bRamCtrlPins_MCmd = io_ocp_M_Cmd;
   assign io_ocp_S_Data = io_bRamCtrlPins_SData;
-  assign io_ocp_S_Resp = io_bRamCtrlPins_SResp;
+  assign io_ocp_S_Resp = respReg;
+  assign T5 = reset ? 2'h0 : T1;
+  assign T1 = T2 ? 2'h1 : 2'h0;
+  assign T2 = T4 | T3;
+  assign T3 = io_bRamCtrlPins_MCmd == 3'h2;
+  assign T4 = io_bRamCtrlPins_MCmd == 3'h1;
+
+  always @(posedge clk) begin
+    if(reset) begin
+      respReg <= 2'h0;
+    end else if(T2) begin
+      respReg <= 2'h1;
+    end else begin
+      respReg <= 2'h0;
+    end
+  end
+endmodule
+
+module BRamCtrlICAP(
+    input  io_superMode,
+    input [2:0] io_ocp_M_Cmd,
+    input [31:0] io_ocp_M_Addr,
+    input [31:0] io_ocp_M_Data,
+    input [3:0] io_ocp_M_ByteEn,
+    output[1:0] io_ocp_S_Resp,
+    output[31:0] io_ocp_S_Data,
+    output[2:0] io_bRamCtrlICAPPins_MCmd,
+    output[15:0] io_bRamCtrlICAPPins_MAddr,
+    output[31:0] io_bRamCtrlICAPPins_MData,
+    output[3:0] io_bRamCtrlICAPPins_MByteEn,
+    input [1:0] io_bRamCtrlICAPPins_SResp,
+    input [31:0] io_bRamCtrlICAPPins_SData
+);
+
+  wire[15:0] T0;
+
+
+  assign io_bRamCtrlICAPPins_MByteEn = io_ocp_M_ByteEn;
+  assign io_bRamCtrlICAPPins_MData = io_ocp_M_Data;
+  assign io_bRamCtrlICAPPins_MAddr = T0;
+  assign T0 = io_ocp_M_Addr[4'hf:1'h0];
+  assign io_bRamCtrlICAPPins_MCmd = io_ocp_M_Cmd;
+  assign io_ocp_S_Data = io_bRamCtrlICAPPins_SData;
+  assign io_ocp_S_Resp = io_bRamCtrlICAPPins_SResp;
 endmodule
 
 module IcapCtrl(
@@ -9905,6 +9934,199 @@ module IcapCtrl(
   assign io_icapCtrlPins_MCmd = io_ocp_M_Cmd;
   assign io_ocp_S_Data = io_icapCtrlPins_SData;
   assign io_ocp_S_Resp = io_icapCtrlPins_SResp;
+endmodule
+
+module HwACtrl(input clk, input reset,
+    input  io_superMode,
+    input [2:0] io_ocp_M_Cmd,
+    input [31:0] io_ocp_M_Addr,
+    input [31:0] io_ocp_M_Data,
+    input [3:0] io_ocp_M_ByteEn,
+    output[1:0] io_ocp_S_Resp,
+    output[31:0] io_ocp_S_Data,
+    output io_hwACtrlPins_ap_start_out,
+    output io_hwACtrlPins_ap_reset_out,
+    input  io_hwACtrlPins_ap_ready_in,
+    input  io_hwACtrlPins_ap_idle_in,
+    input  io_hwACtrlPins_ap_done_in
+);
+
+  wire T0;
+  wire T1;
+  wire T2;
+  wire T3;
+  wire T4;
+  wire T5;
+  wire T6;
+  reg [1:0] state;
+  wire[1:0] T52;
+  wire[1:0] T7;
+  wire[1:0] T8;
+  wire[1:0] T9;
+  wire[1:0] T10;
+  wire[1:0] T11;
+  wire[1:0] T12;
+  wire T13;
+  wire T14;
+  wire T15;
+  wire T16;
+  wire T17;
+  wire T18;
+  wire T19;
+  wire T20;
+  wire T21;
+  wire T22;
+  wire T23;
+  wire T24;
+  wire T25;
+  wire T26;
+  wire T27;
+  wire T28;
+  wire T29;
+  wire T30;
+  wire T31;
+  reg [31:0] rdDataReg;
+  wire[31:0] T53;
+  wire[31:0] T32;
+  wire[31:0] T33;
+  wire[31:0] T34;
+  wire[31:0] T35;
+  wire T36;
+  wire T37;
+  wire T38;
+  wire T39;
+  wire T40;
+  wire T41;
+  wire T42;
+  wire T43;
+  wire T44;
+  wire T45;
+  reg [1:0] respReg;
+  wire[1:0] T54;
+  wire[1:0] T46;
+  wire[1:0] T47;
+  wire[1:0] T48;
+  wire[1:0] T49;
+  wire[1:0] T50;
+  wire[1:0] T51;
+
+`ifndef SYNTHESIS
+// synthesis translate_off
+  integer initvar;
+  initial begin
+    #0.002;
+    state = {1{$random}};
+    rdDataReg = {1{$random}};
+    respReg = {1{$random}};
+  end
+// synthesis translate_on
+`endif
+
+  assign io_hwACtrlPins_ap_reset_out = 1'h0;
+  assign io_hwACtrlPins_ap_start_out = T0;
+  assign T0 = T30 ? 1'h1 : T1;
+  assign T1 = T26 ? 1'h0 : T2;
+  assign T2 = T6 & T3;
+  assign T3 = T5 & T4;
+  assign T4 = io_ocp_M_Data == 32'h1;
+  assign T5 = io_ocp_M_Cmd == 3'h1;
+  assign T6 = state == 2'h0;
+  assign T52 = reset ? 2'h0 : T7;
+  assign T7 = T23 ? 2'h2 : T8;
+  assign T8 = T19 ? 2'h2 : T9;
+  assign T9 = T16 ? 2'h0 : T10;
+  assign T10 = T30 ? 2'h1 : T11;
+  assign T11 = T13 ? 2'h2 : T12;
+  assign T12 = T2 ? 2'h1 : state;
+  assign T13 = T15 & T14;
+  assign T14 = io_hwACtrlPins_ap_done_in == 1'h1;
+  assign T15 = state == 2'h1;
+  assign T16 = T18 & T17;
+  assign T17 = io_ocp_M_Cmd == 3'h2;
+  assign T18 = state == 2'h2;
+  assign T19 = T18 & T20;
+  assign T20 = T22 & T21;
+  assign T21 = io_ocp_M_Cmd == 3'h1;
+  assign T22 = T17 ^ 1'h1;
+  assign T23 = T18 & T24;
+  assign T24 = T25 ^ 1'h1;
+  assign T25 = T17 | T21;
+  assign T26 = T13 & T27;
+  assign T27 = T29 | T28;
+  assign T28 = io_ocp_M_Cmd == 3'h1;
+  assign T29 = io_ocp_M_Cmd == 3'h2;
+  assign T30 = T15 & T31;
+  assign T31 = T14 ^ 1'h1;
+  assign io_ocp_S_Data = rdDataReg;
+  assign T53 = reset ? 32'h0 : T32;
+  assign T32 = T16 ? 32'h1 : T33;
+  assign T33 = T42 ? 32'h0 : T34;
+  assign T34 = T26 ? 32'h0 : T35;
+  assign T35 = T36 ? 32'h0 : rdDataReg;
+  assign T36 = T6 & T37;
+  assign T37 = T41 & T38;
+  assign T38 = T40 | T39;
+  assign T39 = io_ocp_M_Cmd == 3'h1;
+  assign T40 = io_ocp_M_Cmd == 3'h2;
+  assign T41 = T3 ^ 1'h1;
+  assign T42 = T30 & T43;
+  assign T43 = T45 | T44;
+  assign T44 = io_ocp_M_Cmd == 3'h1;
+  assign T45 = io_ocp_M_Cmd == 3'h2;
+  assign io_ocp_S_Resp = respReg;
+  assign T54 = reset ? 2'h0 : T46;
+  assign T46 = T19 ? 2'h1 : T47;
+  assign T47 = T16 ? 2'h1 : T48;
+  assign T48 = T42 ? 2'h1 : T49;
+  assign T49 = T26 ? 2'h1 : T50;
+  assign T50 = T36 ? 2'h1 : T51;
+  assign T51 = T2 ? 2'h1 : 2'h0;
+
+  always @(posedge clk) begin
+    if(reset) begin
+      state <= 2'h0;
+    end else if(T23) begin
+      state <= 2'h2;
+    end else if(T19) begin
+      state <= 2'h2;
+    end else if(T16) begin
+      state <= 2'h0;
+    end else if(T30) begin
+      state <= 2'h1;
+    end else if(T13) begin
+      state <= 2'h2;
+    end else if(T2) begin
+      state <= 2'h1;
+    end
+    if(reset) begin
+      rdDataReg <= 32'h0;
+    end else if(T16) begin
+      rdDataReg <= 32'h1;
+    end else if(T42) begin
+      rdDataReg <= 32'h0;
+    end else if(T26) begin
+      rdDataReg <= 32'h0;
+    end else if(T36) begin
+      rdDataReg <= 32'h0;
+    end
+    if(reset) begin
+      respReg <= 2'h0;
+    end else if(T19) begin
+      respReg <= 2'h1;
+    end else if(T16) begin
+      respReg <= 2'h1;
+    end else if(T42) begin
+      respReg <= 2'h1;
+    end else if(T26) begin
+      respReg <= 2'h1;
+    end else if(T36) begin
+      respReg <= 2'h1;
+    end else if(T2) begin
+      respReg <= 2'h1;
+    end else begin
+      respReg <= 2'h0;
+    end
+  end
 endmodule
 
 module CpuInfo(input clk,
@@ -9976,7 +10198,7 @@ module CpuInfo(input clk,
   assign io_ocp_S_Data = data;
   assign data = T0;
   assign T0 = T32 ? romData : T1;
-  assign T1 = T29 ? 32'h800 : T2;
+  assign T1 = T29 ? 32'h2000 : T2;
   assign T2 = T28 ? 32'h400 : T3;
   assign T3 = T27 ? 32'h0 : T4;
   assign T4 = T26 ? 32'h800 : T5;
@@ -10331,24 +10553,28 @@ module InOut(input clk, input reset,
     output[3:0] io_nexys4DDRIOPins_MByteEn,
     input [1:0] io_nexys4DDRIOPins_SResp,
     input [31:0] io_nexys4DDRIOPins_SData,
-    output[2:0] io_fpuCtrlPins_MCmd,
-    output[15:0] io_fpuCtrlPins_MAddr,
-    output[31:0] io_fpuCtrlPins_MData,
-    output[3:0] io_fpuCtrlPins_MByteEn,
-    input [1:0] io_fpuCtrlPins_SResp,
-    input [31:0] io_fpuCtrlPins_SData,
     output[2:0] io_bRamCtrlPins_MCmd,
     output[15:0] io_bRamCtrlPins_MAddr,
     output[31:0] io_bRamCtrlPins_MData,
     output[3:0] io_bRamCtrlPins_MByteEn,
-    input [1:0] io_bRamCtrlPins_SResp,
     input [31:0] io_bRamCtrlPins_SData,
+    output[2:0] io_bRamCtrlICAPPins_MCmd,
+    output[15:0] io_bRamCtrlICAPPins_MAddr,
+    output[31:0] io_bRamCtrlICAPPins_MData,
+    output[3:0] io_bRamCtrlICAPPins_MByteEn,
+    input [1:0] io_bRamCtrlICAPPins_SResp,
+    input [31:0] io_bRamCtrlICAPPins_SData,
     output[2:0] io_icapCtrlPins_MCmd,
     output[15:0] io_icapCtrlPins_MAddr,
     output[31:0] io_icapCtrlPins_MData,
     output[3:0] io_icapCtrlPins_MByteEn,
     input [1:0] io_icapCtrlPins_SResp,
     input [31:0] io_icapCtrlPins_SData,
+    output io_hwACtrlPins_ap_start_out,
+    output io_hwACtrlPins_ap_reset_out,
+    input  io_hwACtrlPins_ap_ready_in,
+    input  io_hwACtrlPins_ap_idle_in,
+    input  io_hwACtrlPins_ap_done_in,
     input [31:0] io_cpuInfoPins_id,
     input [31:0] io_cpuInfoPins_cnt
 );
@@ -10367,74 +10593,75 @@ module InOut(input clk, input reset,
   wire T8;
   wire[3:0] T9;
   wire[2:0] T10;
-  wire selDeviceVec_12;
+  wire selDeviceVec_13;
   wire T11;
   wire T12;
   wire[3:0] T13;
   wire[2:0] T14;
-  wire selDeviceVec_11;
+  wire selDeviceVec_12;
   wire T15;
   wire T16;
   wire[3:0] T17;
   wire[2:0] T18;
-  wire selDeviceVec_10;
+  wire selDeviceVec_11;
   wire T19;
   wire T20;
   wire[3:0] T21;
   wire[2:0] T22;
-  wire selDeviceVec_9;
+  wire selDeviceVec_10;
   wire T23;
   wire T24;
   wire[3:0] T25;
   wire[2:0] T26;
-  wire selDeviceVec_8;
+  wire selDeviceVec_9;
   wire T27;
   wire T28;
   wire[3:0] T29;
-  reg [3:0] R30;
-  wire[3:0] T169;
-  wire[3:0] T31;
+  wire[2:0] T30;
+  wire selDeviceVec_8;
+  wire T31;
   wire T32;
-  wire T33;
-  wire T34;
-  reg [2:0] R35;
-  wire[2:0] T170;
-  wire[2:0] T36;
-  reg [31:0] R37;
-  wire[31:0] T171;
-  wire[31:0] T38;
-  reg [31:0] R39;
+  wire[3:0] T33;
+  reg [3:0] R34;
+  wire[3:0] T170;
+  wire[3:0] T35;
+  wire T36;
+  wire T37;
+  wire T38;
+  reg [2:0] R39;
+  wire[2:0] T171;
+  wire[2:0] T40;
+  reg [31:0] R41;
   wire[31:0] T172;
-  wire[31:0] T40;
-  wire[2:0] T41;
-  wire selComConf;
-  wire T42;
-  wire T43;
-  wire selNI;
-  wire[3:0] T44;
-  wire[10:0] T173;
+  wire[31:0] T42;
+  reg [31:0] R43;
+  wire[31:0] T173;
+  wire[31:0] T44;
   wire[2:0] T45;
-  wire selSpm;
+  wire selComConf;
   wire T46;
   wire T47;
-  wire T48;
-  wire T49;
+  wire selNI;
+  wire[3:0] T48;
+  wire[12:0] T174;
+  wire[2:0] T49;
+  wire selSpm;
   wire T50;
   wire T51;
   wire T52;
-  wire[2:0] T53;
-  wire selDeviceVec_1;
+  wire T53;
   wire T54;
   wire T55;
-  wire[3:0] T56;
+  wire T56;
   wire[2:0] T57;
-  wire selComSpm;
+  wire selDeviceVec_1;
   wire T58;
   wire T59;
-  wire[31:0] T60;
-  wire[31:0] T61;
-  wire[31:0] T62;
-  wire[31:0] T63;
+  wire[3:0] T60;
+  wire[2:0] T61;
+  wire selComSpm;
+  wire T62;
+  wire T63;
   wire[31:0] T64;
   wire[31:0] T65;
   wire[31:0] T66;
@@ -10449,193 +10676,193 @@ module InOut(input clk, input reset,
   wire[31:0] T75;
   wire[31:0] T76;
   wire[31:0] T77;
+  wire[31:0] T78;
+  wire[31:0] T79;
+  wire[31:0] T80;
+  wire[31:0] T81;
   reg  selComConfReg;
-  wire T78;
-  wire T79;
+  wire T82;
+  wire T83;
   reg  selComSpmReg;
-  wire T80;
+  wire T84;
   wire[31:0] deviceSVec_0_Data;
   reg  selDeviceReg_0;
-  wire T81;
+  wire T85;
   wire[31:0] deviceSVec_1_Data;
   reg  selDeviceReg_1;
-  wire T82;
+  wire T86;
   wire[31:0] deviceSVec_2_Data;
   reg  selDeviceReg_2;
-  wire T83;
+  wire T87;
   wire[31:0] deviceSVec_3_Data;
   reg  selDeviceReg_3;
-  wire T84;
-  wire selDeviceVec_3;
-  wire T85;
-  wire T86;
-  wire[3:0] T87;
-  wire[31:0] deviceSVec_4_Data;
-  reg  selDeviceReg_4;
   wire T88;
-  wire selDeviceVec_4;
+  wire selDeviceVec_3;
   wire T89;
   wire T90;
   wire[3:0] T91;
-  wire[31:0] deviceSVec_5_Data;
-  reg  selDeviceReg_5;
+  wire[31:0] deviceSVec_4_Data;
+  reg  selDeviceReg_4;
   wire T92;
-  wire selDeviceVec_5;
+  wire selDeviceVec_4;
   wire T93;
   wire T94;
   wire[3:0] T95;
-  wire[31:0] deviceSVec_6_Data;
-  reg  selDeviceReg_6;
+  wire[31:0] deviceSVec_5_Data;
+  reg  selDeviceReg_5;
   wire T96;
-  wire selDeviceVec_6;
+  wire selDeviceVec_5;
   wire T97;
   wire T98;
   wire[3:0] T99;
-  wire[31:0] deviceSVec_7_Data;
-  reg  selDeviceReg_7;
+  wire[31:0] deviceSVec_6_Data;
+  reg  selDeviceReg_6;
   wire T100;
-  wire selDeviceVec_7;
+  wire selDeviceVec_6;
   wire T101;
   wire T102;
   wire[3:0] T103;
+  wire[31:0] deviceSVec_7_Data;
+  reg  selDeviceReg_7;
+  wire T104;
+  wire selDeviceVec_7;
+  wire T105;
+  wire T106;
+  wire[3:0] T107;
   wire[31:0] deviceSVec_8_Data;
   reg  selDeviceReg_8;
-  wire T104;
+  wire T108;
   wire[31:0] deviceSVec_9_Data;
   reg  selDeviceReg_9;
-  wire T105;
+  wire T109;
   wire[31:0] deviceSVec_10_Data;
   reg  selDeviceReg_10;
-  wire T106;
+  wire T110;
   wire[31:0] deviceSVec_11_Data;
   reg  selDeviceReg_11;
-  wire T107;
+  wire T111;
   wire[31:0] deviceSVec_12_Data;
   reg  selDeviceReg_12;
-  wire T108;
+  wire T112;
   wire[31:0] deviceSVec_13_Data;
   reg  selDeviceReg_13;
-  wire T109;
-  wire selDeviceVec_13;
-  wire T110;
-  wire T111;
-  wire[3:0] T112;
+  wire T113;
   wire[31:0] deviceSVec_14_Data;
   reg  selDeviceReg_14;
-  wire T113;
-  wire selDeviceVec_14;
   wire T114;
+  wire selDeviceVec_14;
   wire T115;
-  wire[3:0] T116;
+  wire T116;
+  wire[3:0] T117;
   wire[31:0] deviceSVec_15_Data;
   reg  selDeviceReg_15;
-  wire T117;
-  wire selDeviceVec_15;
   wire T118;
+  wire selDeviceVec_15;
   wire T119;
-  wire[3:0] T120;
-  wire[1:0] T121;
+  wire T120;
+  wire[3:0] T121;
   wire[1:0] T122;
-  wire[1:0] deviceSVec_15_Resp;
   wire[1:0] T123;
-  wire[1:0] deviceSVec_14_Resp;
+  wire[1:0] deviceSVec_15_Resp;
   wire[1:0] T124;
-  wire[1:0] deviceSVec_13_Resp;
+  wire[1:0] deviceSVec_14_Resp;
   wire[1:0] T125;
-  wire[1:0] deviceSVec_12_Resp;
+  wire[1:0] deviceSVec_13_Resp;
   wire[1:0] T126;
-  wire[1:0] deviceSVec_11_Resp;
+  wire[1:0] deviceSVec_12_Resp;
   wire[1:0] T127;
-  wire[1:0] deviceSVec_10_Resp;
+  wire[1:0] deviceSVec_11_Resp;
   wire[1:0] T128;
-  wire[1:0] deviceSVec_9_Resp;
+  wire[1:0] deviceSVec_10_Resp;
   wire[1:0] T129;
-  wire[1:0] deviceSVec_8_Resp;
+  wire[1:0] deviceSVec_9_Resp;
   wire[1:0] T130;
-  wire[1:0] deviceSVec_7_Resp;
+  wire[1:0] deviceSVec_8_Resp;
   wire[1:0] T131;
-  wire[1:0] deviceSVec_6_Resp;
+  wire[1:0] deviceSVec_7_Resp;
   wire[1:0] T132;
-  wire[1:0] deviceSVec_5_Resp;
+  wire[1:0] deviceSVec_6_Resp;
   wire[1:0] T133;
-  wire[1:0] deviceSVec_4_Resp;
+  wire[1:0] deviceSVec_5_Resp;
   wire[1:0] T134;
-  wire[1:0] deviceSVec_3_Resp;
+  wire[1:0] deviceSVec_4_Resp;
   wire[1:0] T135;
-  wire[1:0] deviceSVec_2_Resp;
+  wire[1:0] deviceSVec_3_Resp;
   wire[1:0] T136;
-  wire[1:0] deviceSVec_1_Resp;
+  wire[1:0] deviceSVec_2_Resp;
   wire[1:0] T137;
-  wire[1:0] deviceSVec_0_Resp;
+  wire[1:0] deviceSVec_1_Resp;
   wire[1:0] T138;
+  wire[1:0] deviceSVec_0_Resp;
   wire[1:0] T139;
   wire[1:0] T140;
   wire[1:0] T141;
+  wire[1:0] T142;
   wire[1:0] ispmResp;
-  wire T142;
+  wire T143;
   reg [2:0] ispmCmdReg;
-  wire[2:0] T143;
+  wire[2:0] T144;
   wire selISpm;
-  wire T144;
   wire T145;
   wire T146;
   wire T147;
   wire T148;
+  wire T149;
   reg [1:0] errResp;
-  wire[1:0] T174;
-  wire[1:0] T149;
-  wire T150;
+  wire[1:0] T175;
+  wire[1:0] T150;
   wire T151;
+  wire T152;
   wire validSel;
   wire validSelVec_15;
   wire validDeviceVec_15;
-  wire T152;
+  wire T153;
   wire validSelVec_14;
   wire validDeviceVec_14;
-  wire T153;
+  wire T154;
   wire validSelVec_13;
   wire validDeviceVec_13;
-  wire T154;
+  wire T155;
   wire validSelVec_12;
   wire validDeviceVec_12;
-  wire T155;
+  wire T156;
   wire validSelVec_11;
   wire validDeviceVec_11;
-  wire T156;
+  wire T157;
   wire validSelVec_10;
   wire validDeviceVec_10;
-  wire T157;
+  wire T158;
   wire validSelVec_9;
   wire validDeviceVec_9;
-  wire T158;
+  wire T159;
   wire validSelVec_8;
   wire validDeviceVec_8;
-  wire T159;
+  wire T160;
   wire validSelVec_7;
   wire validDeviceVec_7;
-  wire T160;
+  wire T161;
   wire validSelVec_6;
   wire validDeviceVec_6;
-  wire T161;
+  wire T162;
   wire validSelVec_5;
   wire validDeviceVec_5;
-  wire T162;
+  wire T163;
   wire validSelVec_4;
   wire validDeviceVec_4;
-  wire T163;
+  wire T164;
   wire validSelVec_3;
   wire validDeviceVec_3;
-  wire T164;
+  wire T165;
   wire validSelVec_2;
   wire validDeviceVec_2;
-  wire T165;
+  wire T166;
   wire validSelVec_1;
   wire validDeviceVec_1;
-  wire T166;
+  wire T167;
   wire validSelVec_0;
   wire validDeviceVec_0;
-  wire T167;
   wire T168;
+  wire T169;
   wire[1:0] comConf_io_slave_S_Resp;
   wire[31:0] comConf_io_slave_S_Data;
   wire[2:0] comConf_io_master_M_Cmd;
@@ -10656,24 +10883,28 @@ module InOut(input clk, input reset,
   wire[15:0] Nexys4DDRIO_io_nexys4DDRIOPins_MAddr;
   wire[31:0] Nexys4DDRIO_io_nexys4DDRIOPins_MData;
   wire[3:0] Nexys4DDRIO_io_nexys4DDRIOPins_MByteEn;
-  wire[1:0] FpuCtrl_io_ocp_S_Resp;
-  wire[31:0] FpuCtrl_io_ocp_S_Data;
-  wire[2:0] FpuCtrl_io_fpuCtrlPins_MCmd;
-  wire[15:0] FpuCtrl_io_fpuCtrlPins_MAddr;
-  wire[31:0] FpuCtrl_io_fpuCtrlPins_MData;
-  wire[3:0] FpuCtrl_io_fpuCtrlPins_MByteEn;
   wire[1:0] BRamCtrl_io_ocp_S_Resp;
   wire[31:0] BRamCtrl_io_ocp_S_Data;
   wire[2:0] BRamCtrl_io_bRamCtrlPins_MCmd;
   wire[15:0] BRamCtrl_io_bRamCtrlPins_MAddr;
   wire[31:0] BRamCtrl_io_bRamCtrlPins_MData;
   wire[3:0] BRamCtrl_io_bRamCtrlPins_MByteEn;
+  wire[1:0] BRamCtrlICAP_io_ocp_S_Resp;
+  wire[31:0] BRamCtrlICAP_io_ocp_S_Data;
+  wire[2:0] BRamCtrlICAP_io_bRamCtrlICAPPins_MCmd;
+  wire[15:0] BRamCtrlICAP_io_bRamCtrlICAPPins_MAddr;
+  wire[31:0] BRamCtrlICAP_io_bRamCtrlICAPPins_MData;
+  wire[3:0] BRamCtrlICAP_io_bRamCtrlICAPPins_MByteEn;
   wire[1:0] IcapCtrl_io_ocp_S_Resp;
   wire[31:0] IcapCtrl_io_ocp_S_Data;
   wire[2:0] IcapCtrl_io_icapCtrlPins_MCmd;
   wire[15:0] IcapCtrl_io_icapCtrlPins_MAddr;
   wire[31:0] IcapCtrl_io_icapCtrlPins_MData;
   wire[3:0] IcapCtrl_io_icapCtrlPins_MByteEn;
+  wire[1:0] HwACtrl_io_ocp_S_Resp;
+  wire[31:0] HwACtrl_io_ocp_S_Data;
+  wire HwACtrl_io_hwACtrlPins_ap_start_out;
+  wire HwACtrl_io_hwACtrlPins_ap_reset_out;
   wire[1:0] CpuInfo_io_ocp_S_Resp;
   wire[31:0] CpuInfo_io_ocp_S_Data;
   wire[1:0] Timer_io_ocp_S_Resp;
@@ -10692,10 +10923,10 @@ module InOut(input clk, input reset,
   initial begin
     #0.002;
     T0 = 1'b0;
-    R30 = {1{$random}};
-    R35 = {1{$random}};
-    R37 = {1{$random}};
+    R34 = {1{$random}};
     R39 = {1{$random}};
+    R41 = {1{$random}};
+    R43 = {1{$random}};
     selComConfReg = {1{$random}};
     selComSpmReg = {1{$random}};
     selDeviceReg_0 = {1{$random}};
@@ -10740,68 +10971,75 @@ module InOut(input clk, input reset,
   assign T7 = selIO & T8;
   assign T8 = T9 == 4'h0;
   assign T9 = io_memInOut_M_Addr[5'h13:5'h10];
-  assign T10 = selDeviceVec_12 ? io_memInOut_M_Cmd : 3'h0;
-  assign selDeviceVec_12 = T11;
+  assign T10 = selDeviceVec_13 ? io_memInOut_M_Cmd : 3'h0;
+  assign selDeviceVec_13 = T11;
   assign T11 = selIO & T12;
-  assign T12 = T13 == 4'hc;
+  assign T12 = T13 == 4'hd;
   assign T13 = io_memInOut_M_Addr[5'h13:5'h10];
-  assign T14 = selDeviceVec_11 ? io_memInOut_M_Cmd : 3'h0;
-  assign selDeviceVec_11 = T15;
+  assign T14 = selDeviceVec_12 ? io_memInOut_M_Cmd : 3'h0;
+  assign selDeviceVec_12 = T15;
   assign T15 = selIO & T16;
-  assign T16 = T17 == 4'hb;
+  assign T16 = T17 == 4'hc;
   assign T17 = io_memInOut_M_Addr[5'h13:5'h10];
-  assign T18 = selDeviceVec_10 ? io_memInOut_M_Cmd : 3'h0;
-  assign selDeviceVec_10 = T19;
+  assign T18 = selDeviceVec_11 ? io_memInOut_M_Cmd : 3'h0;
+  assign selDeviceVec_11 = T19;
   assign T19 = selIO & T20;
-  assign T20 = T21 == 4'ha;
+  assign T20 = T21 == 4'hb;
   assign T21 = io_memInOut_M_Addr[5'h13:5'h10];
-  assign T22 = selDeviceVec_9 ? io_memInOut_M_Cmd : 3'h0;
-  assign selDeviceVec_9 = T23;
+  assign T22 = selDeviceVec_10 ? io_memInOut_M_Cmd : 3'h0;
+  assign selDeviceVec_10 = T23;
   assign T23 = selIO & T24;
-  assign T24 = T25 == 4'h9;
+  assign T24 = T25 == 4'ha;
   assign T25 = io_memInOut_M_Addr[5'h13:5'h10];
-  assign T26 = selDeviceVec_8 ? io_memInOut_M_Cmd : 3'h0;
-  assign selDeviceVec_8 = T27;
+  assign T26 = selDeviceVec_9 ? io_memInOut_M_Cmd : 3'h0;
+  assign selDeviceVec_9 = T27;
   assign T27 = selIO & T28;
-  assign T28 = T29 == 4'h8;
+  assign T28 = T29 == 4'h9;
   assign T29 = io_memInOut_M_Addr[5'h13:5'h10];
-  assign T169 = reset ? comConf_io_master_M_ByteEn : T31;
-  assign T31 = T32 ? comConf_io_master_M_ByteEn : R30;
-  assign T32 = T34 | T33;
-  assign T33 = comConfIO_io_slave_S_CmdAccept == 1'h1;
-  assign T34 = R35 == 3'h0;
-  assign T170 = reset ? comConf_io_master_M_Cmd : T36;
-  assign T36 = T32 ? comConf_io_master_M_Cmd : R35;
-  assign T171 = reset ? comConf_io_master_M_Data : T38;
-  assign T38 = T32 ? comConf_io_master_M_Data : R37;
-  assign T172 = reset ? comConf_io_master_M_Addr : T40;
-  assign T40 = T32 ? comConf_io_master_M_Addr : R39;
-  assign T41 = selComConf ? io_memInOut_M_Cmd : 3'h0;
-  assign selComConf = selNI & T42;
-  assign T42 = T43 == 1'h0;
-  assign T43 = io_memInOut_M_Addr[5'h1b:5'h1b];
-  assign selNI = T44 == 4'he;
-  assign T44 = io_memInOut_M_Addr[5'h1f:5'h1c];
-  assign T173 = io_memInOut_M_Addr[4'ha:1'h0];
-  assign T45 = selSpm ? io_memInOut_M_Cmd : 3'h0;
-  assign selSpm = T48 & T46;
+  assign T30 = selDeviceVec_8 ? io_memInOut_M_Cmd : 3'h0;
+  assign selDeviceVec_8 = T31;
+  assign T31 = selIO & T32;
+  assign T32 = T33 == 4'h8;
+  assign T33 = io_memInOut_M_Addr[5'h13:5'h10];
+  assign T170 = reset ? comConf_io_master_M_ByteEn : T35;
+  assign T35 = T36 ? comConf_io_master_M_ByteEn : R34;
+  assign T36 = T38 | T37;
+  assign T37 = comConfIO_io_slave_S_CmdAccept == 1'h1;
+  assign T38 = R39 == 3'h0;
+  assign T171 = reset ? comConf_io_master_M_Cmd : T40;
+  assign T40 = T36 ? comConf_io_master_M_Cmd : R39;
+  assign T172 = reset ? comConf_io_master_M_Data : T42;
+  assign T42 = T36 ? comConf_io_master_M_Data : R41;
+  assign T173 = reset ? comConf_io_master_M_Addr : T44;
+  assign T44 = T36 ? comConf_io_master_M_Addr : R43;
+  assign T45 = selComConf ? io_memInOut_M_Cmd : 3'h0;
+  assign selComConf = selNI & T46;
   assign T46 = T47 == 1'h0;
-  assign T47 = io_memInOut_M_Addr[5'h10:5'h10];
-  assign T48 = T50 & T49;
-  assign T49 = selNI ^ 1'h1;
-  assign T50 = selIO ^ 1'h1;
+  assign T47 = io_memInOut_M_Addr[5'h1b:5'h1b];
+  assign selNI = T48 == 4'he;
+  assign T48 = io_memInOut_M_Addr[5'h1f:5'h1c];
+  assign T174 = io_memInOut_M_Addr[4'hc:1'h0];
+  assign T49 = selSpm ? io_memInOut_M_Cmd : 3'h0;
+  assign selSpm = T52 & T50;
+  assign T50 = T51 == 1'h0;
+  assign T51 = io_memInOut_M_Addr[5'h10:5'h10];
+  assign T52 = T54 & T53;
+  assign T53 = selNI ^ 1'h1;
+  assign T54 = selIO ^ 1'h1;
+  assign io_hwACtrlPins_ap_reset_out = HwACtrl_io_hwACtrlPins_ap_reset_out;
+  assign io_hwACtrlPins_ap_start_out = HwACtrl_io_hwACtrlPins_ap_start_out;
   assign io_icapCtrlPins_MByteEn = IcapCtrl_io_icapCtrlPins_MByteEn;
   assign io_icapCtrlPins_MData = IcapCtrl_io_icapCtrlPins_MData;
   assign io_icapCtrlPins_MAddr = IcapCtrl_io_icapCtrlPins_MAddr;
   assign io_icapCtrlPins_MCmd = IcapCtrl_io_icapCtrlPins_MCmd;
+  assign io_bRamCtrlICAPPins_MByteEn = BRamCtrlICAP_io_bRamCtrlICAPPins_MByteEn;
+  assign io_bRamCtrlICAPPins_MData = BRamCtrlICAP_io_bRamCtrlICAPPins_MData;
+  assign io_bRamCtrlICAPPins_MAddr = BRamCtrlICAP_io_bRamCtrlICAPPins_MAddr;
+  assign io_bRamCtrlICAPPins_MCmd = BRamCtrlICAP_io_bRamCtrlICAPPins_MCmd;
   assign io_bRamCtrlPins_MByteEn = BRamCtrl_io_bRamCtrlPins_MByteEn;
   assign io_bRamCtrlPins_MData = BRamCtrl_io_bRamCtrlPins_MData;
   assign io_bRamCtrlPins_MAddr = BRamCtrl_io_bRamCtrlPins_MAddr;
   assign io_bRamCtrlPins_MCmd = BRamCtrl_io_bRamCtrlPins_MCmd;
-  assign io_fpuCtrlPins_MByteEn = FpuCtrl_io_fpuCtrlPins_MByteEn;
-  assign io_fpuCtrlPins_MData = FpuCtrl_io_fpuCtrlPins_MData;
-  assign io_fpuCtrlPins_MAddr = FpuCtrl_io_fpuCtrlPins_MAddr;
-  assign io_fpuCtrlPins_MCmd = FpuCtrl_io_fpuCtrlPins_MCmd;
   assign io_nexys4DDRIOPins_MByteEn = Nexys4DDRIO_io_nexys4DDRIOPins_MByteEn;
   assign io_nexys4DDRIOPins_MData = Nexys4DDRIO_io_nexys4DDRIOPins_MData;
   assign io_nexys4DDRIOPins_MAddr = Nexys4DDRIO_io_nexys4DDRIOPins_MAddr;
@@ -10809,10 +11047,10 @@ module InOut(input clk, input reset,
   assign io_uartPins_tx = Uart_io_uartPins_tx;
   assign io_intrs_0 = Timer_io_timerIntrs_0;
   assign io_intrs_1 = Timer_io_timerIntrs_1;
-  assign io_intrs_2 = T51;
-  assign T51 = io_comConf_S_Flag[1'h0:1'h0];
-  assign io_intrs_3 = T52;
-  assign T52 = io_comConf_S_Flag[1'h1:1'h1];
+  assign io_intrs_2 = T55;
+  assign T55 = io_comConf_S_Flag[1'h0:1'h0];
+  assign io_intrs_3 = T56;
+  assign T56 = io_comConf_S_Flag[1'h1:1'h1];
   assign io_intrs_4 = 1'h0;
   assign io_intrs_5 = 1'h0;
   assign io_intrs_6 = 1'h0;
@@ -10828,222 +11066,218 @@ module InOut(input clk, input reset,
   assign io_excInOut_M_ByteEn = io_memInOut_M_ByteEn;
   assign io_excInOut_M_Data = io_memInOut_M_Data;
   assign io_excInOut_M_Addr = io_memInOut_M_Addr;
-  assign io_excInOut_M_Cmd = T53;
-  assign T53 = selDeviceVec_1 ? io_memInOut_M_Cmd : 3'h0;
-  assign selDeviceVec_1 = T54;
-  assign T54 = selIO & T55;
-  assign T55 = T56 == 4'h1;
-  assign T56 = io_memInOut_M_Addr[5'h13:5'h10];
+  assign io_excInOut_M_Cmd = T57;
+  assign T57 = selDeviceVec_1 ? io_memInOut_M_Cmd : 3'h0;
+  assign selDeviceVec_1 = T58;
+  assign T58 = selIO & T59;
+  assign T59 = T60 == 4'h1;
+  assign T60 = io_memInOut_M_Addr[5'h13:5'h10];
   assign io_comSpm_M_ByteEn = io_memInOut_M_ByteEn;
   assign io_comSpm_M_Data = io_memInOut_M_Data;
   assign io_comSpm_M_Addr = io_memInOut_M_Addr;
-  assign io_comSpm_M_Cmd = T57;
-  assign T57 = selComSpm ? io_memInOut_M_Cmd : 3'h0;
-  assign selComSpm = selNI & T58;
-  assign T58 = T59 == 1'h1;
-  assign T59 = io_memInOut_M_Addr[5'h1b:5'h1b];
+  assign io_comSpm_M_Cmd = T61;
+  assign T61 = selComSpm ? io_memInOut_M_Cmd : 3'h0;
+  assign selComSpm = selNI & T62;
+  assign T62 = T63 == 1'h1;
+  assign T63 = io_memInOut_M_Addr[5'h1b:5'h1b];
   assign io_comConf_M_RespAccept = comConfIO_io_master_M_RespAccept;
   assign io_comConf_M_ByteEn = comConfIO_io_master_M_ByteEn;
   assign io_comConf_M_Data = comConfIO_io_master_M_Data;
   assign io_comConf_M_Addr = comConfIO_io_master_M_Addr;
   assign io_comConf_M_Cmd = comConfIO_io_master_M_Cmd;
-  assign io_memInOut_S_Data = T60;
-  assign T60 = selDeviceReg_15 ? deviceSVec_15_Data : T61;
-  assign T61 = selDeviceReg_14 ? deviceSVec_14_Data : T62;
-  assign T62 = selDeviceReg_13 ? deviceSVec_13_Data : T63;
-  assign T63 = selDeviceReg_12 ? deviceSVec_12_Data : T64;
-  assign T64 = selDeviceReg_11 ? deviceSVec_11_Data : T65;
-  assign T65 = selDeviceReg_10 ? deviceSVec_10_Data : T66;
-  assign T66 = selDeviceReg_9 ? deviceSVec_9_Data : T67;
-  assign T67 = selDeviceReg_8 ? deviceSVec_8_Data : T68;
-  assign T68 = selDeviceReg_7 ? deviceSVec_7_Data : T69;
-  assign T69 = selDeviceReg_6 ? deviceSVec_6_Data : T70;
-  assign T70 = selDeviceReg_5 ? deviceSVec_5_Data : T71;
-  assign T71 = selDeviceReg_4 ? deviceSVec_4_Data : T72;
-  assign T72 = selDeviceReg_3 ? deviceSVec_3_Data : T73;
-  assign T73 = selDeviceReg_2 ? deviceSVec_2_Data : T74;
-  assign T74 = selDeviceReg_1 ? deviceSVec_1_Data : T75;
-  assign T75 = selDeviceReg_0 ? deviceSVec_0_Data : T76;
-  assign T76 = selComSpmReg ? io_comSpm_S_Data : T77;
-  assign T77 = selComConfReg ? comConf_io_slave_S_Data : spm_io_S_Data;
-  assign T78 = T79 ? selComConf : selComConfReg;
-  assign T79 = io_memInOut_M_Cmd != 3'h0;
-  assign T80 = T79 ? selComSpm : selComSpmReg;
+  assign io_memInOut_S_Data = T64;
+  assign T64 = selDeviceReg_15 ? deviceSVec_15_Data : T65;
+  assign T65 = selDeviceReg_14 ? deviceSVec_14_Data : T66;
+  assign T66 = selDeviceReg_13 ? deviceSVec_13_Data : T67;
+  assign T67 = selDeviceReg_12 ? deviceSVec_12_Data : T68;
+  assign T68 = selDeviceReg_11 ? deviceSVec_11_Data : T69;
+  assign T69 = selDeviceReg_10 ? deviceSVec_10_Data : T70;
+  assign T70 = selDeviceReg_9 ? deviceSVec_9_Data : T71;
+  assign T71 = selDeviceReg_8 ? deviceSVec_8_Data : T72;
+  assign T72 = selDeviceReg_7 ? deviceSVec_7_Data : T73;
+  assign T73 = selDeviceReg_6 ? deviceSVec_6_Data : T74;
+  assign T74 = selDeviceReg_5 ? deviceSVec_5_Data : T75;
+  assign T75 = selDeviceReg_4 ? deviceSVec_4_Data : T76;
+  assign T76 = selDeviceReg_3 ? deviceSVec_3_Data : T77;
+  assign T77 = selDeviceReg_2 ? deviceSVec_2_Data : T78;
+  assign T78 = selDeviceReg_1 ? deviceSVec_1_Data : T79;
+  assign T79 = selDeviceReg_0 ? deviceSVec_0_Data : T80;
+  assign T80 = selComSpmReg ? io_comSpm_S_Data : T81;
+  assign T81 = selComConfReg ? comConf_io_slave_S_Data : spm_io_S_Data;
+  assign T82 = T83 ? selComConf : selComConfReg;
+  assign T83 = io_memInOut_M_Cmd != 3'h0;
+  assign T84 = T83 ? selComSpm : selComSpmReg;
   assign deviceSVec_0_Data = CpuInfo_io_ocp_S_Data;
-  assign T81 = T79 ? selDeviceVec_0 : selDeviceReg_0;
+  assign T85 = T83 ? selDeviceVec_0 : selDeviceReg_0;
   assign deviceSVec_1_Data = io_excInOut_S_Data;
-  assign T82 = T79 ? selDeviceVec_1 : selDeviceReg_1;
+  assign T86 = T83 ? selDeviceVec_1 : selDeviceReg_1;
   assign deviceSVec_2_Data = Timer_io_ocp_S_Data;
-  assign T83 = T79 ? selDeviceVec_2 : selDeviceReg_2;
+  assign T87 = T83 ? selDeviceVec_2 : selDeviceReg_2;
   assign deviceSVec_3_Data = 32'h0;
-  assign T84 = T79 ? selDeviceVec_3 : selDeviceReg_3;
-  assign selDeviceVec_3 = T85;
-  assign T85 = selIO & T86;
-  assign T86 = T87 == 4'h3;
-  assign T87 = io_memInOut_M_Addr[5'h13:5'h10];
-  assign deviceSVec_4_Data = 32'h0;
-  assign T88 = T79 ? selDeviceVec_4 : selDeviceReg_4;
-  assign selDeviceVec_4 = T89;
+  assign T88 = T83 ? selDeviceVec_3 : selDeviceReg_3;
+  assign selDeviceVec_3 = T89;
   assign T89 = selIO & T90;
-  assign T90 = T91 == 4'h4;
+  assign T90 = T91 == 4'h3;
   assign T91 = io_memInOut_M_Addr[5'h13:5'h10];
-  assign deviceSVec_5_Data = 32'h0;
-  assign T92 = T79 ? selDeviceVec_5 : selDeviceReg_5;
-  assign selDeviceVec_5 = T93;
+  assign deviceSVec_4_Data = 32'h0;
+  assign T92 = T83 ? selDeviceVec_4 : selDeviceReg_4;
+  assign selDeviceVec_4 = T93;
   assign T93 = selIO & T94;
-  assign T94 = T95 == 4'h5;
+  assign T94 = T95 == 4'h4;
   assign T95 = io_memInOut_M_Addr[5'h13:5'h10];
-  assign deviceSVec_6_Data = 32'h0;
-  assign T96 = T79 ? selDeviceVec_6 : selDeviceReg_6;
-  assign selDeviceVec_6 = T97;
+  assign deviceSVec_5_Data = 32'h0;
+  assign T96 = T83 ? selDeviceVec_5 : selDeviceReg_5;
+  assign selDeviceVec_5 = T97;
   assign T97 = selIO & T98;
-  assign T98 = T99 == 4'h6;
+  assign T98 = T99 == 4'h5;
   assign T99 = io_memInOut_M_Addr[5'h13:5'h10];
-  assign deviceSVec_7_Data = 32'h0;
-  assign T100 = T79 ? selDeviceVec_7 : selDeviceReg_7;
-  assign selDeviceVec_7 = T101;
+  assign deviceSVec_6_Data = 32'h0;
+  assign T100 = T83 ? selDeviceVec_6 : selDeviceReg_6;
+  assign selDeviceVec_6 = T101;
   assign T101 = selIO & T102;
-  assign T102 = T103 == 4'h7;
+  assign T102 = T103 == 4'h6;
   assign T103 = io_memInOut_M_Addr[5'h13:5'h10];
+  assign deviceSVec_7_Data = 32'h0;
+  assign T104 = T83 ? selDeviceVec_7 : selDeviceReg_7;
+  assign selDeviceVec_7 = T105;
+  assign T105 = selIO & T106;
+  assign T106 = T107 == 4'h7;
+  assign T107 = io_memInOut_M_Addr[5'h13:5'h10];
   assign deviceSVec_8_Data = Uart_io_ocp_S_Data;
-  assign T104 = T79 ? selDeviceVec_8 : selDeviceReg_8;
+  assign T108 = T83 ? selDeviceVec_8 : selDeviceReg_8;
   assign deviceSVec_9_Data = Nexys4DDRIO_io_ocp_S_Data;
-  assign T105 = T79 ? selDeviceVec_9 : selDeviceReg_9;
-  assign deviceSVec_10_Data = FpuCtrl_io_ocp_S_Data;
-  assign T106 = T79 ? selDeviceVec_10 : selDeviceReg_10;
-  assign deviceSVec_11_Data = BRamCtrl_io_ocp_S_Data;
-  assign T107 = T79 ? selDeviceVec_11 : selDeviceReg_11;
+  assign T109 = T83 ? selDeviceVec_9 : selDeviceReg_9;
+  assign deviceSVec_10_Data = BRamCtrl_io_ocp_S_Data;
+  assign T110 = T83 ? selDeviceVec_10 : selDeviceReg_10;
+  assign deviceSVec_11_Data = BRamCtrlICAP_io_ocp_S_Data;
+  assign T111 = T83 ? selDeviceVec_11 : selDeviceReg_11;
   assign deviceSVec_12_Data = IcapCtrl_io_ocp_S_Data;
-  assign T108 = T79 ? selDeviceVec_12 : selDeviceReg_12;
-  assign deviceSVec_13_Data = 32'h0;
-  assign T109 = T79 ? selDeviceVec_13 : selDeviceReg_13;
-  assign selDeviceVec_13 = T110;
-  assign T110 = selIO & T111;
-  assign T111 = T112 == 4'hd;
-  assign T112 = io_memInOut_M_Addr[5'h13:5'h10];
+  assign T112 = T83 ? selDeviceVec_12 : selDeviceReg_12;
+  assign deviceSVec_13_Data = HwACtrl_io_ocp_S_Data;
+  assign T113 = T83 ? selDeviceVec_13 : selDeviceReg_13;
   assign deviceSVec_14_Data = 32'h0;
-  assign T113 = T79 ? selDeviceVec_14 : selDeviceReg_14;
-  assign selDeviceVec_14 = T114;
-  assign T114 = selIO & T115;
-  assign T115 = T116 == 4'he;
-  assign T116 = io_memInOut_M_Addr[5'h13:5'h10];
+  assign T114 = T83 ? selDeviceVec_14 : selDeviceReg_14;
+  assign selDeviceVec_14 = T115;
+  assign T115 = selIO & T116;
+  assign T116 = T117 == 4'he;
+  assign T117 = io_memInOut_M_Addr[5'h13:5'h10];
   assign deviceSVec_15_Data = 32'h0;
-  assign T117 = T79 ? selDeviceVec_15 : selDeviceReg_15;
-  assign selDeviceVec_15 = T118;
-  assign T118 = selIO & T119;
-  assign T119 = T120 == 4'hf;
-  assign T120 = io_memInOut_M_Addr[5'h13:5'h10];
-  assign io_memInOut_S_Resp = T121;
-  assign T121 = T138 | T122;
-  assign T122 = T123 | deviceSVec_15_Resp;
+  assign T118 = T83 ? selDeviceVec_15 : selDeviceReg_15;
+  assign selDeviceVec_15 = T119;
+  assign T119 = selIO & T120;
+  assign T120 = T121 == 4'hf;
+  assign T121 = io_memInOut_M_Addr[5'h13:5'h10];
+  assign io_memInOut_S_Resp = T122;
+  assign T122 = T139 | T123;
+  assign T123 = T124 | deviceSVec_15_Resp;
   assign deviceSVec_15_Resp = 2'h0;
-  assign T123 = T124 | deviceSVec_14_Resp;
+  assign T124 = T125 | deviceSVec_14_Resp;
   assign deviceSVec_14_Resp = 2'h0;
-  assign T124 = T125 | deviceSVec_13_Resp;
-  assign deviceSVec_13_Resp = 2'h0;
-  assign T125 = T126 | deviceSVec_12_Resp;
+  assign T125 = T126 | deviceSVec_13_Resp;
+  assign deviceSVec_13_Resp = HwACtrl_io_ocp_S_Resp;
+  assign T126 = T127 | deviceSVec_12_Resp;
   assign deviceSVec_12_Resp = IcapCtrl_io_ocp_S_Resp;
-  assign T126 = T127 | deviceSVec_11_Resp;
-  assign deviceSVec_11_Resp = BRamCtrl_io_ocp_S_Resp;
-  assign T127 = T128 | deviceSVec_10_Resp;
-  assign deviceSVec_10_Resp = FpuCtrl_io_ocp_S_Resp;
-  assign T128 = T129 | deviceSVec_9_Resp;
+  assign T127 = T128 | deviceSVec_11_Resp;
+  assign deviceSVec_11_Resp = BRamCtrlICAP_io_ocp_S_Resp;
+  assign T128 = T129 | deviceSVec_10_Resp;
+  assign deviceSVec_10_Resp = BRamCtrl_io_ocp_S_Resp;
+  assign T129 = T130 | deviceSVec_9_Resp;
   assign deviceSVec_9_Resp = Nexys4DDRIO_io_ocp_S_Resp;
-  assign T129 = T130 | deviceSVec_8_Resp;
+  assign T130 = T131 | deviceSVec_8_Resp;
   assign deviceSVec_8_Resp = Uart_io_ocp_S_Resp;
-  assign T130 = T131 | deviceSVec_7_Resp;
+  assign T131 = T132 | deviceSVec_7_Resp;
   assign deviceSVec_7_Resp = 2'h0;
-  assign T131 = T132 | deviceSVec_6_Resp;
+  assign T132 = T133 | deviceSVec_6_Resp;
   assign deviceSVec_6_Resp = 2'h0;
-  assign T132 = T133 | deviceSVec_5_Resp;
+  assign T133 = T134 | deviceSVec_5_Resp;
   assign deviceSVec_5_Resp = 2'h0;
-  assign T133 = T134 | deviceSVec_4_Resp;
+  assign T134 = T135 | deviceSVec_4_Resp;
   assign deviceSVec_4_Resp = 2'h0;
-  assign T134 = T135 | deviceSVec_3_Resp;
+  assign T135 = T136 | deviceSVec_3_Resp;
   assign deviceSVec_3_Resp = 2'h0;
-  assign T135 = T136 | deviceSVec_2_Resp;
+  assign T136 = T137 | deviceSVec_2_Resp;
   assign deviceSVec_2_Resp = Timer_io_ocp_S_Resp;
-  assign T136 = T137 | deviceSVec_1_Resp;
+  assign T137 = T138 | deviceSVec_1_Resp;
   assign deviceSVec_1_Resp = io_excInOut_S_Resp;
-  assign T137 = 2'h0 | deviceSVec_0_Resp;
+  assign T138 = 2'h0 | deviceSVec_0_Resp;
   assign deviceSVec_0_Resp = CpuInfo_io_ocp_S_Resp;
-  assign T138 = T139 | io_comSpm_S_Resp;
-  assign T139 = T140 | comConf_io_slave_S_Resp;
-  assign T140 = T141 | spm_io_S_Resp;
-  assign T141 = errResp | ispmResp;
-  assign ispmResp = T142 ? 2'h0 : 2'h1;
-  assign T142 = ispmCmdReg == 3'h0;
-  assign T143 = selISpm ? io_memInOut_M_Cmd : 3'h0;
-  assign selISpm = T146 & T144;
-  assign T144 = T145 == 1'h1;
-  assign T145 = io_memInOut_M_Addr[5'h10:5'h10];
-  assign T146 = T148 & T147;
-  assign T147 = selNI ^ 1'h1;
-  assign T148 = selIO ^ 1'h1;
-  assign T174 = reset ? 2'h0 : T149;
-  assign T149 = T150 ? 2'h3 : 2'h0;
-  assign T150 = T167 & T151;
-  assign T151 = validSel ^ 1'h1;
-  assign validSel = T152 | validSelVec_15;
+  assign T139 = T140 | io_comSpm_S_Resp;
+  assign T140 = T141 | comConf_io_slave_S_Resp;
+  assign T141 = T142 | spm_io_S_Resp;
+  assign T142 = errResp | ispmResp;
+  assign ispmResp = T143 ? 2'h0 : 2'h1;
+  assign T143 = ispmCmdReg == 3'h0;
+  assign T144 = selISpm ? io_memInOut_M_Cmd : 3'h0;
+  assign selISpm = T147 & T145;
+  assign T145 = T146 == 1'h1;
+  assign T146 = io_memInOut_M_Addr[5'h10:5'h10];
+  assign T147 = T149 & T148;
+  assign T148 = selNI ^ 1'h1;
+  assign T149 = selIO ^ 1'h1;
+  assign T175 = reset ? 2'h0 : T150;
+  assign T150 = T151 ? 2'h3 : 2'h0;
+  assign T151 = T168 & T152;
+  assign T152 = validSel ^ 1'h1;
+  assign validSel = T153 | validSelVec_15;
   assign validSelVec_15 = selDeviceVec_15 & validDeviceVec_15;
   assign validDeviceVec_15 = 1'h0;
-  assign T152 = T153 | validSelVec_14;
+  assign T153 = T154 | validSelVec_14;
   assign validSelVec_14 = selDeviceVec_14 & validDeviceVec_14;
   assign validDeviceVec_14 = 1'h0;
-  assign T153 = T154 | validSelVec_13;
+  assign T154 = T155 | validSelVec_13;
   assign validSelVec_13 = selDeviceVec_13 & validDeviceVec_13;
-  assign validDeviceVec_13 = 1'h0;
-  assign T154 = T155 | validSelVec_12;
+  assign validDeviceVec_13 = 1'h1;
+  assign T155 = T156 | validSelVec_12;
   assign validSelVec_12 = selDeviceVec_12 & validDeviceVec_12;
   assign validDeviceVec_12 = 1'h1;
-  assign T155 = T156 | validSelVec_11;
+  assign T156 = T157 | validSelVec_11;
   assign validSelVec_11 = selDeviceVec_11 & validDeviceVec_11;
   assign validDeviceVec_11 = 1'h1;
-  assign T156 = T157 | validSelVec_10;
+  assign T157 = T158 | validSelVec_10;
   assign validSelVec_10 = selDeviceVec_10 & validDeviceVec_10;
   assign validDeviceVec_10 = 1'h1;
-  assign T157 = T158 | validSelVec_9;
+  assign T158 = T159 | validSelVec_9;
   assign validSelVec_9 = selDeviceVec_9 & validDeviceVec_9;
   assign validDeviceVec_9 = 1'h1;
-  assign T158 = T159 | validSelVec_8;
+  assign T159 = T160 | validSelVec_8;
   assign validSelVec_8 = selDeviceVec_8 & validDeviceVec_8;
   assign validDeviceVec_8 = 1'h1;
-  assign T159 = T160 | validSelVec_7;
+  assign T160 = T161 | validSelVec_7;
   assign validSelVec_7 = selDeviceVec_7 & validDeviceVec_7;
   assign validDeviceVec_7 = 1'h0;
-  assign T160 = T161 | validSelVec_6;
+  assign T161 = T162 | validSelVec_6;
   assign validSelVec_6 = selDeviceVec_6 & validDeviceVec_6;
   assign validDeviceVec_6 = 1'h0;
-  assign T161 = T162 | validSelVec_5;
+  assign T162 = T163 | validSelVec_5;
   assign validSelVec_5 = selDeviceVec_5 & validDeviceVec_5;
   assign validDeviceVec_5 = 1'h0;
-  assign T162 = T163 | validSelVec_4;
+  assign T163 = T164 | validSelVec_4;
   assign validSelVec_4 = selDeviceVec_4 & validDeviceVec_4;
   assign validDeviceVec_4 = 1'h0;
-  assign T163 = T164 | validSelVec_3;
+  assign T164 = T165 | validSelVec_3;
   assign validSelVec_3 = selDeviceVec_3 & validDeviceVec_3;
   assign validDeviceVec_3 = 1'h0;
-  assign T164 = T165 | validSelVec_2;
+  assign T165 = T166 | validSelVec_2;
   assign validSelVec_2 = selDeviceVec_2 & validDeviceVec_2;
   assign validDeviceVec_2 = 1'h1;
-  assign T165 = T166 | validSelVec_1;
+  assign T166 = T167 | validSelVec_1;
   assign validSelVec_1 = selDeviceVec_1 & validDeviceVec_1;
   assign validDeviceVec_1 = 1'h1;
-  assign T166 = 1'h0 | validSelVec_0;
+  assign T167 = 1'h0 | validSelVec_0;
   assign validSelVec_0 = selDeviceVec_0 & validDeviceVec_0;
   assign validDeviceVec_0 = 1'h1;
-  assign T167 = T168 & selIO;
-  assign T168 = io_memInOut_M_Cmd != 3'h0;
+  assign T168 = T169 & selIO;
+  assign T169 = io_memInOut_M_Cmd != 3'h0;
   Spm spm(.clk(clk),
-       .io_M_Cmd( T45 ),
-       .io_M_Addr( T173 ),
+       .io_M_Cmd( T49 ),
+       .io_M_Addr( T174 ),
        .io_M_Data( io_memInOut_M_Data ),
        .io_M_ByteEn( io_memInOut_M_ByteEn ),
        .io_S_Resp( spm_io_S_Resp ),
        .io_S_Data( spm_io_S_Data )
   );
   OcpCoreBus comConf(
-       .io_slave_M_Cmd( T41 ),
+       .io_slave_M_Cmd( T45 ),
        .io_slave_M_Addr( io_memInOut_M_Addr ),
        .io_slave_M_Data( io_memInOut_M_Data ),
        .io_slave_M_ByteEn( io_memInOut_M_ByteEn ),
@@ -11057,10 +11291,10 @@ module InOut(input clk, input reset,
        .io_master_S_Data( comConfIO_io_slave_S_Data )
   );
   OcpIOBus comConfIO(
-       .io_slave_M_Cmd( R35 ),
-       .io_slave_M_Addr( R39 ),
-       .io_slave_M_Data( R37 ),
-       .io_slave_M_ByteEn( R30 ),
+       .io_slave_M_Cmd( R39 ),
+       .io_slave_M_Addr( R43 ),
+       .io_slave_M_Data( R41 ),
+       .io_slave_M_ByteEn( R34 ),
        .io_slave_M_RespAccept( 1'h1 ),
        .io_slave_S_Resp( comConfIO_io_slave_S_Resp ),
        .io_slave_S_Data( comConfIO_io_slave_S_Data ),
@@ -11076,7 +11310,7 @@ module InOut(input clk, input reset,
   );
   Uart Uart(.clk(clk), .reset(reset),
        .io_superMode( io_superMode ),
-       .io_ocp_M_Cmd( T26 ),
+       .io_ocp_M_Cmd( T30 ),
        .io_ocp_M_Addr( io_memInOut_M_Addr ),
        .io_ocp_M_Data( io_memInOut_M_Data ),
        .io_ocp_M_ByteEn( io_memInOut_M_ByteEn ),
@@ -11087,7 +11321,7 @@ module InOut(input clk, input reset,
   );
   Nexys4DDRIO Nexys4DDRIO(
        .io_superMode( io_superMode ),
-       .io_ocp_M_Cmd( T22 ),
+       .io_ocp_M_Cmd( T26 ),
        .io_ocp_M_Addr( io_memInOut_M_Addr ),
        .io_ocp_M_Data( io_memInOut_M_Data ),
        .io_ocp_M_ByteEn( io_memInOut_M_ByteEn ),
@@ -11100,24 +11334,9 @@ module InOut(input clk, input reset,
        .io_nexys4DDRIOPins_SResp( io_nexys4DDRIOPins_SResp ),
        .io_nexys4DDRIOPins_SData( io_nexys4DDRIOPins_SData )
   );
-  FpuCtrl FpuCtrl(
+  BRamCtrl BRamCtrl(.clk(clk), .reset(reset),
        .io_superMode( io_superMode ),
-       .io_ocp_M_Cmd( T18 ),
-       .io_ocp_M_Addr( io_memInOut_M_Addr ),
-       .io_ocp_M_Data( io_memInOut_M_Data ),
-       .io_ocp_M_ByteEn( io_memInOut_M_ByteEn ),
-       .io_ocp_S_Resp( FpuCtrl_io_ocp_S_Resp ),
-       .io_ocp_S_Data( FpuCtrl_io_ocp_S_Data ),
-       .io_fpuCtrlPins_MCmd( FpuCtrl_io_fpuCtrlPins_MCmd ),
-       .io_fpuCtrlPins_MAddr( FpuCtrl_io_fpuCtrlPins_MAddr ),
-       .io_fpuCtrlPins_MData( FpuCtrl_io_fpuCtrlPins_MData ),
-       .io_fpuCtrlPins_MByteEn( FpuCtrl_io_fpuCtrlPins_MByteEn ),
-       .io_fpuCtrlPins_SResp( io_fpuCtrlPins_SResp ),
-       .io_fpuCtrlPins_SData( io_fpuCtrlPins_SData )
-  );
-  BRamCtrl BRamCtrl(
-       .io_superMode( io_superMode ),
-       .io_ocp_M_Cmd( T14 ),
+       .io_ocp_M_Cmd( T22 ),
        .io_ocp_M_Addr( io_memInOut_M_Addr ),
        .io_ocp_M_Data( io_memInOut_M_Data ),
        .io_ocp_M_ByteEn( io_memInOut_M_ByteEn ),
@@ -11127,12 +11346,26 @@ module InOut(input clk, input reset,
        .io_bRamCtrlPins_MAddr( BRamCtrl_io_bRamCtrlPins_MAddr ),
        .io_bRamCtrlPins_MData( BRamCtrl_io_bRamCtrlPins_MData ),
        .io_bRamCtrlPins_MByteEn( BRamCtrl_io_bRamCtrlPins_MByteEn ),
-       .io_bRamCtrlPins_SResp( io_bRamCtrlPins_SResp ),
        .io_bRamCtrlPins_SData( io_bRamCtrlPins_SData )
+  );
+  BRamCtrlICAP BRamCtrlICAP(
+       .io_superMode( io_superMode ),
+       .io_ocp_M_Cmd( T18 ),
+       .io_ocp_M_Addr( io_memInOut_M_Addr ),
+       .io_ocp_M_Data( io_memInOut_M_Data ),
+       .io_ocp_M_ByteEn( io_memInOut_M_ByteEn ),
+       .io_ocp_S_Resp( BRamCtrlICAP_io_ocp_S_Resp ),
+       .io_ocp_S_Data( BRamCtrlICAP_io_ocp_S_Data ),
+       .io_bRamCtrlICAPPins_MCmd( BRamCtrlICAP_io_bRamCtrlICAPPins_MCmd ),
+       .io_bRamCtrlICAPPins_MAddr( BRamCtrlICAP_io_bRamCtrlICAPPins_MAddr ),
+       .io_bRamCtrlICAPPins_MData( BRamCtrlICAP_io_bRamCtrlICAPPins_MData ),
+       .io_bRamCtrlICAPPins_MByteEn( BRamCtrlICAP_io_bRamCtrlICAPPins_MByteEn ),
+       .io_bRamCtrlICAPPins_SResp( io_bRamCtrlICAPPins_SResp ),
+       .io_bRamCtrlICAPPins_SData( io_bRamCtrlICAPPins_SData )
   );
   IcapCtrl IcapCtrl(
        .io_superMode( io_superMode ),
-       .io_ocp_M_Cmd( T10 ),
+       .io_ocp_M_Cmd( T14 ),
        .io_ocp_M_Addr( io_memInOut_M_Addr ),
        .io_ocp_M_Data( io_memInOut_M_Data ),
        .io_ocp_M_ByteEn( io_memInOut_M_ByteEn ),
@@ -11144,6 +11377,20 @@ module InOut(input clk, input reset,
        .io_icapCtrlPins_MByteEn( IcapCtrl_io_icapCtrlPins_MByteEn ),
        .io_icapCtrlPins_SResp( io_icapCtrlPins_SResp ),
        .io_icapCtrlPins_SData( io_icapCtrlPins_SData )
+  );
+  HwACtrl HwACtrl(.clk(clk), .reset(reset),
+       .io_superMode( io_superMode ),
+       .io_ocp_M_Cmd( T10 ),
+       .io_ocp_M_Addr( io_memInOut_M_Addr ),
+       .io_ocp_M_Data( io_memInOut_M_Data ),
+       .io_ocp_M_ByteEn( io_memInOut_M_ByteEn ),
+       .io_ocp_S_Resp( HwACtrl_io_ocp_S_Resp ),
+       .io_ocp_S_Data( HwACtrl_io_ocp_S_Data ),
+       .io_hwACtrlPins_ap_start_out( HwACtrl_io_hwACtrlPins_ap_start_out ),
+       .io_hwACtrlPins_ap_reset_out( HwACtrl_io_hwACtrlPins_ap_reset_out ),
+       .io_hwACtrlPins_ap_ready_in( io_hwACtrlPins_ap_ready_in ),
+       .io_hwACtrlPins_ap_idle_in( io_hwACtrlPins_ap_idle_in ),
+       .io_hwACtrlPins_ap_done_in( io_hwACtrlPins_ap_done_in )
   );
   CpuInfo CpuInfo(.clk(clk),
        .io_superMode( io_superMode ),
@@ -11179,77 +11426,77 @@ module InOut(input clk, input reset,
 // synthesis translate_on
 `endif
     if(reset) begin
-      R30 <= comConf_io_master_M_ByteEn;
-    end else if(T32) begin
-      R30 <= comConf_io_master_M_ByteEn;
+      R34 <= comConf_io_master_M_ByteEn;
+    end else if(T36) begin
+      R34 <= comConf_io_master_M_ByteEn;
     end
     if(reset) begin
-      R35 <= comConf_io_master_M_Cmd;
-    end else if(T32) begin
-      R35 <= comConf_io_master_M_Cmd;
+      R39 <= comConf_io_master_M_Cmd;
+    end else if(T36) begin
+      R39 <= comConf_io_master_M_Cmd;
     end
     if(reset) begin
-      R37 <= comConf_io_master_M_Data;
-    end else if(T32) begin
-      R37 <= comConf_io_master_M_Data;
+      R41 <= comConf_io_master_M_Data;
+    end else if(T36) begin
+      R41 <= comConf_io_master_M_Data;
     end
     if(reset) begin
-      R39 <= comConf_io_master_M_Addr;
-    end else if(T32) begin
-      R39 <= comConf_io_master_M_Addr;
+      R43 <= comConf_io_master_M_Addr;
+    end else if(T36) begin
+      R43 <= comConf_io_master_M_Addr;
     end
-    if(T79) begin
+    if(T83) begin
       selComConfReg <= selComConf;
     end
-    if(T79) begin
+    if(T83) begin
       selComSpmReg <= selComSpm;
     end
-    if(T79) begin
+    if(T83) begin
       selDeviceReg_0 <= selDeviceVec_0;
     end
-    if(T79) begin
+    if(T83) begin
       selDeviceReg_1 <= selDeviceVec_1;
     end
-    if(T79) begin
+    if(T83) begin
       selDeviceReg_2 <= selDeviceVec_2;
     end
-    if(T79) begin
+    if(T83) begin
       selDeviceReg_3 <= selDeviceVec_3;
     end
-    if(T79) begin
+    if(T83) begin
       selDeviceReg_4 <= selDeviceVec_4;
     end
-    if(T79) begin
+    if(T83) begin
       selDeviceReg_5 <= selDeviceVec_5;
     end
-    if(T79) begin
+    if(T83) begin
       selDeviceReg_6 <= selDeviceVec_6;
     end
-    if(T79) begin
+    if(T83) begin
       selDeviceReg_7 <= selDeviceVec_7;
     end
-    if(T79) begin
+    if(T83) begin
       selDeviceReg_8 <= selDeviceVec_8;
     end
-    if(T79) begin
+    if(T83) begin
       selDeviceReg_9 <= selDeviceVec_9;
     end
-    if(T79) begin
+    if(T83) begin
       selDeviceReg_10 <= selDeviceVec_10;
     end
-    if(T79) begin
+    if(T83) begin
       selDeviceReg_11 <= selDeviceVec_11;
     end
-    if(T79) begin
+    if(T83) begin
       selDeviceReg_12 <= selDeviceVec_12;
     end
-    if(T79) begin
+    if(T83) begin
       selDeviceReg_13 <= selDeviceVec_13;
     end
-    if(T79) begin
+    if(T83) begin
       selDeviceReg_14 <= selDeviceVec_14;
     end
-    if(T79) begin
+    if(T83) begin
       selDeviceReg_15 <= selDeviceVec_15;
     end
     if(selISpm) begin
@@ -11259,7 +11506,7 @@ module InOut(input clk, input reset,
     end
     if(reset) begin
       errResp <= 2'h0;
-    end else if(T150) begin
+    end else if(T151) begin
       errResp <= 2'h3;
     end else begin
       errResp <= 2'h0;
@@ -15712,6 +15959,43 @@ module DirectMappedCache(input clk, input reset,
   end
 endmodule
 
+module MemBlock_5(input clk,
+    input [8:0] io_rdAddr,
+    output[7:0] io_rdData,
+    input [8:0] io_wrAddr,
+    input  io_wrEna,
+    input [7:0] io_wrData
+);
+
+  wire[7:0] T0;
+  reg [7:0] mem [511:0];
+  wire[7:0] T1;
+  wire T2;
+  reg [8:0] rdAddrReg;
+
+`ifndef SYNTHESIS
+// synthesis translate_off
+  integer initvar;
+  initial begin
+    #0.002;
+    for (initvar = 0; initvar < 512; initvar = initvar+1)
+      mem[initvar] = {1{$random}};
+    rdAddrReg = {1{$random}};
+  end
+// synthesis translate_on
+`endif
+
+  assign io_rdData = T0;
+  assign T0 = mem[rdAddrReg];
+  assign T2 = io_wrEna == 1'h1;
+
+  always @(posedge clk) begin
+    if (T2)
+      mem[io_wrAddr] <= io_wrData;
+    rdAddrReg <= io_rdAddr;
+  end
+endmodule
+
 module StackCache(input clk, input reset,
     input  io_ena_in,
     input [2:0] io_exsc_op,
@@ -16147,28 +16431,28 @@ module StackCache(input clk, input reset,
   assign T156 = io_toMemory_S_Resp == 2'h3;
   assign io_scex_memTop = memTopReg;
   assign io_scex_stackTop = stackTopReg;
-  MemBlock_2 MemBlock(.clk(clk),
+  MemBlock_5 MemBlock(.clk(clk),
        .io_rdAddr( mb_rdAddr ),
        .io_rdData( MemBlock_io_rdData ),
        .io_wrAddr( mb_wrAddr ),
        .io_wrEna( T133 ),
        .io_wrData( T132 )
   );
-  MemBlock_2 MemBlock_1(.clk(clk),
+  MemBlock_5 MemBlock_1(.clk(clk),
        .io_rdAddr( mb_rdAddr ),
        .io_rdData( MemBlock_1_io_rdData ),
        .io_wrAddr( mb_wrAddr ),
        .io_wrEna( T131 ),
        .io_wrData( T130 )
   );
-  MemBlock_2 MemBlock_2(.clk(clk),
+  MemBlock_5 MemBlock_2(.clk(clk),
        .io_rdAddr( mb_rdAddr ),
        .io_rdData( MemBlock_2_io_rdData ),
        .io_wrAddr( mb_wrAddr ),
        .io_wrEna( T129 ),
        .io_wrData( T128 )
   );
-  MemBlock_2 MemBlock_3(.clk(clk),
+  MemBlock_5 MemBlock_3(.clk(clk),
        .io_rdAddr( mb_rdAddr ),
        .io_rdData( MemBlock_3_io_rdData ),
        .io_wrAddr( mb_wrAddr ),
@@ -17077,24 +17361,28 @@ module PatmosCore(input clk, input reset,
     output[3:0] io_nexys4DDRIOPins_MByteEn,
     input [1:0] io_nexys4DDRIOPins_SResp,
     input [31:0] io_nexys4DDRIOPins_SData,
-    output[2:0] io_fpuCtrlPins_MCmd,
-    output[15:0] io_fpuCtrlPins_MAddr,
-    output[31:0] io_fpuCtrlPins_MData,
-    output[3:0] io_fpuCtrlPins_MByteEn,
-    input [1:0] io_fpuCtrlPins_SResp,
-    input [31:0] io_fpuCtrlPins_SData,
     output[2:0] io_bRamCtrlPins_MCmd,
     output[15:0] io_bRamCtrlPins_MAddr,
     output[31:0] io_bRamCtrlPins_MData,
     output[3:0] io_bRamCtrlPins_MByteEn,
-    input [1:0] io_bRamCtrlPins_SResp,
     input [31:0] io_bRamCtrlPins_SData,
+    output[2:0] io_bRamCtrlICAPPins_MCmd,
+    output[15:0] io_bRamCtrlICAPPins_MAddr,
+    output[31:0] io_bRamCtrlICAPPins_MData,
+    output[3:0] io_bRamCtrlICAPPins_MByteEn,
+    input [1:0] io_bRamCtrlICAPPins_SResp,
+    input [31:0] io_bRamCtrlICAPPins_SData,
     output[2:0] io_icapCtrlPins_MCmd,
     output[15:0] io_icapCtrlPins_MAddr,
     output[31:0] io_icapCtrlPins_MData,
     output[3:0] io_icapCtrlPins_MByteEn,
     input [1:0] io_icapCtrlPins_SResp,
     input [31:0] io_icapCtrlPins_SData,
+    output io_hwACtrlPins_ap_start_out,
+    output io_hwACtrlPins_ap_reset_out,
+    input  io_hwACtrlPins_ap_ready_in,
+    input  io_hwACtrlPins_ap_idle_in,
+    input  io_hwACtrlPins_ap_done_in,
     input [31:0] io_cpuInfoPins_id,
     input [31:0] io_cpuInfoPins_cnt
 );
@@ -17334,18 +17622,20 @@ module PatmosCore(input clk, input reset,
   wire[15:0] iocomp_io_nexys4DDRIOPins_MAddr;
   wire[31:0] iocomp_io_nexys4DDRIOPins_MData;
   wire[3:0] iocomp_io_nexys4DDRIOPins_MByteEn;
-  wire[2:0] iocomp_io_fpuCtrlPins_MCmd;
-  wire[15:0] iocomp_io_fpuCtrlPins_MAddr;
-  wire[31:0] iocomp_io_fpuCtrlPins_MData;
-  wire[3:0] iocomp_io_fpuCtrlPins_MByteEn;
   wire[2:0] iocomp_io_bRamCtrlPins_MCmd;
   wire[15:0] iocomp_io_bRamCtrlPins_MAddr;
   wire[31:0] iocomp_io_bRamCtrlPins_MData;
   wire[3:0] iocomp_io_bRamCtrlPins_MByteEn;
+  wire[2:0] iocomp_io_bRamCtrlICAPPins_MCmd;
+  wire[15:0] iocomp_io_bRamCtrlICAPPins_MAddr;
+  wire[31:0] iocomp_io_bRamCtrlICAPPins_MData;
+  wire[3:0] iocomp_io_bRamCtrlICAPPins_MByteEn;
   wire[2:0] iocomp_io_icapCtrlPins_MCmd;
   wire[15:0] iocomp_io_icapCtrlPins_MAddr;
   wire[31:0] iocomp_io_icapCtrlPins_MData;
   wire[3:0] iocomp_io_icapCtrlPins_MByteEn;
+  wire iocomp_io_hwACtrlPins_ap_start_out;
+  wire iocomp_io_hwACtrlPins_ap_reset_out;
   wire[1:0] dcache_io_master_S_Resp;
   wire[31:0] dcache_io_master_S_Data;
   wire[2:0] dcache_io_slave_M_Cmd;
@@ -17404,18 +17694,20 @@ module PatmosCore(input clk, input reset,
   assign T25 = R5 ? 2'h0 : burstBus_io_slave_S_Resp;
   assign T26 = memory_io_ena_out & T27;
   assign T27 = dcache_io_scIO_stall ^ 1'h1;
+  assign io_hwACtrlPins_ap_reset_out = iocomp_io_hwACtrlPins_ap_reset_out;
+  assign io_hwACtrlPins_ap_start_out = iocomp_io_hwACtrlPins_ap_start_out;
   assign io_icapCtrlPins_MByteEn = iocomp_io_icapCtrlPins_MByteEn;
   assign io_icapCtrlPins_MData = iocomp_io_icapCtrlPins_MData;
   assign io_icapCtrlPins_MAddr = iocomp_io_icapCtrlPins_MAddr;
   assign io_icapCtrlPins_MCmd = iocomp_io_icapCtrlPins_MCmd;
+  assign io_bRamCtrlICAPPins_MByteEn = iocomp_io_bRamCtrlICAPPins_MByteEn;
+  assign io_bRamCtrlICAPPins_MData = iocomp_io_bRamCtrlICAPPins_MData;
+  assign io_bRamCtrlICAPPins_MAddr = iocomp_io_bRamCtrlICAPPins_MAddr;
+  assign io_bRamCtrlICAPPins_MCmd = iocomp_io_bRamCtrlICAPPins_MCmd;
   assign io_bRamCtrlPins_MByteEn = iocomp_io_bRamCtrlPins_MByteEn;
   assign io_bRamCtrlPins_MData = iocomp_io_bRamCtrlPins_MData;
   assign io_bRamCtrlPins_MAddr = iocomp_io_bRamCtrlPins_MAddr;
   assign io_bRamCtrlPins_MCmd = iocomp_io_bRamCtrlPins_MCmd;
-  assign io_fpuCtrlPins_MByteEn = iocomp_io_fpuCtrlPins_MByteEn;
-  assign io_fpuCtrlPins_MData = iocomp_io_fpuCtrlPins_MData;
-  assign io_fpuCtrlPins_MAddr = iocomp_io_fpuCtrlPins_MAddr;
-  assign io_fpuCtrlPins_MCmd = iocomp_io_fpuCtrlPins_MCmd;
   assign io_nexys4DDRIOPins_MByteEn = iocomp_io_nexys4DDRIOPins_MByteEn;
   assign io_nexys4DDRIOPins_MData = iocomp_io_nexys4DDRIOPins_MData;
   assign io_nexys4DDRIOPins_MAddr = iocomp_io_nexys4DDRIOPins_MAddr;
@@ -17833,24 +18125,28 @@ module PatmosCore(input clk, input reset,
        .io_nexys4DDRIOPins_MByteEn( iocomp_io_nexys4DDRIOPins_MByteEn ),
        .io_nexys4DDRIOPins_SResp( io_nexys4DDRIOPins_SResp ),
        .io_nexys4DDRIOPins_SData( io_nexys4DDRIOPins_SData ),
-       .io_fpuCtrlPins_MCmd( iocomp_io_fpuCtrlPins_MCmd ),
-       .io_fpuCtrlPins_MAddr( iocomp_io_fpuCtrlPins_MAddr ),
-       .io_fpuCtrlPins_MData( iocomp_io_fpuCtrlPins_MData ),
-       .io_fpuCtrlPins_MByteEn( iocomp_io_fpuCtrlPins_MByteEn ),
-       .io_fpuCtrlPins_SResp( io_fpuCtrlPins_SResp ),
-       .io_fpuCtrlPins_SData( io_fpuCtrlPins_SData ),
        .io_bRamCtrlPins_MCmd( iocomp_io_bRamCtrlPins_MCmd ),
        .io_bRamCtrlPins_MAddr( iocomp_io_bRamCtrlPins_MAddr ),
        .io_bRamCtrlPins_MData( iocomp_io_bRamCtrlPins_MData ),
        .io_bRamCtrlPins_MByteEn( iocomp_io_bRamCtrlPins_MByteEn ),
-       .io_bRamCtrlPins_SResp( io_bRamCtrlPins_SResp ),
        .io_bRamCtrlPins_SData( io_bRamCtrlPins_SData ),
+       .io_bRamCtrlICAPPins_MCmd( iocomp_io_bRamCtrlICAPPins_MCmd ),
+       .io_bRamCtrlICAPPins_MAddr( iocomp_io_bRamCtrlICAPPins_MAddr ),
+       .io_bRamCtrlICAPPins_MData( iocomp_io_bRamCtrlICAPPins_MData ),
+       .io_bRamCtrlICAPPins_MByteEn( iocomp_io_bRamCtrlICAPPins_MByteEn ),
+       .io_bRamCtrlICAPPins_SResp( io_bRamCtrlICAPPins_SResp ),
+       .io_bRamCtrlICAPPins_SData( io_bRamCtrlICAPPins_SData ),
        .io_icapCtrlPins_MCmd( iocomp_io_icapCtrlPins_MCmd ),
        .io_icapCtrlPins_MAddr( iocomp_io_icapCtrlPins_MAddr ),
        .io_icapCtrlPins_MData( iocomp_io_icapCtrlPins_MData ),
        .io_icapCtrlPins_MByteEn( iocomp_io_icapCtrlPins_MByteEn ),
        .io_icapCtrlPins_SResp( io_icapCtrlPins_SResp ),
        .io_icapCtrlPins_SData( io_icapCtrlPins_SData ),
+       .io_hwACtrlPins_ap_start_out( iocomp_io_hwACtrlPins_ap_start_out ),
+       .io_hwACtrlPins_ap_reset_out( iocomp_io_hwACtrlPins_ap_reset_out ),
+       .io_hwACtrlPins_ap_ready_in( io_hwACtrlPins_ap_ready_in ),
+       .io_hwACtrlPins_ap_idle_in( io_hwACtrlPins_ap_idle_in ),
+       .io_hwACtrlPins_ap_done_in( io_hwACtrlPins_ap_done_in ),
        .io_cpuInfoPins_id( io_cpuInfoPins_id ),
        .io_cpuInfoPins_cnt( io_cpuInfoPins_cnt )
   );
@@ -18015,24 +18311,28 @@ module Patmos(input clk, input reset,
     output[3:0] io_nexys4DDRIOPins_MByteEn,
     input [1:0] io_nexys4DDRIOPins_SResp,
     input [31:0] io_nexys4DDRIOPins_SData,
-    output[2:0] io_fpuCtrlPins_MCmd,
-    output[15:0] io_fpuCtrlPins_MAddr,
-    output[31:0] io_fpuCtrlPins_MData,
-    output[3:0] io_fpuCtrlPins_MByteEn,
-    input [1:0] io_fpuCtrlPins_SResp,
-    input [31:0] io_fpuCtrlPins_SData,
     output[2:0] io_bRamCtrlPins_MCmd,
     output[15:0] io_bRamCtrlPins_MAddr,
     output[31:0] io_bRamCtrlPins_MData,
     output[3:0] io_bRamCtrlPins_MByteEn,
-    input [1:0] io_bRamCtrlPins_SResp,
     input [31:0] io_bRamCtrlPins_SData,
+    output[2:0] io_bRamCtrlICAPPins_MCmd,
+    output[15:0] io_bRamCtrlICAPPins_MAddr,
+    output[31:0] io_bRamCtrlICAPPins_MData,
+    output[3:0] io_bRamCtrlICAPPins_MByteEn,
+    input [1:0] io_bRamCtrlICAPPins_SResp,
+    input [31:0] io_bRamCtrlICAPPins_SData,
     output[2:0] io_icapCtrlPins_MCmd,
     output[15:0] io_icapCtrlPins_MAddr,
     output[31:0] io_icapCtrlPins_MData,
     output[3:0] io_icapCtrlPins_MByteEn,
     input [1:0] io_icapCtrlPins_SResp,
     input [31:0] io_icapCtrlPins_SData,
+    output io_hwACtrlPins_ap_start_out,
+    output io_hwACtrlPins_ap_reset_out,
+    input  io_hwACtrlPins_ap_ready_in,
+    input  io_hwACtrlPins_ap_idle_in,
+    input  io_hwACtrlPins_ap_done_in,
     input [31:0] io_cpuInfoPins_id,
     input [31:0] io_cpuInfoPins_cnt
 );
@@ -18066,33 +18366,37 @@ module Patmos(input clk, input reset,
   wire[15:0] core_io_nexys4DDRIOPins_MAddr;
   wire[31:0] core_io_nexys4DDRIOPins_MData;
   wire[3:0] core_io_nexys4DDRIOPins_MByteEn;
-  wire[2:0] core_io_fpuCtrlPins_MCmd;
-  wire[15:0] core_io_fpuCtrlPins_MAddr;
-  wire[31:0] core_io_fpuCtrlPins_MData;
-  wire[3:0] core_io_fpuCtrlPins_MByteEn;
   wire[2:0] core_io_bRamCtrlPins_MCmd;
   wire[15:0] core_io_bRamCtrlPins_MAddr;
   wire[31:0] core_io_bRamCtrlPins_MData;
   wire[3:0] core_io_bRamCtrlPins_MByteEn;
+  wire[2:0] core_io_bRamCtrlICAPPins_MCmd;
+  wire[15:0] core_io_bRamCtrlICAPPins_MAddr;
+  wire[31:0] core_io_bRamCtrlICAPPins_MData;
+  wire[3:0] core_io_bRamCtrlICAPPins_MByteEn;
   wire[2:0] core_io_icapCtrlPins_MCmd;
   wire[15:0] core_io_icapCtrlPins_MAddr;
   wire[31:0] core_io_icapCtrlPins_MData;
   wire[3:0] core_io_icapCtrlPins_MByteEn;
+  wire core_io_hwACtrlPins_ap_start_out;
+  wire core_io_hwACtrlPins_ap_reset_out;
 
 
   assign T0 = {5'h0, core_io_memPort_M_Addr};
+  assign io_hwACtrlPins_ap_reset_out = core_io_hwACtrlPins_ap_reset_out;
+  assign io_hwACtrlPins_ap_start_out = core_io_hwACtrlPins_ap_start_out;
   assign io_icapCtrlPins_MByteEn = core_io_icapCtrlPins_MByteEn;
   assign io_icapCtrlPins_MData = core_io_icapCtrlPins_MData;
   assign io_icapCtrlPins_MAddr = core_io_icapCtrlPins_MAddr;
   assign io_icapCtrlPins_MCmd = core_io_icapCtrlPins_MCmd;
+  assign io_bRamCtrlICAPPins_MByteEn = core_io_bRamCtrlICAPPins_MByteEn;
+  assign io_bRamCtrlICAPPins_MData = core_io_bRamCtrlICAPPins_MData;
+  assign io_bRamCtrlICAPPins_MAddr = core_io_bRamCtrlICAPPins_MAddr;
+  assign io_bRamCtrlICAPPins_MCmd = core_io_bRamCtrlICAPPins_MCmd;
   assign io_bRamCtrlPins_MByteEn = core_io_bRamCtrlPins_MByteEn;
   assign io_bRamCtrlPins_MData = core_io_bRamCtrlPins_MData;
   assign io_bRamCtrlPins_MAddr = core_io_bRamCtrlPins_MAddr;
   assign io_bRamCtrlPins_MCmd = core_io_bRamCtrlPins_MCmd;
-  assign io_fpuCtrlPins_MByteEn = core_io_fpuCtrlPins_MByteEn;
-  assign io_fpuCtrlPins_MData = core_io_fpuCtrlPins_MData;
-  assign io_fpuCtrlPins_MAddr = core_io_fpuCtrlPins_MAddr;
-  assign io_fpuCtrlPins_MCmd = core_io_fpuCtrlPins_MCmd;
   assign io_nexys4DDRIOPins_MByteEn = core_io_nexys4DDRIOPins_MByteEn;
   assign io_nexys4DDRIOPins_MData = core_io_nexys4DDRIOPins_MData;
   assign io_nexys4DDRIOPins_MAddr = core_io_nexys4DDRIOPins_MAddr;
@@ -18147,24 +18451,28 @@ module Patmos(input clk, input reset,
        .io_nexys4DDRIOPins_MByteEn( core_io_nexys4DDRIOPins_MByteEn ),
        .io_nexys4DDRIOPins_SResp( io_nexys4DDRIOPins_SResp ),
        .io_nexys4DDRIOPins_SData( io_nexys4DDRIOPins_SData ),
-       .io_fpuCtrlPins_MCmd( core_io_fpuCtrlPins_MCmd ),
-       .io_fpuCtrlPins_MAddr( core_io_fpuCtrlPins_MAddr ),
-       .io_fpuCtrlPins_MData( core_io_fpuCtrlPins_MData ),
-       .io_fpuCtrlPins_MByteEn( core_io_fpuCtrlPins_MByteEn ),
-       .io_fpuCtrlPins_SResp( io_fpuCtrlPins_SResp ),
-       .io_fpuCtrlPins_SData( io_fpuCtrlPins_SData ),
        .io_bRamCtrlPins_MCmd( core_io_bRamCtrlPins_MCmd ),
        .io_bRamCtrlPins_MAddr( core_io_bRamCtrlPins_MAddr ),
        .io_bRamCtrlPins_MData( core_io_bRamCtrlPins_MData ),
        .io_bRamCtrlPins_MByteEn( core_io_bRamCtrlPins_MByteEn ),
-       .io_bRamCtrlPins_SResp( io_bRamCtrlPins_SResp ),
        .io_bRamCtrlPins_SData( io_bRamCtrlPins_SData ),
+       .io_bRamCtrlICAPPins_MCmd( core_io_bRamCtrlICAPPins_MCmd ),
+       .io_bRamCtrlICAPPins_MAddr( core_io_bRamCtrlICAPPins_MAddr ),
+       .io_bRamCtrlICAPPins_MData( core_io_bRamCtrlICAPPins_MData ),
+       .io_bRamCtrlICAPPins_MByteEn( core_io_bRamCtrlICAPPins_MByteEn ),
+       .io_bRamCtrlICAPPins_SResp( io_bRamCtrlICAPPins_SResp ),
+       .io_bRamCtrlICAPPins_SData( io_bRamCtrlICAPPins_SData ),
        .io_icapCtrlPins_MCmd( core_io_icapCtrlPins_MCmd ),
        .io_icapCtrlPins_MAddr( core_io_icapCtrlPins_MAddr ),
        .io_icapCtrlPins_MData( core_io_icapCtrlPins_MData ),
        .io_icapCtrlPins_MByteEn( core_io_icapCtrlPins_MByteEn ),
        .io_icapCtrlPins_SResp( io_icapCtrlPins_SResp ),
        .io_icapCtrlPins_SData( io_icapCtrlPins_SData ),
+       .io_hwACtrlPins_ap_start_out( core_io_hwACtrlPins_ap_start_out ),
+       .io_hwACtrlPins_ap_reset_out( core_io_hwACtrlPins_ap_reset_out ),
+       .io_hwACtrlPins_ap_ready_in( io_hwACtrlPins_ap_ready_in ),
+       .io_hwACtrlPins_ap_idle_in( io_hwACtrlPins_ap_idle_in ),
+       .io_hwACtrlPins_ap_done_in( io_hwACtrlPins_ap_done_in ),
        .io_cpuInfoPins_id( io_cpuInfoPins_id ),
        .io_cpuInfoPins_cnt( io_cpuInfoPins_cnt )
   );
