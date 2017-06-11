@@ -2,30 +2,14 @@
 # Vivado v2016.4 (64-bit)
 # SW Build 1733598 on Wed Dec 14 22:35:42 MST 2016
 # IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
-# Start of session at: Sun Jun 11 11:39:10 2017
-# Process ID: 7603
-# Current directory: /home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon
+# Start of session at: Sun Jun 11 12:45:45 2017
+# Process ID: 53278
+# Current directory: /home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon
 # Command line: vivado -mode tcl
-# Log file: /home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/vivado.log
-# Journal file: /home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/vivado.jou
+# Log file: /home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/vivado.log
+# Journal file: /home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/vivado.jou
 #-----------------------------------------------------------
-source design_thesis.tcl -notrace
-source design_thesis.tcl -notrace
-source hd_visual/pblock_recon_matrix_inst_0_AllTiles.tcl
-open_checkpoint implement/config_recon_matmul_3b_32x32_implement/patmos_top_route_design.dcp
-start_gui
-ls
-source ./hd_visual/pblock_recon_matrix_inst_0_FrameTiles.tcl
-source ./hd_visual/pblock_recon_matrix_inst_0_FrameTiles.tcl
+open_checkpoint ./implement/config_recon_minver_1b_32x32_import/patmos_top_route_design.dcp 
+start_gui 
 source ./hd_visual/pblock_recon_matrix_inst_0_AllTiles.tcl
 highlight_objects -color blue [get_selected_objects]
-source ./hd_visual/pblock_recon_matrix_inst_0_AllTiles.tcl
-highlight_objects -color none [get_selected_objects]
-report_utilization -name util_1 -spreadsheet_file utilization_matmul.xlsx
-close_gui
-close_design
-open_checkpoint implement/config_recon_matmul_3b_32x32_implement/patmos_top_route_design.dcp
-close_design
-open_checkpoint implement/config_recon_minver_1b_32x32_import/patmos_top_route_design.dcp
-report_utilization -name util_1 -spreadsheet_file utilization_minver.xlsx
-close_design
