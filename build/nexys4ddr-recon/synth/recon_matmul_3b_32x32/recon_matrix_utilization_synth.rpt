@@ -1,8 +1,8 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.4 (lin64) Build 1733598 Wed Dec 14 22:35:42 MST 2016
-| Date         : Wed Jun  7 12:13:00 2017
-| Host         : andreas-W54xEU running 64-bit Ubuntu 16.04.2 LTS
+| Date         : Sun Jun 11 11:04:11 2017
+| Host         : ubuntu running 64-bit Ubuntu 16.04.2 LTS
 | Command      : report_utilization -file ./synth/recon_matmul_3b_32x32/recon_matrix_utilization_synth.rpt
 | Design       : recon_matrix
 | Device       : 7a100tcsg324-1
@@ -69,9 +69,9 @@ Table of Contents
 +-------------------+------+-------+-----------+-------+
 |     Site Type     | Used | Fixed | Available | Util% |
 +-------------------+------+-------+-----------+-------+
-| Block RAM Tile    |   12 |     0 |       135 |  8.89 |
-|   RAMB36/FIFO*    |   12 |     0 |       135 |  8.89 |
-|     RAMB36E1 only |   12 |       |           |       |
+| Block RAM Tile    |    3 |     0 |       135 |  2.22 |
+|   RAMB36/FIFO*    |    3 |     0 |       135 |  2.22 |
+|     RAMB36E1 only |    3 |       |           |       |
 |   RAMB18          |    0 |     0 |       270 |  0.00 |
 +-------------------+------+-------+-----------+-------+
 * Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
@@ -159,8 +159,8 @@ Table of Contents
 | LUT4     |   89 |                 LUT |
 | LUT1     |   75 |                 LUT |
 | CARRY4   |   25 |          CarryLogic |
-| RAMB36E1 |   12 |        Block Memory |
 | DSP48E1  |    5 |    Block Arithmetic |
+| RAMB36E1 |    3 |        Block Memory |
 | FDSE     |    1 |        Flop & Latch |
 +----------+------+---------------------+
 

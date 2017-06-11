@@ -3,7 +3,7 @@
 
 	#HD: Parsing log file "./synth/Static/patmos_top_synth_design.rds":
 	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-	CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'recon_matrix' instantiated as 'recon_matrix_inst_0' [/home/andreas/t-crest/reconfig_bsc_thesis/build/nexys4ddr-recon/sources/hdl/patmos_nexys4ddr-recon.vhdl:599]
+	CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'recon_matrix' instantiated as 'recon_matrix_inst_0' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/patmos_nexys4ddr-recon.vhdl:599]
 
 
 	#HD: Parsing log file "./synth/Static/temp.log":

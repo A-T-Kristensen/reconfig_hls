@@ -197,8 +197,7 @@ set module1_variant1 "recon_matmul_3b_32x32"
 set variant $module1_variant1
 add_module $variant
 set_attribute module $variant moduleName   $module1
-set_attribute module $variant vhdl         [list $rtlDir/MEM_PACKAGE_MATMUL.vhd work \
-                                                 $rtlDir/HWA_PACKAGE_MATMUL.vhd work \
+set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MATMUL.vhd work \
                                                  $rtlDir/recon_matmul_3b_32x32.vhd work \
                                                  $rtlDir/bram_tdp.vhd work \
                                                  $rtlDir/n_bank_matmul.vhd work \
@@ -235,8 +234,7 @@ set module1_variant2 "recon_minver_1b_32x32"
 set variant $module1_variant2
 add_module $variant
 set_attribute module $variant moduleName   $module1
-set_attribute module $variant vhdl         [list $rtlDir/MEM_PACKAGE_MINVER.vhd work \
-                                                 $rtlDir/HWA_PACKAGE_MINVER.vhd work \
+set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MINVER.vhd work \
                                                  $rtlDir/recon_minver_1b_32x32.vhd work \
                                                  $rtlDir/n_bank_minver.vhd work \
                                                  $rtlDir/minver_hwa.vhd work \
