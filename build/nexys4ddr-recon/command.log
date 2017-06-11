@@ -1,6 +1,6 @@
 puts "#HD: Running synthesis for block Static"
 puts "	#HD: Setting Tcl Params:"
-set_param hd.visual 0
+set_param hd.visual 1
 create_project -in_memory -part xc7a100tcsg324-1
 add_files ./sources/hdl/Patmos.v
 add_files ./sources/hdl/ddr2_ctrl/rtl/clocking/mig_7series_v4_0_clk_ibuf.v
@@ -106,7 +106,7 @@ close_project
 puts "#HD: Synthesis of module Static complete\n"
 puts "#HD: Running synthesis for block recon_matmul_3b_32x32"
 puts "	#HD: Setting Tcl Params:"
-set_param hd.visual 0
+set_param hd.visual 1
 create_project -in_memory -part xc7a100tcsg324-1
 add_files ./sources/hdl/HWA_PACKAGE_MATMUL.vhd
 set_property LIBRARY work [get_files ./sources/hdl/HWA_PACKAGE_MATMUL.vhd]
@@ -133,7 +133,7 @@ close_project
 puts "#HD: Synthesis of module recon_matmul_3b_32x32 complete\n"
 puts "#HD: Running synthesis for block recon_minver_1b_32x32"
 puts "	#HD: Setting Tcl Params:"
-set_param hd.visual 0
+set_param hd.visual 1
 create_project -in_memory -part xc7a100tcsg324-1
 add_files ./sources/hdl/HWA_PACKAGE_MINVER.vhd
 set_property LIBRARY work [get_files ./sources/hdl/HWA_PACKAGE_MINVER.vhd]
@@ -182,7 +182,7 @@ file mkdir ./implement/config_recon_matmul_3b_32x32_implement
 file mkdir ./implement/config_recon_matmul_3b_32x32_implement/reports
 puts "#HD: Running implementation config_recon_matmul_3b_32x32_implement"
 puts "	#HD: Setting Tcl Params:"
-set_param hd.visual 0
+set_param hd.visual 1
 create_project -in_memory -part xc7a100tcsg324-1
 add_files ./synth/Static/patmos_top_synth.dcp
 add_files ./sources/xdc/nexys4ddr.xdc
@@ -200,4 +200,74 @@ set_property HD.RECONFIGURABLE 1 [get_cells recon_matrix_inst_0]
 read_checkpoint -cell recon_matrix_inst_0 ./synth/recon_matmul_3b_32x32/recon_matrix_synth.dcp -strict
 write_checkpoint -force ./implement/config_recon_matmul_3b_32x32_implement/patmos_top_link_design.dcp
 opt_design
-write_checkpoint -force ./implement/config_recon_matmul_3b_32x32_implement/patmos_top_opt_design_error.dcp
+puts "	#HD: Completed: opt_design"
+write_checkpoint -force ./implement/config_recon_matmul_3b_32x32_implement/patmos_top_opt_design.dcp
+place_design
+puts "	#HD: Completed: place_design"
+write_checkpoint -force ./implement/config_recon_matmul_3b_32x32_implement/patmos_top_place_design.dcp
+phys_opt_design
+puts "	#HD: Completed: phys_opt_design"
+write_checkpoint -force ./implement/config_recon_matmul_3b_32x32_implement/patmos_top_phys_opt_design.dcp
+route_design
+puts "	#HD: Completed: route_design"
+write_checkpoint -force ./implement/config_recon_matmul_3b_32x32_implement/patmos_top_route_design.dcp
+report_utilization -file ./implement/config_recon_matmul_3b_32x32_implement/reports/patmos_top_utilization_route_design.rpt
+report_route_status -file ./implement/config_recon_matmul_3b_32x32_implement/reports/patmos_top_route_status.rpt
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -file ./implement/config_recon_matmul_3b_32x32_implement/reports/patmos_top_timing_summary.rpt
+report_drc -ruledeck bitstream_checks -name patmos_top -file ./implement/config_recon_matmul_3b_32x32_implement/reports/patmos_top_drc_bitstream_checks.rpt
+debug::report_design_status
+write_checkpoint -force -cell recon_matrix_inst_0 ./implement/config_recon_matmul_3b_32x32_implement/pblock_recon_matrix_inst_0_recon_matmul_3b_32x32_route_design.dcp
+file copy -force ./implement/config_recon_matmul_3b_32x32_implement/pblock_recon_matrix_inst_0_recon_matmul_3b_32x32_route_design.dcp ./checkpoint
+update_design -cell recon_matrix_inst_0 -black_box
+lock_design -level routing
+write_checkpoint -force ./implement/config_recon_matmul_3b_32x32_implement/patmos_top_static.dcp
+file copy -force ./implement/config_recon_matmul_3b_32x32_implement/patmos_top_static.dcp ./checkpoint
+close_project
+puts "#HD: Implementation config_recon_matmul_3b_32x32_implement complete\n"
+file mkdir ./implement
+file delete -force ./implement/config_recon_minver_1b_32x32_import
+file mkdir ./implement/config_recon_minver_1b_32x32_import
+file mkdir ./implement/config_recon_minver_1b_32x32_import/reports
+puts "#HD: Running implementation config_recon_minver_1b_32x32_import"
+puts "	#HD: Setting Tcl Params:"
+set_param hd.visual 1
+create_project -in_memory -part xc7a100tcsg324-1
+add_files ./checkpoint/patmos_top_static.dcp
+link_design -mode default -part xc7a100tcsg324-1 -top patmos_top
+read_checkpoint -cell recon_matrix_inst_0 ./synth/recon_minver_1b_32x32/recon_matrix_synth.dcp -strict
+write_checkpoint -force ./implement/config_recon_minver_1b_32x32_import/patmos_top_link_design.dcp
+opt_design
+puts "	#HD: Completed: opt_design"
+write_checkpoint -force ./implement/config_recon_minver_1b_32x32_import/patmos_top_opt_design.dcp
+place_design
+puts "	#HD: Completed: place_design"
+write_checkpoint -force ./implement/config_recon_minver_1b_32x32_import/patmos_top_place_design.dcp
+phys_opt_design
+puts "	#HD: Completed: phys_opt_design"
+write_checkpoint -force ./implement/config_recon_minver_1b_32x32_import/patmos_top_phys_opt_design.dcp
+route_design
+puts "	#HD: Completed: route_design"
+write_checkpoint -force ./implement/config_recon_minver_1b_32x32_import/patmos_top_route_design.dcp
+report_utilization -file ./implement/config_recon_minver_1b_32x32_import/reports/patmos_top_utilization_route_design.rpt
+report_route_status -file ./implement/config_recon_minver_1b_32x32_import/reports/patmos_top_route_status.rpt
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -file ./implement/config_recon_minver_1b_32x32_import/reports/patmos_top_timing_summary.rpt
+report_drc -ruledeck bitstream_checks -name patmos_top -file ./implement/config_recon_minver_1b_32x32_import/reports/patmos_top_drc_bitstream_checks.rpt
+debug::report_design_status
+write_checkpoint -force -cell recon_matrix_inst_0 ./implement/config_recon_minver_1b_32x32_import/pblock_recon_matrix_inst_0_recon_minver_1b_32x32_route_design.dcp
+file copy -force ./implement/config_recon_minver_1b_32x32_import/pblock_recon_matrix_inst_0_recon_minver_1b_32x32_route_design.dcp ./checkpoint
+close_project
+puts "#HD: Implementation config_recon_minver_1b_32x32_import complete\n"
+puts "#HD: Running pr_verify between initial config config_recon_matmul_3b_32x32_implement and subsequent configurations config_recon_minver_1b_32x32_import"
+pr_verify -full_check -initial ./implement/config_recon_matmul_3b_32x32_implement/patmos_top_route_design.dcp -additional "./implement/config_recon_minver_1b_32x32_import/patmos_top_route_design.dcp"
+puts "	#HD: Setting Tcl Params:"
+set_param hd.visual 1
+puts "	#HD: Running write_bitstream on config_recon_matmul_3b_32x32_implement"
+open_checkpoint ./implement/config_recon_matmul_3b_32x32_implement/patmos_top_route_design.dcp
+set_property BITSTREAM.GENERAL.COMPRESS        TRUE [current_design]
+write_bitstream -force -bin_file ./bitstreams/config_recon_matmul_3b_32x32_implement
+close_project
+puts "	#HD: Running write_bitstream on config_recon_minver_1b_32x32_import"
+open_checkpoint ./implement/config_recon_minver_1b_32x32_import/patmos_top_route_design.dcp
+set_property BITSTREAM.GENERAL.COMPRESS        TRUE [current_design]
+write_bitstream -force -bin_file ./bitstreams/config_recon_minver_1b_32x32_import
+close_project

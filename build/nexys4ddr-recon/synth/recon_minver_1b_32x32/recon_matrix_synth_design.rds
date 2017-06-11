@@ -3,176 +3,176 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 52492 
+INFO: Helper process launched with PID 14484 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:09:17 ; elapsed = 00:11:40 . Memory (MB): peak = 2638.211 ; gain = 1706.230 ; free physical = 764 ; free virtual = 13878
+Starting Synthesize : Time (s): cpu = 00:19:40 ; elapsed = 00:19:09 . Memory (MB): peak = 3047.078 ; gain = 2116.590 ; free physical = 596 ; free virtual = 10710
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'recon_matrix' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/recon_minver_1b_32x32.vhd:36]
-INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/recon_minver_1b_32x32.vhd:74]
-INFO: [Synth 8-3491] module 'n_bank' declared at '/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_minver.vhd:15' bound to instance 'n_bank_inst_0' of component 'n_bank' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/recon_minver_1b_32x32.vhd:97]
-INFO: [Synth 8-638] synthesizing module 'n_bank' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_minver.vhd:31]
-WARNING: [Synth 8-3919] null assignment ignored [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_minver.vhd:60]
-WARNING: [Synth 8-3919] null assignment ignored [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_minver.vhd:60]
-INFO: [Synth 8-3491] module 'bram_tdp' declared at '/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/bram_tdp.vhd:41' bound to instance 'bram_array' of component 'bram_tdp' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_minver.vhd:72]
-INFO: [Synth 8-638] synthesizing module 'bram_tdp' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/bram_tdp.vhd:64]
-INFO: [Synth 8-256] done synthesizing module 'bram_tdp' (1#1) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/bram_tdp.vhd:64]
-WARNING: [Synth 8-3919] null assignment ignored [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_minver.vhd:92]
-WARNING: [Synth 8-3919] null assignment ignored [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_minver.vhd:98]
-INFO: [Synth 8-256] done synthesizing module 'n_bank' (2#1) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_minver.vhd:31]
-WARNING: [Synth 8-5640] Port 'ap_return' is missing in component declaration [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/recon_minver_1b_32x32.vhd:54]
-INFO: [Synth 8-3491] module 'minver_hwa' declared at '/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:12' bound to instance 'minver_hwa_inst_0' of component 'minver_hwa' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/recon_minver_1b_32x32.vhd:111]
-INFO: [Synth 8-638] synthesizing module 'minver_hwa' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:31]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:574]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:577]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:582]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:591]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:595]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:598]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:601]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:605]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:607]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:611]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:616]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:620]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:623]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:626]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:629]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:632]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:635]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:637]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:639]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:641]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:643]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:645]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:647]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:649]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:651]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:653]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:655]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:657]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:659]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:661]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:663]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:665]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:667]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:669]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:671]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:673]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:675]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:677]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:679]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:681]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:683]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:685]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:687]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:689]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:691]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:693]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:695]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:699]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:703]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:705]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:708]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:711]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:714]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:717]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:720]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:722]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:725]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:728]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:731]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:734]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:736]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:739]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:742]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:744]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:747]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:750]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:752]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:755]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:759]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:761]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:764]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:766]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:769]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:772]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:774]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:777]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:779]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:782]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:785]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:787]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:789]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:792]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:794]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:796]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:799]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:802]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:804]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:807]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:809]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:812]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:814]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:817]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:819]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:821]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:824]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:826]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:828]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:830]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:832]
+INFO: [Synth 8-638] synthesizing module 'recon_matrix' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/recon_minver_1b_32x32.vhd:36]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/recon_minver_1b_32x32.vhd:74]
+INFO: [Synth 8-3491] module 'n_bank' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_minver.vhd:15' bound to instance 'n_bank_inst_0' of component 'n_bank' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/recon_minver_1b_32x32.vhd:97]
+INFO: [Synth 8-638] synthesizing module 'n_bank' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_minver.vhd:31]
+WARNING: [Synth 8-3919] null assignment ignored [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_minver.vhd:60]
+WARNING: [Synth 8-3919] null assignment ignored [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_minver.vhd:60]
+INFO: [Synth 8-3491] module 'bram_tdp' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/bram_tdp.vhd:41' bound to instance 'bram_array' of component 'bram_tdp' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_minver.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'bram_tdp' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/bram_tdp.vhd:64]
+INFO: [Synth 8-256] done synthesizing module 'bram_tdp' (1#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/bram_tdp.vhd:64]
+WARNING: [Synth 8-3919] null assignment ignored [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_minver.vhd:92]
+WARNING: [Synth 8-3919] null assignment ignored [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_minver.vhd:98]
+INFO: [Synth 8-256] done synthesizing module 'n_bank' (2#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_minver.vhd:31]
+WARNING: [Synth 8-5640] Port 'ap_return' is missing in component declaration [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/recon_minver_1b_32x32.vhd:54]
+INFO: [Synth 8-3491] module 'minver_hwa' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:12' bound to instance 'minver_hwa_inst_0' of component 'minver_hwa' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/recon_minver_1b_32x32.vhd:111]
+INFO: [Synth 8-638] synthesizing module 'minver_hwa' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:31]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:574]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:577]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:582]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:591]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:595]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:598]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:601]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:605]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:607]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:611]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:616]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:620]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:623]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:626]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:629]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:632]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:635]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:637]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:639]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:641]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:643]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:645]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:647]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:649]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:651]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:653]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:655]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:657]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:659]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:661]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:663]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:665]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:667]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:669]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:671]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:673]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:675]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:677]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:679]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:681]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:683]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:685]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:687]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:689]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:691]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:693]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:695]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:699]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:703]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:705]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:708]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:711]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:714]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:717]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:720]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:722]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:725]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:728]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:731]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:734]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:736]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:739]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:742]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:744]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:747]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:750]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:752]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:755]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:759]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:761]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:764]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:766]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:769]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:772]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:774]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:777]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:779]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:782]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:785]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:787]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:789]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:792]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:794]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:796]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:799]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:802]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:804]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:807]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:809]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:812]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:814]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:817]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:819]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:821]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:824]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:826]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:828]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:830]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:832]
 INFO: [Common 17-14] Message 'Synth 8-5534' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3491] module 'minver_hwa_work' declared at '/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_work.vhd:107' bound to instance 'work_U' of component 'minver_hwa_work' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:1681]
-INFO: [Synth 8-638] synthesizing module 'minver_hwa_work' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_work.vhd:127]
-INFO: [Synth 8-3491] module 'minver_hwa_work_ram' declared at '/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_work.vhd:13' bound to instance 'minver_hwa_work_ram_U' of component 'minver_hwa_work_ram' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_work.vhd:146]
-INFO: [Synth 8-638] synthesizing module 'minver_hwa_work_ram' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_work.vhd:36]
-INFO: [Synth 8-256] done synthesizing module 'minver_hwa_work_ram' (3#1) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_work.vhd:36]
-INFO: [Synth 8-256] done synthesizing module 'minver_hwa_work' (4#1) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_work.vhd:127]
-INFO: [Synth 8-3491] module 'minver_hwa_fsub_3bkb' declared at '/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fsub_3bkb.vhd:11' bound to instance 'minver_hwa_fsub_3bkb_U1' of component 'minver_hwa_fsub_3bkb' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:1700]
-INFO: [Synth 8-638] synthesizing module 'minver_hwa_fsub_3bkb' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fsub_3bkb.vhd:29]
-INFO: [Synth 8-3491] module 'minver_hwa_ap_fsub_3_full_dsp_32' declared at '/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fsub_3_full_dsp_32/synth/minver_hwa_ap_fsub_3_full_dsp_32.vhd:59' bound to instance 'minver_hwa_ap_fsub_3_full_dsp_32_u' of component 'minver_hwa_ap_fsub_3_full_dsp_32' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fsub_3bkb.vhd:56]
-INFO: [Synth 8-638] synthesizing module 'minver_hwa_ap_fsub_3_full_dsp_32' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fsub_3_full_dsp_32/synth/minver_hwa_ap_fsub_3_full_dsp_32.vhd:72]
-INFO: [Synth 8-3491] module 'floating_point_v7_1_3' declared at '/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_dcmp_0_no_dsp_64/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_3' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fsub_3_full_dsp_32/synth/minver_hwa_ap_fsub_3_full_dsp_32.vhd:197]
-INFO: [Synth 8-256] done synthesizing module 'minver_hwa_ap_fsub_3_full_dsp_32' (22#1) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fsub_3_full_dsp_32/synth/minver_hwa_ap_fsub_3_full_dsp_32.vhd:72]
-INFO: [Synth 8-256] done synthesizing module 'minver_hwa_fsub_3bkb' (23#1) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fsub_3bkb.vhd:29]
-INFO: [Synth 8-3491] module 'minver_hwa_fmul_3cud' declared at '/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fmul_3cud.vhd:11' bound to instance 'minver_hwa_fmul_3cud_U2' of component 'minver_hwa_fmul_3cud' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:1715]
-INFO: [Synth 8-638] synthesizing module 'minver_hwa_fmul_3cud' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fmul_3cud.vhd:29]
-INFO: [Synth 8-3491] module 'minver_hwa_ap_fmul_2_max_dsp_32' declared at '/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fmul_2_max_dsp_32/synth/minver_hwa_ap_fmul_2_max_dsp_32.vhd:59' bound to instance 'minver_hwa_ap_fmul_2_max_dsp_32_u' of component 'minver_hwa_ap_fmul_2_max_dsp_32' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fmul_3cud.vhd:56]
-INFO: [Synth 8-638] synthesizing module 'minver_hwa_ap_fmul_2_max_dsp_32' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fmul_2_max_dsp_32/synth/minver_hwa_ap_fmul_2_max_dsp_32.vhd:72]
-INFO: [Synth 8-3491] module 'floating_point_v7_1_3' declared at '/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_dcmp_0_no_dsp_64/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_3' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fmul_2_max_dsp_32/synth/minver_hwa_ap_fmul_2_max_dsp_32.vhd:197]
-INFO: [Synth 8-256] done synthesizing module 'minver_hwa_ap_fmul_2_max_dsp_32' (31#1) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fmul_2_max_dsp_32/synth/minver_hwa_ap_fmul_2_max_dsp_32.vhd:72]
-INFO: [Synth 8-256] done synthesizing module 'minver_hwa_fmul_3cud' (32#1) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fmul_3cud.vhd:29]
-INFO: [Synth 8-3491] module 'minver_hwa_fdiv_3dEe' declared at '/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fdiv_3dEe.vhd:11' bound to instance 'minver_hwa_fdiv_3dEe_U3' of component 'minver_hwa_fdiv_3dEe' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:1730]
-INFO: [Synth 8-638] synthesizing module 'minver_hwa_fdiv_3dEe' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fdiv_3dEe.vhd:29]
-INFO: [Synth 8-3491] module 'minver_hwa_ap_fdiv_14_no_dsp_32' declared at '/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fdiv_14_no_dsp_32/synth/minver_hwa_ap_fdiv_14_no_dsp_32.vhd:59' bound to instance 'minver_hwa_ap_fdiv_14_no_dsp_32_u' of component 'minver_hwa_ap_fdiv_14_no_dsp_32' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fdiv_3dEe.vhd:56]
-INFO: [Synth 8-638] synthesizing module 'minver_hwa_ap_fdiv_14_no_dsp_32' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fdiv_14_no_dsp_32/synth/minver_hwa_ap_fdiv_14_no_dsp_32.vhd:72]
-INFO: [Synth 8-3491] module 'floating_point_v7_1_3' declared at '/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_dcmp_0_no_dsp_64/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_3' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fdiv_14_no_dsp_32/synth/minver_hwa_ap_fdiv_14_no_dsp_32.vhd:197]
-INFO: [Synth 8-256] done synthesizing module 'minver_hwa_ap_fdiv_14_no_dsp_32' (39#1) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fdiv_14_no_dsp_32/synth/minver_hwa_ap_fdiv_14_no_dsp_32.vhd:72]
-INFO: [Synth 8-256] done synthesizing module 'minver_hwa_fdiv_3dEe' (40#1) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fdiv_3dEe.vhd:29]
-INFO: [Synth 8-3491] module 'minver_hwa_fpext_eOg' declared at '/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fpext_eOg.vhd:11' bound to instance 'minver_hwa_fpext_eOg_U4' of component 'minver_hwa_fpext_eOg' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:1745]
-INFO: [Synth 8-638] synthesizing module 'minver_hwa_fpext_eOg' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fpext_eOg.vhd:24]
-INFO: [Synth 8-3491] module 'minver_hwa_ap_fpext_0_no_dsp_32' declared at '/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fpext_0_no_dsp_32/synth/minver_hwa_ap_fpext_0_no_dsp_32.vhd:59' bound to instance 'minver_hwa_ap_fpext_0_no_dsp_32_u' of component 'minver_hwa_ap_fpext_0_no_dsp_32' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fpext_eOg.vhd:41]
-INFO: [Synth 8-638] synthesizing module 'minver_hwa_ap_fpext_0_no_dsp_32' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fpext_0_no_dsp_32/synth/minver_hwa_ap_fpext_0_no_dsp_32.vhd:68]
-INFO: [Synth 8-3491] module 'floating_point_v7_1_3' declared at '/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_dcmp_0_no_dsp_64/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_3' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fpext_0_no_dsp_32/synth/minver_hwa_ap_fpext_0_no_dsp_32.vhd:189]
-INFO: [Synth 8-256] done synthesizing module 'minver_hwa_ap_fpext_0_no_dsp_32' (43#1) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fpext_0_no_dsp_32/synth/minver_hwa_ap_fpext_0_no_dsp_32.vhd:68]
-INFO: [Synth 8-256] done synthesizing module 'minver_hwa_fpext_eOg' (44#1) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fpext_eOg.vhd:24]
-INFO: [Synth 8-3491] module 'minver_hwa_fcmp_3fYi' declared at '/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fcmp_3fYi.vhd:11' bound to instance 'minver_hwa_fcmp_3fYi_U5' of component 'minver_hwa_fcmp_3fYi' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:1755]
-INFO: [Synth 8-638] synthesizing module 'minver_hwa_fcmp_3fYi' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fcmp_3fYi.vhd:27]
-INFO: [Synth 8-3491] module 'minver_hwa_ap_fcmp_0_no_dsp_32' declared at '/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fcmp_0_no_dsp_32/synth/minver_hwa_ap_fcmp_0_no_dsp_32.vhd:59' bound to instance 'minver_hwa_ap_fcmp_0_no_dsp_32_u' of component 'minver_hwa_ap_fcmp_0_no_dsp_32' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fcmp_3fYi.vhd:69]
-INFO: [Synth 8-638] synthesizing module 'minver_hwa_ap_fcmp_0_no_dsp_32' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fcmp_0_no_dsp_32/synth/minver_hwa_ap_fcmp_0_no_dsp_32.vhd:72]
-INFO: [Synth 8-3491] module 'floating_point_v7_1_3' declared at '/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_dcmp_0_no_dsp_64/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_3' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fcmp_0_no_dsp_32/synth/minver_hwa_ap_fcmp_0_no_dsp_32.vhd:197]
-INFO: [Synth 8-256] done synthesizing module 'minver_hwa_ap_fcmp_0_no_dsp_32' (48#1) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fcmp_0_no_dsp_32/synth/minver_hwa_ap_fcmp_0_no_dsp_32.vhd:72]
-INFO: [Synth 8-256] done synthesizing module 'minver_hwa_fcmp_3fYi' (49#1) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fcmp_3fYi.vhd:27]
-INFO: [Synth 8-3491] module 'minver_hwa_fcmp_3fYi' declared at '/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fcmp_3fYi.vhd:11' bound to instance 'minver_hwa_fcmp_3fYi_U6' of component 'minver_hwa_fcmp_3fYi' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:1768]
-INFO: [Synth 8-3491] module 'minver_hwa_dcmp_6g8j' declared at '/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_dcmp_6g8j.vhd:11' bound to instance 'minver_hwa_dcmp_6g8j_U7' of component 'minver_hwa_dcmp_6g8j' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:1781]
-INFO: [Synth 8-638] synthesizing module 'minver_hwa_dcmp_6g8j' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_dcmp_6g8j.vhd:27]
-INFO: [Synth 8-3491] module 'minver_hwa_ap_dcmp_0_no_dsp_64' declared at '/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_dcmp_0_no_dsp_64/synth/minver_hwa_ap_dcmp_0_no_dsp_64.vhd:59' bound to instance 'minver_hwa_ap_dcmp_0_no_dsp_64_u' of component 'minver_hwa_ap_dcmp_0_no_dsp_64' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_dcmp_6g8j.vhd:69]
-INFO: [Synth 8-638] synthesizing module 'minver_hwa_ap_dcmp_0_no_dsp_64' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_dcmp_0_no_dsp_64/synth/minver_hwa_ap_dcmp_0_no_dsp_64.vhd:72]
-INFO: [Synth 8-3491] module 'floating_point_v7_1_3' declared at '/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_dcmp_0_no_dsp_64/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_3' [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_dcmp_0_no_dsp_64/synth/minver_hwa_ap_dcmp_0_no_dsp_64.vhd:197]
-INFO: [Synth 8-256] done synthesizing module 'minver_hwa_ap_dcmp_0_no_dsp_64' (50#1) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_dcmp_0_no_dsp_64/synth/minver_hwa_ap_dcmp_0_no_dsp_64.vhd:72]
-INFO: [Synth 8-256] done synthesizing module 'minver_hwa_dcmp_6g8j' (51#1) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_dcmp_6g8j.vhd:27]
-INFO: [Synth 8-256] done synthesizing module 'minver_hwa' (52#1) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:31]
-INFO: [Synth 8-256] done synthesizing module 'recon_matrix' (53#1) [/home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/recon_minver_1b_32x32.vhd:36]
+INFO: [Synth 8-3491] module 'minver_hwa_work' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_work.vhd:107' bound to instance 'work_U' of component 'minver_hwa_work' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:1681]
+INFO: [Synth 8-638] synthesizing module 'minver_hwa_work' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_work.vhd:127]
+INFO: [Synth 8-3491] module 'minver_hwa_work_ram' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_work.vhd:13' bound to instance 'minver_hwa_work_ram_U' of component 'minver_hwa_work_ram' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_work.vhd:146]
+INFO: [Synth 8-638] synthesizing module 'minver_hwa_work_ram' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_work.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'minver_hwa_work_ram' (3#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_work.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'minver_hwa_work' (4#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_work.vhd:127]
+INFO: [Synth 8-3491] module 'minver_hwa_fsub_3bkb' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fsub_3bkb.vhd:11' bound to instance 'minver_hwa_fsub_3bkb_U1' of component 'minver_hwa_fsub_3bkb' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:1700]
+INFO: [Synth 8-638] synthesizing module 'minver_hwa_fsub_3bkb' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fsub_3bkb.vhd:29]
+INFO: [Synth 8-3491] module 'minver_hwa_ap_fsub_3_full_dsp_32' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fsub_3_full_dsp_32/synth/minver_hwa_ap_fsub_3_full_dsp_32.vhd:59' bound to instance 'minver_hwa_ap_fsub_3_full_dsp_32_u' of component 'minver_hwa_ap_fsub_3_full_dsp_32' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fsub_3bkb.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'minver_hwa_ap_fsub_3_full_dsp_32' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fsub_3_full_dsp_32/synth/minver_hwa_ap_fsub_3_full_dsp_32.vhd:72]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_3' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_dcmp_0_no_dsp_64/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_3' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fsub_3_full_dsp_32/synth/minver_hwa_ap_fsub_3_full_dsp_32.vhd:197]
+INFO: [Synth 8-256] done synthesizing module 'minver_hwa_ap_fsub_3_full_dsp_32' (22#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fsub_3_full_dsp_32/synth/minver_hwa_ap_fsub_3_full_dsp_32.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'minver_hwa_fsub_3bkb' (23#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fsub_3bkb.vhd:29]
+INFO: [Synth 8-3491] module 'minver_hwa_fmul_3cud' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fmul_3cud.vhd:11' bound to instance 'minver_hwa_fmul_3cud_U2' of component 'minver_hwa_fmul_3cud' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:1715]
+INFO: [Synth 8-638] synthesizing module 'minver_hwa_fmul_3cud' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fmul_3cud.vhd:29]
+INFO: [Synth 8-3491] module 'minver_hwa_ap_fmul_2_max_dsp_32' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fmul_2_max_dsp_32/synth/minver_hwa_ap_fmul_2_max_dsp_32.vhd:59' bound to instance 'minver_hwa_ap_fmul_2_max_dsp_32_u' of component 'minver_hwa_ap_fmul_2_max_dsp_32' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fmul_3cud.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'minver_hwa_ap_fmul_2_max_dsp_32' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fmul_2_max_dsp_32/synth/minver_hwa_ap_fmul_2_max_dsp_32.vhd:72]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_3' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_dcmp_0_no_dsp_64/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_3' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fmul_2_max_dsp_32/synth/minver_hwa_ap_fmul_2_max_dsp_32.vhd:197]
+INFO: [Synth 8-256] done synthesizing module 'minver_hwa_ap_fmul_2_max_dsp_32' (31#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fmul_2_max_dsp_32/synth/minver_hwa_ap_fmul_2_max_dsp_32.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'minver_hwa_fmul_3cud' (32#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fmul_3cud.vhd:29]
+INFO: [Synth 8-3491] module 'minver_hwa_fdiv_3dEe' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fdiv_3dEe.vhd:11' bound to instance 'minver_hwa_fdiv_3dEe_U3' of component 'minver_hwa_fdiv_3dEe' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:1730]
+INFO: [Synth 8-638] synthesizing module 'minver_hwa_fdiv_3dEe' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fdiv_3dEe.vhd:29]
+INFO: [Synth 8-3491] module 'minver_hwa_ap_fdiv_14_no_dsp_32' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fdiv_14_no_dsp_32/synth/minver_hwa_ap_fdiv_14_no_dsp_32.vhd:59' bound to instance 'minver_hwa_ap_fdiv_14_no_dsp_32_u' of component 'minver_hwa_ap_fdiv_14_no_dsp_32' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fdiv_3dEe.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'minver_hwa_ap_fdiv_14_no_dsp_32' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fdiv_14_no_dsp_32/synth/minver_hwa_ap_fdiv_14_no_dsp_32.vhd:72]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_3' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_dcmp_0_no_dsp_64/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_3' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fdiv_14_no_dsp_32/synth/minver_hwa_ap_fdiv_14_no_dsp_32.vhd:197]
+INFO: [Synth 8-256] done synthesizing module 'minver_hwa_ap_fdiv_14_no_dsp_32' (39#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fdiv_14_no_dsp_32/synth/minver_hwa_ap_fdiv_14_no_dsp_32.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'minver_hwa_fdiv_3dEe' (40#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fdiv_3dEe.vhd:29]
+INFO: [Synth 8-3491] module 'minver_hwa_fpext_eOg' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fpext_eOg.vhd:11' bound to instance 'minver_hwa_fpext_eOg_U4' of component 'minver_hwa_fpext_eOg' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:1745]
+INFO: [Synth 8-638] synthesizing module 'minver_hwa_fpext_eOg' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fpext_eOg.vhd:24]
+INFO: [Synth 8-3491] module 'minver_hwa_ap_fpext_0_no_dsp_32' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fpext_0_no_dsp_32/synth/minver_hwa_ap_fpext_0_no_dsp_32.vhd:59' bound to instance 'minver_hwa_ap_fpext_0_no_dsp_32_u' of component 'minver_hwa_ap_fpext_0_no_dsp_32' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fpext_eOg.vhd:41]
+INFO: [Synth 8-638] synthesizing module 'minver_hwa_ap_fpext_0_no_dsp_32' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fpext_0_no_dsp_32/synth/minver_hwa_ap_fpext_0_no_dsp_32.vhd:68]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_3' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_dcmp_0_no_dsp_64/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_3' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fpext_0_no_dsp_32/synth/minver_hwa_ap_fpext_0_no_dsp_32.vhd:189]
+INFO: [Synth 8-256] done synthesizing module 'minver_hwa_ap_fpext_0_no_dsp_32' (43#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fpext_0_no_dsp_32/synth/minver_hwa_ap_fpext_0_no_dsp_32.vhd:68]
+INFO: [Synth 8-256] done synthesizing module 'minver_hwa_fpext_eOg' (44#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fpext_eOg.vhd:24]
+INFO: [Synth 8-3491] module 'minver_hwa_fcmp_3fYi' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fcmp_3fYi.vhd:11' bound to instance 'minver_hwa_fcmp_3fYi_U5' of component 'minver_hwa_fcmp_3fYi' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:1755]
+INFO: [Synth 8-638] synthesizing module 'minver_hwa_fcmp_3fYi' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fcmp_3fYi.vhd:27]
+INFO: [Synth 8-3491] module 'minver_hwa_ap_fcmp_0_no_dsp_32' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fcmp_0_no_dsp_32/synth/minver_hwa_ap_fcmp_0_no_dsp_32.vhd:59' bound to instance 'minver_hwa_ap_fcmp_0_no_dsp_32_u' of component 'minver_hwa_ap_fcmp_0_no_dsp_32' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fcmp_3fYi.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'minver_hwa_ap_fcmp_0_no_dsp_32' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fcmp_0_no_dsp_32/synth/minver_hwa_ap_fcmp_0_no_dsp_32.vhd:72]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_3' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_dcmp_0_no_dsp_64/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_3' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fcmp_0_no_dsp_32/synth/minver_hwa_ap_fcmp_0_no_dsp_32.vhd:197]
+INFO: [Synth 8-256] done synthesizing module 'minver_hwa_ap_fcmp_0_no_dsp_32' (48#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fcmp_0_no_dsp_32/synth/minver_hwa_ap_fcmp_0_no_dsp_32.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'minver_hwa_fcmp_3fYi' (49#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fcmp_3fYi.vhd:27]
+INFO: [Synth 8-3491] module 'minver_hwa_fcmp_3fYi' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_fcmp_3fYi.vhd:11' bound to instance 'minver_hwa_fcmp_3fYi_U6' of component 'minver_hwa_fcmp_3fYi' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:1768]
+INFO: [Synth 8-3491] module 'minver_hwa_dcmp_6g8j' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_dcmp_6g8j.vhd:11' bound to instance 'minver_hwa_dcmp_6g8j_U7' of component 'minver_hwa_dcmp_6g8j' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:1781]
+INFO: [Synth 8-638] synthesizing module 'minver_hwa_dcmp_6g8j' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_dcmp_6g8j.vhd:27]
+INFO: [Synth 8-3491] module 'minver_hwa_ap_dcmp_0_no_dsp_64' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_dcmp_0_no_dsp_64/synth/minver_hwa_ap_dcmp_0_no_dsp_64.vhd:59' bound to instance 'minver_hwa_ap_dcmp_0_no_dsp_64_u' of component 'minver_hwa_ap_dcmp_0_no_dsp_64' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_dcmp_6g8j.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'minver_hwa_ap_dcmp_0_no_dsp_64' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_dcmp_0_no_dsp_64/synth/minver_hwa_ap_dcmp_0_no_dsp_64.vhd:72]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_3' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_dcmp_0_no_dsp_64/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_3' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_dcmp_0_no_dsp_64/synth/minver_hwa_ap_dcmp_0_no_dsp_64.vhd:197]
+INFO: [Synth 8-256] done synthesizing module 'minver_hwa_ap_dcmp_0_no_dsp_64' (50#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_dcmp_0_no_dsp_64/synth/minver_hwa_ap_dcmp_0_no_dsp_64.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'minver_hwa_dcmp_6g8j' (51#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_dcmp_6g8j.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'minver_hwa' (52#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'recon_matrix' (53#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/recon_minver_1b_32x32.vhd:36]
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized674 has unconnected port CLK
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized674 has unconnected port CE
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized674 has unconnected port SCLR
@@ -275,17 +275,17 @@ WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized660 has unconn
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized660 has unconnected port SINIT
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:09:32 ; elapsed = 00:11:55 . Memory (MB): peak = 2638.211 ; gain = 1706.230 ; free physical = 761 ; free virtual = 13877
+Finished Synthesize : Time (s): cpu = 00:19:54 ; elapsed = 00:19:24 . Memory (MB): peak = 3047.078 ; gain = 2116.590 ; free physical = 589 ; free virtual = 10704
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:09:32 ; elapsed = 00:11:56 . Memory (MB): peak = 2638.211 ; gain = 1706.230 ; free physical = 760 ; free virtual = 13875
+Finished Constraint Validation : Time (s): cpu = 00:19:55 ; elapsed = 00:19:24 . Memory (MB): peak = 3047.078 ; gain = 2116.590 ; free physical = 589 ; free virtual = 10704
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:09:32 ; elapsed = 00:11:56 . Memory (MB): peak = 2638.211 ; gain = 1706.230 ; free physical = 760 ; free virtual = 13875
+Finished Loading Part and Timing Information : Time (s): cpu = 00:19:55 ; elapsed = 00:19:24 . Memory (MB): peak = 3047.078 ; gain = 2116.590 ; free physical = 589 ; free virtual = 10704
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
@@ -418,7 +418,7 @@ INFO: [Synth 8-5544] ROM "r_1_reg_865" won't be mapped to Block RAM because addr
 INFO: [Synth 8-3971] The signal mem_reg was recognized as a true dual port RAM template.
 INFO: [Synth 8-3971] The signal ram_reg was recognized as a true dual port RAM template.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:09:42 ; elapsed = 00:12:06 . Memory (MB): peak = 2638.211 ; gain = 1706.230 ; free physical = 768 ; free virtual = 13883
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:20:06 ; elapsed = 00:19:36 . Memory (MB): peak = 3047.078 ; gain = 2116.590 ; free physical = 579 ; free virtual = 10708
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -620,7 +620,7 @@ INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/op
 INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[12].pipe_reg[12][0]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
 WARNING: [Synth 8-3332] Sequential element (tmp_5_reg_3022_reg[28]) is unused and will be removed from module minver_hwa.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:09:58 ; elapsed = 00:12:23 . Memory (MB): peak = 2638.211 ; gain = 1706.230 ; free physical = 761 ; free virtual = 13876
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:20:21 ; elapsed = 00:19:51 . Memory (MB): peak = 3047.078 ; gain = 2116.590 ; free physical = 548 ; free virtual = 10697
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -633,7 +633,7 @@ Start Timing Optimization
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:09:58 ; elapsed = 00:12:23 . Memory (MB): peak = 2638.211 ; gain = 1706.230 ; free physical = 761 ; free virtual = 13876
+Finished Timing Optimization : Time (s): cpu = 00:20:21 ; elapsed = 00:19:51 . Memory (MB): peak = 3047.078 ; gain = 2116.590 ; free physical = 548 ; free virtual = 10697
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -649,7 +649,7 @@ INFO: [Synth 8-4480] The timing for the instance n_bank_inst_0/bram_gen[0].bram_
 INFO: [Synth 8-4480] The timing for the instance minver_hwa_inst_0/work_U/minver_hwa_work_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance minver_hwa_inst_0/work_U/minver_hwa_work_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:10:02 ; elapsed = 00:12:27 . Memory (MB): peak = 2638.211 ; gain = 1706.230 ; free physical = 760 ; free virtual = 13876
+Finished Technology Mapping : Time (s): cpu = 00:20:25 ; elapsed = 00:19:55 . Memory (MB): peak = 3047.078 ; gain = 2116.590 ; free physical = 551 ; free virtual = 10697
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -673,7 +673,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:10:03 ; elapsed = 00:12:28 . Memory (MB): peak = 2638.211 ; gain = 1706.230 ; free physical = 760 ; free virtual = 13876
+Finished IO Insertion : Time (s): cpu = 00:20:26 ; elapsed = 00:19:56 . Memory (MB): peak = 3047.078 ; gain = 2116.590 ; free physical = 552 ; free virtual = 10697
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -686,7 +686,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:10:03 ; elapsed = 00:12:28 . Memory (MB): peak = 2638.211 ; gain = 1706.230 ; free physical = 760 ; free virtual = 13876
+Finished Renaming Generated Instances : Time (s): cpu = 00:20:26 ; elapsed = 00:19:56 . Memory (MB): peak = 3047.078 ; gain = 2116.590 ; free physical = 552 ; free virtual = 10697
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -698,25 +698,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:10:03 ; elapsed = 00:12:29 . Memory (MB): peak = 2638.211 ; gain = 1706.230 ; free physical = 760 ; free virtual = 13876
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:20:27 ; elapsed = 00:19:57 . Memory (MB): peak = 3047.078 ; gain = 2116.590 ; free physical = 552 ; free virtual = 10697
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:10:03 ; elapsed = 00:12:29 . Memory (MB): peak = 2638.211 ; gain = 1706.230 ; free physical = 760 ; free virtual = 13876
+Finished Renaming Generated Ports : Time (s): cpu = 00:20:27 ; elapsed = 00:19:57 . Memory (MB): peak = 3047.078 ; gain = 2116.590 ; free physical = 552 ; free virtual = 10697
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:10:04 ; elapsed = 00:12:29 . Memory (MB): peak = 2638.211 ; gain = 1706.230 ; free physical = 760 ; free virtual = 13875
+Finished Handling Custom Attributes : Time (s): cpu = 00:20:27 ; elapsed = 00:19:57 . Memory (MB): peak = 3047.078 ; gain = 2116.590 ; free physical = 552 ; free virtual = 10697
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:10:04 ; elapsed = 00:12:29 . Memory (MB): peak = 2638.211 ; gain = 1706.230 ; free physical = 760 ; free virtual = 13875
+Finished Renaming Generated Nets : Time (s): cpu = 00:20:27 ; elapsed = 00:19:57 . Memory (MB): peak = 3047.078 ; gain = 2116.590 ; free physical = 552 ; free virtual = 10697
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -751,11 +751,11 @@ Report Cell Usage:
 |17    |FDSE     |     8|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:10:04 ; elapsed = 00:12:29 . Memory (MB): peak = 2638.211 ; gain = 1706.230 ; free physical = 760 ; free virtual = 13875
+Finished Writing Synthesis Report : Time (s): cpu = 00:20:27 ; elapsed = 00:19:57 . Memory (MB): peak = 3047.078 ; gain = 2116.590 ; free physical = 552 ; free virtual = 10697
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 2535 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 2638.211 ; gain = 0.000 ; free physical = 760 ; free virtual = 13875
-Synthesis Optimization Complete : Time (s): cpu = 00:10:04 ; elapsed = 00:12:29 . Memory (MB): peak = 2638.211 ; gain = 1706.230 ; free physical = 762 ; free virtual = 13877
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 3047.078 ; gain = 0.000 ; free physical = 552 ; free virtual = 10697
+Synthesis Optimization Complete : Time (s): cpu = 00:20:27 ; elapsed = 00:19:57 . Memory (MB): peak = 3047.078 ; gain = 2116.590 ; free physical = 554 ; free virtual = 10699
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 1623 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -769,4 +769,4 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 1790 Infos, 677 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 2638.211 ; gain = 0.000 ; free physical = 762 ; free virtual = 13878
+synth_design: Time (s): cpu = 00:00:56 ; elapsed = 00:00:57 . Memory (MB): peak = 3047.078 ; gain = 0.000 ; free physical = 553 ; free virtual = 10699

@@ -2,7 +2,7 @@
 ###   Tcl Variables
 ###############################################################
 #set tclParams [list <param1> <value> <param2> <value> ... <paramN> <value>]
-set tclParams [list hd.visual 0] 
+set tclParams [list hd.visual 1] 
 
 #Define custom location for "Tcl" directory. Defaults to "./tcl"
 set tclHome "./tcl"

@@ -44,6 +44,7 @@ vivado*.zip
 # Ignore Vivado journal files
 vivado*.jou
 webtalk*.jou
+vivado*.log
 
 # Ignore LaTeX temp files
 doc/**/*.aux
