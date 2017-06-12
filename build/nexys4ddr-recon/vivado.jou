@@ -2,11 +2,24 @@
 # Vivado v2016.4 (64-bit)
 # SW Build 1733598 on Wed Dec 14 22:35:42 MST 2016
 # IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+<<<<<<< HEAD
 # Start of session at: Mon Jun 12 09:39:14 2017
 # Process ID: 2495
 # Current directory: /home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon
+=======
+# Start of session at: Sun Jun 11 12:45:45 2017
+# Process ID: 53278
+# Current directory: /home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon
+>>>>>>> faf00fd0e94c35ff38f3a4c8dd06a3c99d13ba90
 # Command line: vivado -mode tcl
-# Log file: /home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/vivado.log
-# Journal file: /home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/vivado.jou
+# Log file: /home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/vivado.log
+# Journal file: /home/patmos/t-crest/reconfig_hls/build/nexys4ddr-recon/vivado.jou
 #-----------------------------------------------------------
+<<<<<<< HEAD
 source design_thesis.tcl -notrace
+=======
+open_checkpoint ./implement/config_recon_minver_1b_32x32_import/patmos_top_route_design.dcp 
+start_gui 
+source ./hd_visual/pblock_recon_matrix_inst_0_AllTiles.tcl
+highlight_objects -color blue [get_selected_objects]
+>>>>>>> faf00fd0e94c35ff38f3a4c8dd06a3c99d13ba90
