@@ -1,1 +1,1 @@
-report_utilization: Time (s): cpu = 00:00:00.28 ; elapsed = 00:00:00.34 . Memory (MB): peak = 2975.051 ; gain = 0.000 ; free physical = 606 ; free virtual = 10721
+report_utilization: Time (s): cpu = 00:00:00.26 ; elapsed = 00:00:00.29 . Memory (MB): peak = 2546.801 ; gain = 0.000 ; free physical = 3390 ; free virtual = 13168

@@ -2,7 +2,7 @@
 ###   Tcl Variables
 ###############################################################
 #set tclParams [list <param1> <value> <param2> <value> ... <paramN> <value>]
-set tclParams [list hd.visual 1] 
+set tclParams [list hd.visual 0] 
 
 #Define custom location for "Tcl" directory. Defaults to "./tcl"
 set tclHome "./tcl"
@@ -193,59 +193,70 @@ set_attribute module $static synth         ${run.topSynth}
 ####################################################################
 set module1 "recon_matrix"
 
-set module1_variant1 "recon_matmul_3b_32x32"
+set module1_variant1 "recon_matmul_3b_4x4"
 set variant $module1_variant1
 add_module $variant
 set_attribute module $variant moduleName   $module1
 set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MATMUL.vhd work \
-                                                 $rtlDir/recon_matmul_3b_32x32.vhd work \
+                                                 $rtlDir/recon_matmul_3b.vhd work \
                                                  $rtlDir/bram_tdp.vhd work \
                                                  $rtlDir/n_bank_matmul.vhd work \
-                                                 $rtlDir/matmul_hw.vhd work \
-                                                 $rtlDir/matmul_hw_fmul_32cud.vhd work \
-                                                 $rtlDir/matmul_hw_fadd_32bkb.vhd work \
+                                                 $rtlDir/matmul_float_3b_4x4/matmul_hw.vhd work \
+                                                 $rtlDir/matmul_float_3b_4x4/matmul_hw_fmul_32cud.vhd work \
+                                                 $rtlDir/matmul_float_3b_4x4/matmul_hw_fadd_32bkb.vhd work \
                                                  $rtlDir/matmul_hw_ap_fadd_3_full_dsp_32/matmul_hw_ap_fadd_3_full_dsp_32.xci work \
                                                  $rtlDir/matmul_hw_ap_fmul_2_max_dsp_32/matmul_hw_ap_fmul_2_max_dsp_32.xci work \
                                            ]
 set_attribute module $variant synth        ${run.rmSynth}
 
-                                                 # $rtlDir/matmul_hw_ap_fadd_3_full_dsp_32/synth/matmul_hw_ap_fadd_3_full_dsp_32.vhd work \
-                                                 # $rtlDir/matmul_hw_ap_fmul_2_max_dsp_32/synth/matmul_hw_ap_fmul_2_max_dsp_32.vhd work \
-                                                 # $rtlDir/matmul_hw_ap_fmul_2_max_dsp_32/hdl/axi_utils_v2_0_vh_rfs.vhd work \
-                                                 # $rtlDir/matmul_hw_ap_fmul_2_max_dsp_32/hdl/xbip_dsp48_multadd_v3_0_vh_rfs.vhd work \
-                                                 # $rtlDir/matmul_hw_ap_fmul_2_max_dsp_32/hdl/floating_point_v7_1_vh_rfs.vhd work \
-                                                 # $rtlDir/matmul_hw_ap_fmul_2_max_dsp_32/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd work \
-                                                 # $rtlDir/matmul_hw_ap_fmul_2_max_dsp_32/hdl/xbip_pipe_v3_0_vh_rfs.vhd work \
-                                                 # $rtlDir/matmul_hw_ap_fmul_2_max_dsp_32/hdl/xbip_utils_v3_0_vh_rfs.vhd work \
-                                                 # $rtlDir/matmul_hw_ap_fmul_2_max_dsp_32/hdl/mult_gen_v12_0_vh_rfs.vhd work \
-                                                 # $rtlDir/matmul_hw_ap_fmul_2_max_dsp_32/hdl/xbip_dsp48_addsub_v3_0_vh_rfs.vhd work \
-                                                 # $rtlDir/matmul_hw_ap_fmul_2_max_dsp_32/hdl/xbip_bram18k_v3_0_vh_rfs.vhd work \
-                                                 # $rtlDir/matmul_hw_ap_fadd_3_full_dsp_32/hdl/axi_utils_v2_0_vh_rfs.vhd work \
-                                                 # $rtlDir/matmul_hw_ap_fadd_3_full_dsp_32/hdl/floating_point_v7_1_vh_rfs.vhd work \
-                                                 # $rtlDir/matmul_hw_ap_fadd_3_full_dsp_32/hdl/mult_gen_v12_0_vh_rfs.vhd work \
-                                                 # $rtlDir/matmul_hw_ap_fadd_3_full_dsp_32/hdl/xbip_bram18k_v3_0_vh_rfs.vhd work \
-                                                 # $rtlDir/matmul_hw_ap_fadd_3_full_dsp_32/hdl/xbip_dsp48_addsub_v3_0_vh_rfs.vhd work \
-                                                 # $rtlDir/matmul_hw_ap_fadd_3_full_dsp_32/hdl/xbip_dsp48_multadd_v3_0_vh_rfs.vhd work \
-                                                 # $rtlDir/matmul_hw_ap_fadd_3_full_dsp_32/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd work \
-                                                 # $rtlDir/matmul_hw_ap_fadd_3_full_dsp_32/hdl/xbip_pipe_v3_0_vh_rfs.vhd work \
-                                                 # $rtlDir/matmul_hw_ap_fadd_3_full_dsp_32/hdl/xbip_utils_v3_0_vh_rfs.vhd work \
-
-set module1_variant2 "recon_minver_1b_32x32"
+set module1_variant2 "recon_matmul_3b_16x16"
 set variant $module1_variant2
 add_module $variant
 set_attribute module $variant moduleName   $module1
-set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MINVER.vhd work \
-                                                 $rtlDir/recon_minver_1b_32x32.vhd work \
-                                                 $rtlDir/n_bank_minver.vhd work \
-                                                 $rtlDir/minver_hwa.vhd work \
-                                                 $rtlDir/minver_hwa_fcmp_3fYi.vhd work \
-                                                 $rtlDir/minver_hwa_fdiv_3dEe.vhd work \
-                                                 $rtlDir/minver_hwa_fmul_3cud.vhd work \
-                                                 $rtlDir/minver_hwa_fsub_3bkb.vhd work \
+set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MATMUL.vhd work \
+                                                 $rtlDir/recon_matmul_3b.vhd work \
                                                  $rtlDir/bram_tdp.vhd work \
-                                                 $rtlDir/minver_hwa_work.vhd work \
-                                                 $rtlDir/minver_hwa_fpext_eOg.vhd work \
-                                                 $rtlDir/minver_hwa_dcmp_6g8j.vhd work \
+                                                 $rtlDir/n_bank_matmul.vhd work \
+                                                 $rtlDir/matmul_float_3b_16x16/matmul_hw.vhd work \
+                                                 $rtlDir/matmul_float_3b_16x16/matmul_hw_fmul_32cud.vhd work \
+                                                 $rtlDir/matmul_float_3b_16x16/matmul_hw_fadd_32bkb.vhd work \
+                                                 $rtlDir/matmul_hw_ap_fadd_3_full_dsp_32/matmul_hw_ap_fadd_3_full_dsp_32.xci work \
+                                                 $rtlDir/matmul_hw_ap_fmul_2_max_dsp_32/matmul_hw_ap_fmul_2_max_dsp_32.xci work \
+                                           ]
+set_attribute module $variant synth        ${run.rmSynth}
+
+set module1_variant3 "recon_matmul_3b_32x32"
+set variant $module1_variant3
+add_module $variant
+set_attribute module $variant moduleName   $module1
+set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MATMUL.vhd work \
+                                                 $rtlDir/recon_matmul_3b.vhd work \
+                                                 $rtlDir/bram_tdp.vhd work \
+                                                 $rtlDir/n_bank_matmul.vhd work \
+                                                 $rtlDir/matmul_float_3b_32x32/matmul_hw.vhd work \
+                                                 $rtlDir/matmul_float_3b_32x32/matmul_hw_fmul_32cud.vhd work \
+                                                 $rtlDir/matmul_float_3b_32x32/matmul_hw_fadd_32bkb.vhd work \
+                                                 $rtlDir/matmul_hw_ap_fadd_3_full_dsp_32/matmul_hw_ap_fadd_3_full_dsp_32.xci work \
+                                                 $rtlDir/matmul_hw_ap_fmul_2_max_dsp_32/matmul_hw_ap_fmul_2_max_dsp_32.xci work \
+                                           ]
+set_attribute module $variant synth        ${run.rmSynth}
+
+set module1_variant4 "recon_minver_1b_4x4"
+set variant $module1_variant4
+add_module $variant
+set_attribute module $variant moduleName   $module1
+set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MINVER.vhd work \
+                                                 $rtlDir/recon_minver_1b.vhd work \
+                                                 $rtlDir/n_bank_minver.vhd work \
+                                                 $rtlDir/minver_float_1b_4x4/minver_hwa.vhd work \
+                                                 $rtlDir/minver_float_1b_4x4/minver_hwa_fcmp_3fYi.vhd work \
+                                                 $rtlDir/minver_float_1b_4x4/minver_hwa_fdiv_3dEe.vhd work \
+                                                 $rtlDir/minver_float_1b_4x4/minver_hwa_fmul_3cud.vhd work \
+                                                 $rtlDir/minver_float_1b_4x4/minver_hwa_fsub_3bkb.vhd work \
+                                                 $rtlDir/bram_tdp.vhd work \
+                                                 $rtlDir/minver_float_1b_4x4/minver_hwa_work.vhd work \
+                                                 $rtlDir/minver_float_1b_4x4/minver_hwa_fpext_eOg.vhd work \
+                                                 $rtlDir/minver_float_1b_4x4/minver_hwa_dcmp_6g8j.vhd work \
                                                  $rtlDir/minver_hwa_ap_dcmp_0_no_dsp_64/minver_hwa_ap_dcmp_0_no_dsp_64.xci work \
                                                  $rtlDir/minver_hwa_ap_fcmp_0_no_dsp_32/minver_hwa_ap_fcmp_0_no_dsp_32.xci work \
                                                  $rtlDir/minver_hwa_ap_fdiv_14_no_dsp_32/minver_hwa_ap_fdiv_14_no_dsp_32.xci work \
@@ -255,66 +266,55 @@ set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MINVER.vhd 
                                            ]
 set_attribute module $variant synth        ${run.rmSynth}
 
-                                                # $rtlDir/minver_hwa_ap_dcmp_0_no_dsp_64/synth/minver_hwa_ap_dcmp_0_no_dsp_64.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fcmp_0_no_dsp_32/synth/minver_hwa_ap_fcmp_0_no_dsp_32.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fdiv_14_no_dsp_32/synth/minver_hwa_ap_fdiv_14_no_dsp_32.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fmul_2_max_dsp_32/synth/minver_hwa_ap_fmul_2_max_dsp_32.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fpext_0_no_dsp_32/synth/minver_hwa_ap_fpext_0_no_dsp_32.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fsub_3_full_dsp_32/synth/minver_hwa_ap_fsub_3_full_dsp_32.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_dcmp_0_no_dsp_64/hdl/axi_utils_v2_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_dcmp_0_no_dsp_64/hdl/floating_point_v7_1_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_dcmp_0_no_dsp_64/hdl/mult_gen_v12_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_dcmp_0_no_dsp_64/hdl/xbip_bram18k_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_dcmp_0_no_dsp_64/hdl/xbip_dsp48_addsub_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_dcmp_0_no_dsp_64/hdl/xbip_dsp48_multadd_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_dcmp_0_no_dsp_64/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_dcmp_0_no_dsp_64/hdl/xbip_pipe_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_dcmp_0_no_dsp_64/hdl/xbip_utils_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fcmp_0_no_dsp_32/hdl/axi_utils_v2_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fcmp_0_no_dsp_32/hdl/xbip_dsp48_multadd_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fcmp_0_no_dsp_32/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fcmp_0_no_dsp_32/hdl/xbip_pipe_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fcmp_0_no_dsp_32/hdl/xbip_utils_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fcmp_0_no_dsp_32/hdl/xbip_dsp48_addsub_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fcmp_0_no_dsp_32/hdl/mult_gen_v12_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fcmp_0_no_dsp_32/hdl/floating_point_v7_1_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fcmp_0_no_dsp_32/hdl/xbip_bram18k_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fdiv_14_no_dsp_32/hdl/axi_utils_v2_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fdiv_14_no_dsp_32/hdl/xbip_dsp48_multadd_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fdiv_14_no_dsp_32/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fdiv_14_no_dsp_32/hdl/xbip_pipe_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fdiv_14_no_dsp_32/hdl/xbip_utils_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fdiv_14_no_dsp_32/hdl/floating_point_v7_1_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fdiv_14_no_dsp_32/hdl/mult_gen_v12_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fdiv_14_no_dsp_32/hdl/xbip_bram18k_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fdiv_14_no_dsp_32/hdl/xbip_dsp48_addsub_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fmul_2_max_dsp_32/hdl/axi_utils_v2_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fmul_2_max_dsp_32/hdl/xbip_dsp48_multadd_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fmul_2_max_dsp_32/hdl/floating_point_v7_1_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fmul_2_max_dsp_32/hdl/mult_gen_v12_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fmul_2_max_dsp_32/hdl/xbip_bram18k_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fmul_2_max_dsp_32/hdl/xbip_dsp48_addsub_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fmul_2_max_dsp_32/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fmul_2_max_dsp_32/hdl/xbip_pipe_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fmul_2_max_dsp_32/hdl/xbip_utils_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fpext_0_no_dsp_32/hdl/axi_utils_v2_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fpext_0_no_dsp_32/hdl/xbip_dsp48_multadd_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fpext_0_no_dsp_32/hdl/floating_point_v7_1_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fpext_0_no_dsp_32/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fpext_0_no_dsp_32/hdl/mult_gen_v12_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fpext_0_no_dsp_32/hdl/xbip_pipe_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fpext_0_no_dsp_32/hdl/xbip_utils_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fpext_0_no_dsp_32/hdl/xbip_bram18k_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fpext_0_no_dsp_32/hdl/xbip_dsp48_addsub_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fsub_3_full_dsp_32/hdl/axi_utils_v2_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fsub_3_full_dsp_32/hdl/xbip_dsp48_multadd_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fsub_3_full_dsp_32/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fsub_3_full_dsp_32/hdl/floating_point_v7_1_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fsub_3_full_dsp_32/hdl/mult_gen_v12_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fsub_3_full_dsp_32/hdl/xbip_pipe_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fsub_3_full_dsp_32/hdl/xbip_bram18k_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fsub_3_full_dsp_32/hdl/xbip_utils_v3_0_vh_rfs.vhd work \
-                                                #  $rtlDir/minver_hwa_ap_fsub_3_full_dsp_32/hdl/xbip_dsp48_addsub_v3_0_vh_rfs.vhd work \
+set module1_variant5 "recon_minver_1b_16x16"
+set variant $module1_variant5
+add_module $variant
+set_attribute module $variant moduleName   $module1
+set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MINVER.vhd work \
+                                                 $rtlDir/recon_minver_1b.vhd work \
+                                                 $rtlDir/n_bank_minver.vhd work \
+                                                 $rtlDir/minver_float_1b_16x16/minver_hwa.vhd work \
+                                                 $rtlDir/minver_float_1b_16x16/minver_hwa_fcmp_3fYi.vhd work \
+                                                 $rtlDir/minver_float_1b_16x16/minver_hwa_fdiv_3dEe.vhd work \
+                                                 $rtlDir/minver_float_1b_16x16/minver_hwa_fmul_3cud.vhd work \
+                                                 $rtlDir/minver_float_1b_16x16/minver_hwa_fsub_3bkb.vhd work \
+                                                 $rtlDir/bram_tdp.vhd work \
+                                                 $rtlDir/minver_float_1b_16x16/minver_hwa_work.vhd work \
+                                                 $rtlDir/minver_float_1b_16x16/minver_hwa_fpext_eOg.vhd work \
+                                                 $rtlDir/minver_float_1b_16x16/minver_hwa_dcmp_6g8j.vhd work \
+                                                 $rtlDir/minver_hwa_ap_dcmp_0_no_dsp_64/minver_hwa_ap_dcmp_0_no_dsp_64.xci work \
+                                                 $rtlDir/minver_hwa_ap_fcmp_0_no_dsp_32/minver_hwa_ap_fcmp_0_no_dsp_32.xci work \
+                                                 $rtlDir/minver_hwa_ap_fdiv_14_no_dsp_32/minver_hwa_ap_fdiv_14_no_dsp_32.xci work \
+                                                 $rtlDir/minver_hwa_ap_fmul_2_max_dsp_32/minver_hwa_ap_fmul_2_max_dsp_32.xci work \
+                                                 $rtlDir/minver_hwa_ap_fpext_0_no_dsp_32/minver_hwa_ap_fpext_0_no_dsp_32.xci work \
+                                                 $rtlDir/minver_hwa_ap_fsub_3_full_dsp_32/minver_hwa_ap_fsub_3_full_dsp_32.xci work \
+                                           ]
+set_attribute module $variant synth        ${run.rmSynth}
+
+set module1_variant6 "recon_minver_1b_32x32"
+set variant $module1_variant6
+add_module $variant
+set_attribute module $variant moduleName   $module1
+set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MINVER.vhd work \
+                                                 $rtlDir/recon_minver_1b.vhd work \
+                                                 $rtlDir/n_bank_minver.vhd work \
+                                                 $rtlDir/minver_float_1b_32x32/minver_hwa.vhd work \
+                                                 $rtlDir/minver_float_1b_32x32/minver_hwa_fcmp_3fYi.vhd work \
+                                                 $rtlDir/minver_float_1b_32x32/minver_hwa_fdiv_3dEe.vhd work \
+                                                 $rtlDir/minver_float_1b_32x32/minver_hwa_fmul_3cud.vhd work \
+                                                 $rtlDir/minver_float_1b_32x32/minver_hwa_fsub_3bkb.vhd work \
+                                                 $rtlDir/bram_tdp.vhd work \
+                                                 $rtlDir/minver_float_1b_32x32/minver_hwa_work.vhd work \
+                                                 $rtlDir/minver_float_1b_32x32/minver_hwa_fpext_eOg.vhd work \
+                                                 $rtlDir/minver_float_1b_32x32/minver_hwa_dcmp_6g8j.vhd work \
+                                                 $rtlDir/minver_hwa_ap_dcmp_0_no_dsp_64/minver_hwa_ap_dcmp_0_no_dsp_64.xci work \
+                                                 $rtlDir/minver_hwa_ap_fcmp_0_no_dsp_32/minver_hwa_ap_fcmp_0_no_dsp_32.xci work \
+                                                 $rtlDir/minver_hwa_ap_fdiv_14_no_dsp_32/minver_hwa_ap_fdiv_14_no_dsp_32.xci work \
+                                                 $rtlDir/minver_hwa_ap_fmul_2_max_dsp_32/minver_hwa_ap_fmul_2_max_dsp_32.xci work \
+                                                 $rtlDir/minver_hwa_ap_fpext_0_no_dsp_32/minver_hwa_ap_fpext_0_no_dsp_32.xci work \
+                                                 $rtlDir/minver_hwa_ap_fsub_3_full_dsp_32/minver_hwa_ap_fsub_3_full_dsp_32.xci work \
+                                           ]
+set_attribute module $variant synth        ${run.rmSynth}
 
 set module1_inst "recon_matrix_inst_0"
 
@@ -372,6 +372,116 @@ set_attribute impl $config bitstream_settings  [list "BITSTREAM.GENERAL.COMPRESS
 set_attribute impl $config bitstream_options   [list "-bin_file" \
                                                ]
 
+########################################################################
+### Configuration (Implementation) Definition - Replicate for each Config
+########################################################################
+set state "import"
+set config "config_${module1_variant3}_${state}" 
+
+add_implementation $config
+set_attribute impl $config top             $top
+set_attribute impl $config implXDC         [list $xdcDir/nexys4ddr.xdc \
+                                                 $xdcDir/pblocks.xdc \
+                                                 $rtlDir/clk_manager/clk_manager.xdc \
+                                                 $rtlDir/ddr2_ctrl/constraints/ddr2_ctrl.xdc \
+                                                 $rtlDir/ddr2_ctrl/constraints/ddr2_ctrl_ooc.xdc \
+                                           ]
+set_attribute impl $config impl            ${run.prImpl} 
+set_attribute impl $config partitions      [list [list $static           $top          $state   ] \
+                                                 [list $module1_variant3 $module1_inst implement] \
+                                           ]
+set_attribute impl $config pr.impl         1 
+set_attribute impl $config impl            ${run.prImpl} 
+set_attribute impl $config verify            ${run.prVerify} 
+set_attribute impl $config bitstream         ${run.writeBitstream} 
+set_attribute impl $config bitstream_settings  [list "BITSTREAM.GENERAL.COMPRESS        TRUE" \
+                                               ]
+set_attribute impl $config bitstream_options   [list "-bin_file" \
+                                               ]
+
+
+########################################################################
+### Configuration (Implementation) Definition - Replicate for each Config
+########################################################################
+set state "import"
+set config "config_${module1_variant4}_${state}" 
+
+add_implementation $config
+set_attribute impl $config top             $top
+set_attribute impl $config implXDC         [list $xdcDir/nexys4ddr.xdc \
+                                                 $xdcDir/pblocks.xdc \
+                                                 $rtlDir/clk_manager/clk_manager.xdc \
+                                                 $rtlDir/ddr2_ctrl/constraints/ddr2_ctrl.xdc \
+                                                 $rtlDir/ddr2_ctrl/constraints/ddr2_ctrl_ooc.xdc \
+                                           ]
+set_attribute impl $config impl            ${run.prImpl} 
+set_attribute impl $config partitions      [list [list $static           $top          $state   ] \
+                                                 [list $module1_variant4 $module1_inst implement] \
+                                           ]
+set_attribute impl $config pr.impl         1 
+set_attribute impl $config impl            ${run.prImpl} 
+set_attribute impl $config verify            ${run.prVerify} 
+set_attribute impl $config bitstream         ${run.writeBitstream} 
+set_attribute impl $config bitstream_settings  [list "BITSTREAM.GENERAL.COMPRESS        TRUE" \
+                                               ]
+set_attribute impl $config bitstream_options   [list "-bin_file" \
+                                               ]
+
+########################################################################
+### Configuration (Implementation) Definition - Replicate for each Config
+########################################################################
+set state "import"
+set config "config_${module1_variant5}_${state}" 
+
+add_implementation $config
+set_attribute impl $config top             $top
+set_attribute impl $config implXDC         [list $xdcDir/nexys4ddr.xdc \
+                                                 $xdcDir/pblocks.xdc \
+                                                 $rtlDir/clk_manager/clk_manager.xdc \
+                                                 $rtlDir/ddr2_ctrl/constraints/ddr2_ctrl.xdc \
+                                                 $rtlDir/ddr2_ctrl/constraints/ddr2_ctrl_ooc.xdc \
+                                           ]
+set_attribute impl $config impl            ${run.prImpl} 
+set_attribute impl $config partitions      [list [list $static           $top          $state   ] \
+                                                 [list $module1_variant5 $module1_inst implement] \
+                                           ]
+set_attribute impl $config pr.impl         1 
+set_attribute impl $config impl            ${run.prImpl} 
+set_attribute impl $config verify            ${run.prVerify} 
+set_attribute impl $config bitstream         ${run.writeBitstream} 
+set_attribute impl $config bitstream_settings  [list "BITSTREAM.GENERAL.COMPRESS        TRUE" \
+                                               ]
+set_attribute impl $config bitstream_options   [list "-bin_file" \
+                                               ]
+
+########################################################################
+### Configuration (Implementation) Definition - Replicate for each Config
+########################################################################
+set state "import"
+set config "config_${module1_variant6}_${state}" 
+
+add_implementation $config
+set_attribute impl $config top             $top
+set_attribute impl $config implXDC         [list $xdcDir/nexys4ddr.xdc \
+                                                 $xdcDir/pblocks.xdc \
+                                                 $rtlDir/clk_manager/clk_manager.xdc \
+                                                 $rtlDir/ddr2_ctrl/constraints/ddr2_ctrl.xdc \
+                                                 $rtlDir/ddr2_ctrl/constraints/ddr2_ctrl_ooc.xdc \
+                                           ]
+set_attribute impl $config impl            ${run.prImpl} 
+set_attribute impl $config partitions      [list [list $static           $top          $state   ] \
+                                                 [list $module1_variant6 $module1_inst implement] \
+                                           ]
+set_attribute impl $config pr.impl         1 
+set_attribute impl $config impl            ${run.prImpl} 
+set_attribute impl $config verify            ${run.prVerify} 
+set_attribute impl $config bitstream         ${run.writeBitstream} 
+set_attribute impl $config bitstream_settings  [list "BITSTREAM.GENERAL.COMPRESS        TRUE" \
+                                               ]
+set_attribute impl $config bitstream_options   [list "-bin_file" \
+                                               ]
+
+                                          
 ########################################################################
 ### Task / flow portion
 ########################################################################

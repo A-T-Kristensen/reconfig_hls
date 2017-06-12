@@ -1,0 +1,83 @@
+Command: debug::report_design_status
+PR Design Status: 
+ 
+Static Logic: 
+------------------------------------------------------------
+   Number of Reconfigurable Modules...............: 1
+   Cells Info: 
+       Number of Leaf Cells.......................: 19206
+   Nets Info: 
+       Number of Signal Nets......................: 22314
+       Has VCC nets...............................: Yes
+       Has GND nets...............................: Yes
+   Clock Sites Info: 
+       BUFR Usage.................................: 0% (0 of 24)
+       MMCME2_ADV Usage...........................: 33.3333% (2 of 6)
+       PLLE2_ADV Usage............................: 16.6666% (1 of 6)
+       BUFG/BUFGCTRL Usage........................: 12.5% (4 of 32)
+   IO Sites Info: 
+       IDELAYCTRL Usage...........................: 16.6666% (1 of 6)
+       IOLOGICE2/IOSERDESE2 Usage.................: 0% (58 of 0)
+       IODELAYE2 Usage............................: 5.33333% (16 of 300)
+       IOBUF Usage................................: 0.32837% (85 of 25885)
+       GTXE2_CHANNEL/GTXE2_COMMON Usage...........: 0% (0 of 0)
+   Logic Sites Info: 
+       RAMB18E1/FIFO18E1 Usage....................: 8.09523% (17 of 210)
+       RAMB36E1 Usage.............................: 60.9523% (64 of 105)
+       DSP48E1 Usage..............................: 2% (4 of 200)
+       SLICE Usage................................: 23.1428% (3321 of 14350)
+           LUT Usage..............................: 15.2891% (8776 of 57400)
+           FF Usage...............................: 6.63327% (7615 of 114800)
+           Carry4 Usage...........................: 3.67247% (527 of 14350)
+   HD Inserted LUT1 Info:
+       Number of Inserted LUT1s...................: 0
+           Inserted for VCC.......................: 0
+           Inserted for GND.......................: 0
+           Inserted for S-IN Loadless.............: 0
+           Inserted for S-OUT Driverless..........: 0
+           Inserted for Common Driver.............: 0
+------------------------------------------------------------
+ 
+Reconfigurable Module: recon_matrix_inst_0
+------------------------------------------------------------
+   Cells Info: 
+       Number of Leaf Cells.......................: 4296
+   Nets Info: 
+       Number of Signal Nets......................: 5462
+       Has VCC nets...............................: Yes
+       Has GND nets...............................: Yes
+   Clock Sites Info: 
+       BUFR Usage.................................: 0% (0 of 0)
+       MMCME2_ADV Usage...........................: 0% (0 of 0)
+       PLLE2_ADV Usage............................: 0% (0 of 0)
+       BUFG/BUFGCTRL Usage........................: 0% (0 of 0)
+   IO Sites Info: 
+       IDELAYCTRL Usage...........................: 0% (0 of 0)
+       IOLOGICE2/IOSERDESE2 Usage.................: 0% (0 of 0)
+       IODELAYE2 Usage............................: 0% (0 of 0)
+       IOBUF Usage................................: 0% (0 of 2650)
+       GTXE2_CHANNEL/GTXE2_COMMON Usage...........: 0% (0 of 0)
+   Logic Sites Info: 
+       RAMB18E1/FIFO18E1 Usage....................: 1.66666% (1 of 60)
+       RAMB36E1 Usage.............................: 3.33333% (1 of 30)
+       DSP48E1 Usage..............................: 12.5% (5 of 40)
+       SLICE Usage................................: 47.0666% (706 of 1500)
+           LUT Usage..............................: 31.5% (1890 of 6000)
+           FF Usage...............................: 16.25% (1950 of 12000)
+           Carry4 Usage...........................: 17.2666% (259 of 1500)
+   PPLOCs Info:
+       Number of PPLOCs...........................: 83
+           Number of PPLOCs in INT Tile...........: 82
+           Number of PPLOCs in CLK Tile...........: 1
+       Number of INT Tiles with PPLOCs............: 53
+       Number of INT Tiles in PBLOCK..............: 1000
+       Average Number of PPLOCs per INT Tile......: 1.54
+       Maximum Number of PPLOCs per INT Tile......: 5
+   HD Inserted LUT1 Info:
+       Number of Inserted LUT1s...................: 5
+           Inserted for VCC.......................: 0
+           Inserted for GND.......................: 0
+           Inserted for S-IN Loadless.............: 4
+           Inserted for S-OUT Driverless..........: 0
+           Inserted for Common Driver.............: 1
+------------------------------------------------------------

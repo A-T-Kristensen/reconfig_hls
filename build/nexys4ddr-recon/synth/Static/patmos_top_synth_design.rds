@@ -3,9 +3,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 14361 
+INFO: Helper process launched with PID 2573 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:15:04 ; elapsed = 00:14:33 . Memory (MB): peak = 2470.941 ; gain = 1540.453 ; free physical = 1373 ; free virtual = 11485
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:27 . Memory (MB): peak = 1089.578 ; gain = 159.086 ; free physical = 4800 ; free virtual = 14563
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'patmos_top' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/patmos_nexys4ddr-recon.vhdl:55]
 INFO: [Synth 8-3491] module 'clk_manager' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.v:71' bound to instance 'clk_manager_inst_0' of component 'clk_manager' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/patmos_nexys4ddr-recon.vhdl:403]
@@ -4860,7 +4860,7 @@ WARNING: [Synth 8-3331] design NullCache has unconnected port io_master_M_Data[3
 WARNING: [Synth 8-3331] design NullCache has unconnected port io_master_M_Data[2]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:15:14 ; elapsed = 00:14:43 . Memory (MB): peak = 2470.941 ; gain = 1540.453 ; free physical = 1365 ; free virtual = 11482
+Finished RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:37 . Memory (MB): peak = 1321.188 ; gain = 390.695 ; free physical = 4516 ; free virtual = 14291
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -4971,11 +4971,12 @@ WARNING: [Synth 8-3295] tying undriven pin u_ddr_mc_phy:mem_dq_in[32] to constan
 WARNING: [Synth 8-3295] tying undriven pin u_ddr_mc_phy:mem_dq_in[31] to constant 0 [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/ddr2_ctrl/rtl/phy/mig_7series_v4_0_ddr_mc_phy_wrapper.v:1579]
 INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:15:16 ; elapsed = 00:14:46 . Memory (MB): peak = 2470.941 ; gain = 1540.453 ; free physical = 1365 ; free virtual = 11482
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:39 . Memory (MB): peak = 1321.188 ; gain = 390.695 ; free physical = 4502 ; free virtual = 14277
 ---------------------------------------------------------------------------------
 WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'recon_matrix' instantiated as 'recon_matrix_inst_0' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/patmos_nexys4ddr-recon.vhdl:599]
 INFO: [Netlist 29-17] Analyzing 89 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -5005,22 +5006,22 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 16 instances
   RAM32M => RAM32M (RAMS32, RAMS32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32): 28 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2470.941 ; gain = 0.000 ; free physical = 1346 ; free virtual = 11456
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1665.664 ; gain = 0.000 ; free physical = 4299 ; free virtual = 14059
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:15:31 ; elapsed = 00:14:59 . Memory (MB): peak = 2470.941 ; gain = 1540.453 ; free physical = 1345 ; free virtual = 11455
+Finished Constraint Validation : Time (s): cpu = 00:00:37 ; elapsed = 00:00:56 . Memory (MB): peak = 1665.664 ; gain = 735.172 ; free physical = 4302 ; free virtual = 14057
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:15:31 ; elapsed = 00:14:59 . Memory (MB): peak = 2470.941 ; gain = 1540.453 ; free physical = 1345 ; free virtual = 11455
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:37 ; elapsed = 00:00:56 . Memory (MB): peak = 1665.664 ; gain = 735.172 ; free physical = 4302 ; free virtual = 14057
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:15:31 ; elapsed = 00:14:59 . Memory (MB): peak = 2470.941 ; gain = 1540.453 ; free physical = 1345 ; free virtual = 11455
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:56 . Memory (MB): peak = 1665.664 ; gain = 735.172 ; free physical = 4302 ; free virtual = 14057
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ocp_burst_to_ddr2_ctrl'
 INFO: [Synth 8-5544] ROM "SCmdAccept" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -5426,7 +5427,7 @@ INFO: [Synth 8-3971] The signal ram_reg was recognized as a true dual port RAM t
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'STATE_reg_reg' using encoding 'sequential' in module 'icap_ctrl'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:15:47 ; elapsed = 00:15:15 . Memory (MB): peak = 2470.941 ; gain = 1540.453 ; free physical = 1333 ; free virtual = 11441
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:53 ; elapsed = 00:01:12 . Memory (MB): peak = 1665.664 ; gain = 735.172 ; free physical = 4295 ; free virtual = 14056
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -7348,7 +7349,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ddr2_ctr
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (corei_8/exc/\masterReg_Cmd_reg[2] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (corei_8/icache/\ctrl/ocpSlaveReg_Resp_reg[1] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:18:00 ; elapsed = 00:17:30 . Memory (MB): peak = 2842.340 ; gain = 1911.852 ; free physical = 744 ; free virtual = 10853
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:03 ; elapsed = 00:03:24 . Memory (MB): peak = 2279.750 ; gain = 1349.258 ; free physical = 3632 ; free virtual = 13386
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -7451,10 +7452,10 @@ Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-3321] set_false_path : Empty through list for constraint at line 330 of /home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/ddr2_ctrl/constraints/ddr2_ctrl.xdc. [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/ddr2_ctrl/constraints/ddr2_ctrl.xdc:330]
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:18:04 ; elapsed = 00:17:34 . Memory (MB): peak = 2876.340 ; gain = 1945.852 ; free physical = 717 ; free virtual = 10826
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:15 ; elapsed = 00:03:35 . Memory (MB): peak = 2386.039 ; gain = 1455.547 ; free physical = 3510 ; free virtual = 13274
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:18:08 ; elapsed = 00:17:38 . Memory (MB): peak = 2896.355 ; gain = 1965.867 ; free physical = 697 ; free virtual = 10807
+Finished Timing Optimization : Time (s): cpu = 00:03:18 ; elapsed = 00:03:38 . Memory (MB): peak = 2406.055 ; gain = 1475.562 ; free physical = 3490 ; free virtual = 13254
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -7559,7 +7560,7 @@ INFO: [Synth 8-4480] The timing for the instance recon_buffer_comp/tdp_sc_bram_c
 INFO: [Synth 8-4480] The timing for the instance recon_buffer_comp/tdp_sc_bram_comp_3/ram_reg_1_7 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance recon_buffer_comp/tdp_sc_bram_comp_3/ram_reg_1_7 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:18:24 ; elapsed = 00:17:54 . Memory (MB): peak = 2975.043 ; gain = 2044.555 ; free physical = 613 ; free virtual = 10723
+Finished Technology Mapping : Time (s): cpu = 00:03:34 ; elapsed = 00:03:55 . Memory (MB): peak = 2490.773 ; gain = 1560.281 ; free physical = 3405 ; free virtual = 13168
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -7666,7 +7667,7 @@ WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/
 WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/ddr2_ctrl/rtl/clocking/mig_7series_v4_0_tempmon.v:226]
 WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/ddr2_ctrl/rtl/clocking/mig_7series_v4_0_tempmon.v:226]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:18:26 ; elapsed = 00:17:56 . Memory (MB): peak = 2975.043 ; gain = 2044.555 ; free physical = 612 ; free virtual = 10722
+Finished IO Insertion : Time (s): cpu = 00:03:36 ; elapsed = 00:03:57 . Memory (MB): peak = 2490.773 ; gain = 1560.281 ; free physical = 3400 ; free virtual = 13168
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -7679,7 +7680,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:18:27 ; elapsed = 00:17:57 . Memory (MB): peak = 2975.043 ; gain = 2044.555 ; free physical = 612 ; free virtual = 10722
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:37 ; elapsed = 00:03:57 . Memory (MB): peak = 2490.773 ; gain = 1560.281 ; free physical = 3400 ; free virtual = 13168
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -7691,25 +7692,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:18:30 ; elapsed = 00:18:00 . Memory (MB): peak = 2975.043 ; gain = 2044.555 ; free physical = 613 ; free virtual = 10722
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:40 ; elapsed = 00:04:00 . Memory (MB): peak = 2490.773 ; gain = 1560.281 ; free physical = 3399 ; free virtual = 13168
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:18:30 ; elapsed = 00:18:00 . Memory (MB): peak = 2975.043 ; gain = 2044.555 ; free physical = 613 ; free virtual = 10722
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:40 ; elapsed = 00:04:00 . Memory (MB): peak = 2490.773 ; gain = 1560.281 ; free physical = 3399 ; free virtual = 13168
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:18:31 ; elapsed = 00:18:01 . Memory (MB): peak = 2975.043 ; gain = 2044.555 ; free physical = 612 ; free virtual = 10722
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:41 ; elapsed = 00:04:01 . Memory (MB): peak = 2490.773 ; gain = 1560.281 ; free physical = 3399 ; free virtual = 13168
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:18:31 ; elapsed = 00:18:01 . Memory (MB): peak = 2975.043 ; gain = 2044.555 ; free physical = 612 ; free virtual = 10722
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:41 ; elapsed = 00:04:01 . Memory (MB): peak = 2490.773 ; gain = 1560.281 ; free physical = 3399 ; free virtual = 13168
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -7940,11 +7941,11 @@ Report Instance Areas:
 |124   |    tdp_sc_bram_comp_3                                              |tdp_sc_bram_2                                      |    29|
 +------+--------------------------------------------------------------------+---------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:18:31 ; elapsed = 00:18:01 . Memory (MB): peak = 2975.043 ; gain = 2044.555 ; free physical = 612 ; free virtual = 10722
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:41 ; elapsed = 00:04:01 . Memory (MB): peak = 2490.773 ; gain = 1560.281 ; free physical = 3399 ; free virtual = 13168
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 914 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:03:22 ; elapsed = 00:03:25 . Memory (MB): peak = 2975.043 ; gain = 504.102 ; free physical = 612 ; free virtual = 10722
-Synthesis Optimization Complete : Time (s): cpu = 00:18:31 ; elapsed = 00:18:01 . Memory (MB): peak = 2975.051 ; gain = 2044.562 ; free physical = 614 ; free virtual = 10724
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:25 ; elapsed = 00:03:27 . Memory (MB): peak = 2490.773 ; gain = 1135.715 ; free physical = 3399 ; free virtual = 13168
+Synthesis Optimization Complete : Time (s): cpu = 00:03:41 ; elapsed = 00:04:01 . Memory (MB): peak = 2490.781 ; gain = 1560.289 ; free physical = 3399 ; free virtual = 13168
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 854 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -7962,6 +7963,6 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   SRLC32E => SRL16E: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-1166 Infos, 467 Warnings, 2 Critical Warnings and 0 Errors encountered.
+1167 Infos, 467 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:03:38 ; elapsed = 00:03:38 . Memory (MB): peak = 2975.051 ; gain = 504.109 ; free physical = 613 ; free virtual = 10722
+synth_design: Time (s): cpu = 00:03:45 ; elapsed = 00:03:45 . Memory (MB): peak = 2522.789 ; gain = 1524.793 ; free physical = 3395 ; free virtual = 13169
