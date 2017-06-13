@@ -1,0 +1,425 @@
+Command: synth_design -mode out_of_context -flatten_hierarchy rebuilt -top recon_matrix -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 8137 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:06:12 ; elapsed = 00:15:41 . Memory (MB): peak = 2618.871 ; gain = 1688.383 ; free physical = 239 ; free virtual = 10735
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'recon_matrix' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/recon_fir2dim.vhd:35]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/recon_fir2dim.vhd:80]
+INFO: [Synth 8-3491] module 'n_bank' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_fir2dim.vhd:15' bound to instance 'n_bank_inst_0' of component 'n_bank' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/recon_fir2dim.vhd:103]
+INFO: [Synth 8-638] synthesizing module 'n_bank' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_fir2dim.vhd:31]
+INFO: [Synth 8-3491] module 'bram_tdp' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/bram_tdp.vhd:41' bound to instance 'bram_array' of component 'bram_tdp' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_fir2dim.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'bram_tdp' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/bram_tdp.vhd:64]
+INFO: [Synth 8-256] done synthesizing module 'bram_tdp' (1#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/bram_tdp.vhd:64]
+INFO: [Synth 8-3491] module 'bram_tdp' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/bram_tdp.vhd:41' bound to instance 'bram_array' of component 'bram_tdp' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_fir2dim.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'n_bank' (2#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_fir2dim.vhd:31]
+INFO: [Synth 8-3491] module 'fir2dim_hwa' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:12' bound to instance 'fir2dim_inst_0' of component 'fir2dim_hwa' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/recon_fir2dim.vhd:117]
+INFO: [Synth 8-638] synthesizing module 'fir2dim_hwa' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:37]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:139]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:142]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:147]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:151]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:153]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:155]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:157]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:160]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:162]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:164]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:166]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:168]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:170]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:173]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:175]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:177]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:179]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:182]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:184]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:186]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:188]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:192]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:194]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:197]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:199]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:203]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:206]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:208]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:222]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:325]
+INFO: [Synth 8-3491] module 'fir2dim_hwa_fadd_bkb' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa_fadd_bkb.vhd:11' bound to instance 'fir2dim_hwa_fadd_bkb_U1' of component 'fir2dim_hwa_fadd_bkb' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:365]
+INFO: [Synth 8-638] synthesizing module 'fir2dim_hwa_fadd_bkb' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa_fadd_bkb.vhd:29]
+INFO: [Synth 8-3491] module 'fir2dim_hwa_ap_fadd_3_full_dsp_32' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim_hwa_ap_fadd_3_full_dsp_32/synth/fir2dim_hwa_ap_fadd_3_full_dsp_32.vhd:59' bound to instance 'fir2dim_hwa_ap_fadd_3_full_dsp_32_u' of component 'fir2dim_hwa_ap_fadd_3_full_dsp_32' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa_fadd_bkb.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'fir2dim_hwa_ap_fadd_3_full_dsp_32' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim_hwa_ap_fadd_3_full_dsp_32/synth/fir2dim_hwa_ap_fadd_3_full_dsp_32.vhd:72]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_3' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim_hwa_ap_fadd_3_full_dsp_32/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_3' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim_hwa_ap_fadd_3_full_dsp_32/synth/fir2dim_hwa_ap_fadd_3_full_dsp_32.vhd:197]
+INFO: [Synth 8-256] done synthesizing module 'fir2dim_hwa_ap_fadd_3_full_dsp_32' (20#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim_hwa_ap_fadd_3_full_dsp_32/synth/fir2dim_hwa_ap_fadd_3_full_dsp_32.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'fir2dim_hwa_fadd_bkb' (21#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa_fadd_bkb.vhd:29]
+INFO: [Synth 8-3491] module 'fir2dim_hwa_fadd_bkb' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa_fadd_bkb.vhd:11' bound to instance 'fir2dim_hwa_fadd_bkb_U2' of component 'fir2dim_hwa_fadd_bkb' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:380]
+INFO: [Synth 8-3491] module 'fir2dim_hwa_fmul_cud' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa_fmul_cud.vhd:11' bound to instance 'fir2dim_hwa_fmul_cud_U3' of component 'fir2dim_hwa_fmul_cud' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:395]
+INFO: [Synth 8-638] synthesizing module 'fir2dim_hwa_fmul_cud' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa_fmul_cud.vhd:29]
+INFO: [Synth 8-3491] module 'fir2dim_hwa_ap_fmul_2_max_dsp_32' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim_hwa_ap_fmul_2_max_dsp_32/synth/fir2dim_hwa_ap_fmul_2_max_dsp_32.vhd:59' bound to instance 'fir2dim_hwa_ap_fmul_2_max_dsp_32_u' of component 'fir2dim_hwa_ap_fmul_2_max_dsp_32' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa_fmul_cud.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'fir2dim_hwa_ap_fmul_2_max_dsp_32' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim_hwa_ap_fmul_2_max_dsp_32/synth/fir2dim_hwa_ap_fmul_2_max_dsp_32.vhd:72]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_3' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim_hwa_ap_fadd_3_full_dsp_32/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_3' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim_hwa_ap_fmul_2_max_dsp_32/synth/fir2dim_hwa_ap_fmul_2_max_dsp_32.vhd:197]
+INFO: [Synth 8-256] done synthesizing module 'fir2dim_hwa_ap_fmul_2_max_dsp_32' (29#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim_hwa_ap_fmul_2_max_dsp_32/synth/fir2dim_hwa_ap_fmul_2_max_dsp_32.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'fir2dim_hwa_fmul_cud' (30#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa_fmul_cud.vhd:29]
+INFO: [Synth 8-3491] module 'fir2dim_hwa_fmul_cud' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa_fmul_cud.vhd:11' bound to instance 'fir2dim_hwa_fmul_cud_U4' of component 'fir2dim_hwa_fmul_cud' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:410]
+INFO: [Synth 8-256] done synthesizing module 'fir2dim_hwa' (31#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/fir2dim/fir2dim_hwa.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'recon_matrix' (32#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/recon_fir2dim.vhd:35]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[11]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[10]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[9]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[8]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DIVIDE_BY_ZERO_IN
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized244 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized244 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized244 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized244 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized244 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized242 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized242 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized242 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized242 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized242 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized240 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized240 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized240 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized240 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized240 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized238 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized238 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized238 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized238 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized238 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized236 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized236 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized236 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized236 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized236 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized234 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized234 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized234 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized234 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized234 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized232 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized232 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized232 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized232 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized232 has unconnected port SINIT
+WARNING: [Synth 8-3331] design dsp48e1_wrapper__parameterized3 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized246 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized246 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized246 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized246 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized246 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized254 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized254 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized254 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized254 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized254 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized252 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized252 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized252 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized252 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized252 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized250 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized250 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized250 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized250 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized250 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized248 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized248 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized248 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized248 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized248 has unconnected port SINIT
+WARNING: [Synth 8-3331] design flt_round_dsp_opt_full has unconnected port SIGN
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized184 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized184 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized184 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized184 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized184 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized230 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized230 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized230 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized230 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized230 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized228 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized228 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized228 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized228 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized228 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized226 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized226 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized226 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized226 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized226 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized224 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized224 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized224 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized224 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized224 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized222 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized222 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized222 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized222 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized222 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized220 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized220 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized220 has unconnected port SINIT
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:06:17 ; elapsed = 00:15:47 . Memory (MB): peak = 2618.871 ; gain = 1688.383 ; free physical = 131 ; free virtual = 10631
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:06:18 ; elapsed = 00:15:48 . Memory (MB): peak = 2618.871 ; gain = 1688.383 ; free physical = 133 ; free virtual = 10630
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:06:18 ; elapsed = 00:15:48 . Memory (MB): peak = 2618.871 ; gain = 1688.383 ; free physical = 133 ; free virtual = 10630
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "det_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state_int_up" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "exitcond1_fu_540_p2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "exitcond1_fu_540_p2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-3971] The signal mem_reg was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:06:20 ; elapsed = 00:15:50 . Memory (MB): peak = 2618.871 ; gain = 1688.383 ; free physical = 130 ; free virtual = 10583
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3971] The signal n_bank_inst_0/bram_gen[1].bram_array/mem_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3886] merging instance 'fir2dim_inst_0/fir2dim_hwa_fadd_bkb_U1/fir2dim_hwa_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]' (FDE) to 'fir2dim_inst_0/fir2dim_hwa_fadd_bkb_U1/fir2dim_hwa_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]'
+INFO: [Synth 8-3886] merging instance 'fir2dim_inst_0/fir2dim_hwa_fadd_bkb_U2/fir2dim_hwa_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]' (FDE) to 'fir2dim_inst_0/fir2dim_hwa_fadd_bkb_U2/fir2dim_hwa_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]'
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_3_viv__1.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[3].pipe_reg[3][0]) is unused and will be removed from module floating_point_v7_1_3_viv__1.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_3_viv.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[3].pipe_reg[3][0]) is unused and will be removed from module floating_point_v7_1_3_viv.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized1__1.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized1.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:06:37 ; elapsed = 00:16:07 . Memory (MB): peak = 2618.871 ; gain = 1688.383 ; free physical = 129 ; free virtual = 10467
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:06:37 ; elapsed = 00:16:07 . Memory (MB): peak = 2618.871 ; gain = 1688.383 ; free physical = 129 ; free virtual = 10467
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\fir2dim_inst_0/tmp_reg_876_reg[5] )
+WARNING: [Synth 8-3332] Sequential element (fir2dim_inst_0/tmp_reg_876_reg[5]) is unused and will be removed from module recon_matrix.
+INFO: [Synth 8-4480] The timing for the instance n_bank_inst_0/bram_gen[1].bram_array/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance n_bank_inst_0/bram_gen[0].bram_array/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance n_bank_inst_0/bram_gen[0].bram_array/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:06:38 ; elapsed = 00:16:09 . Memory (MB): peak = 2618.871 ; gain = 1688.383 ; free physical = 127 ; free virtual = 10465
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:06:39 ; elapsed = 00:16:10 . Memory (MB): peak = 2618.871 ; gain = 1688.383 ; free physical = 132 ; free virtual = 10471
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:06:39 ; elapsed = 00:16:10 . Memory (MB): peak = 2618.871 ; gain = 1688.383 ; free physical = 132 ; free virtual = 10471
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:06:39 ; elapsed = 00:16:10 . Memory (MB): peak = 2618.871 ; gain = 1688.383 ; free physical = 132 ; free virtual = 10471
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:06:40 ; elapsed = 00:16:10 . Memory (MB): peak = 2618.871 ; gain = 1688.383 ; free physical = 131 ; free virtual = 10470
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:06:40 ; elapsed = 00:16:10 . Memory (MB): peak = 2618.871 ; gain = 1688.383 ; free physical = 131 ; free virtual = 10470
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:06:40 ; elapsed = 00:16:10 . Memory (MB): peak = 2618.871 ; gain = 1688.383 ; free physical = 131 ; free virtual = 10470
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |     6|
+|2     |DSP48E1  |    10|
+|3     |LUT1     |    63|
+|4     |LUT2     |   120|
+|5     |LUT3     |   276|
+|6     |LUT4     |   326|
+|7     |LUT5     |   385|
+|8     |LUT6     |   924|
+|9     |MUXCY    |   148|
+|10    |RAMB36E1 |     2|
+|11    |XORCY    |    50|
+|12    |FDE      |     6|
+|13    |FDRE     |  1987|
+|14    |FDSE     |     1|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:06:40 ; elapsed = 00:16:10 . Memory (MB): peak = 2618.871 ; gain = 1688.383 ; free physical = 131 ; free virtual = 10470
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1083 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 2618.871 ; gain = 0.000 ; free physical = 131 ; free virtual = 10470
+Synthesis Optimization Complete : Time (s): cpu = 00:06:40 ; elapsed = 00:16:10 . Memory (MB): peak = 2618.871 ; gain = 1688.383 ; free physical = 132 ; free virtual = 10471
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 222 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 46 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 40 instances
+  FDE => FDRE: 6 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+438 Infos, 206 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 2618.871 ; gain = 0.000 ; free physical = 133 ; free virtual = 10472

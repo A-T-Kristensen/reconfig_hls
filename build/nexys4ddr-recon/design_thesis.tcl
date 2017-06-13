@@ -316,6 +316,42 @@ set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MINVER.vhd 
                                            ]
 set_attribute module $variant synth        ${run.rmSynth}
 
+set module1_variant7 "filterbank"
+set variant $module1_variant7
+add_module $variant
+set_attribute module $variant moduleName   $module1
+set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_FILTERBANK.vhd work \
+                                                 $rtlDir/recon_filterbank.vhd work \
+                                                 $rtlDir/n_bank_filterbank.vhd work \
+                                                 $rtlDir/bram_tdp.vhd work \
+                                                 $rtlDir/filterbank/filterbank_core_hwa.vhd work \
+                                                 $rtlDir/filterbank/filterbank_core_hbkb.vhd work \
+                                                 $rtlDir/filterbank/filterbank_core_hcud.vhd work \
+                                                 $rtlDir/filterbank/filterbank_core_hdEe.vhd work \
+                                                 $rtlDir/filterbank/filterbank_core_heOg.vhd work \
+                                                 $rtlDir/filterbank/filterbank_core_hfYi.vhd work \
+                                                 $rtlDir/filterbank/filterbank_core_hg8j.vhd work \
+                                                 $rtlDir/filterbank_core_hwa_ap_fadd_3_full_dsp_32/filterbank_core_hwa_ap_fadd_3_full_dsp_32.xci work \
+                                                 $rtlDir/filterbank_core_hwa_ap_fmul_2_max_dsp_32/filterbank_core_hwa_ap_fmul_2_max_dsp_32.xci work \
+                                           ]
+set_attribute module $variant synth        ${run.rmSynth}
+
+set module1_variant8 "fir2dim"
+set variant $module1_variant8
+add_module $variant
+set_attribute module $variant moduleName   $module1
+set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_FIR2DIM.vhd work \
+                                                 $rtlDir/recon_fir2dim.vhd work \
+                                                 $rtlDir/n_bank_fir2dim.vhd work \
+                                                 $rtlDir/bram_tdp.vhd work \
+                                                 $rtlDir/fir2dim/fir2dim_hwa_fadd_bkb.vhd work \
+                                                 $rtlDir/fir2dim/fir2dim_hwa_fmul_cud.vhd work \
+                                                 $rtlDir/fir2dim/fir2dim_hwa.vhd work \
+                                                 $rtlDir/fir2dim_hwa_ap_fadd_3_full_dsp_32/fir2dim_hwa_ap_fadd_3_full_dsp_32.xci work \
+                                                 $rtlDir/fir2dim_hwa_ap_fmul_2_max_dsp_32/fir2dim_hwa_ap_fmul_2_max_dsp_32.xci work \
+                                           ]
+set_attribute module $variant synth        ${run.rmSynth}
+
 set module1_inst "recon_matrix_inst_0"
 
 ########################################################################
@@ -481,7 +517,60 @@ set_attribute impl $config bitstream_settings  [list "BITSTREAM.GENERAL.COMPRESS
 set_attribute impl $config bitstream_options   [list "-bin_file" \
                                                ]
 
-                                          
+########################################################################
+### Configuration (Implementation) Definition - Replicate for each Config
+########################################################################
+set state "import"
+set config "config_${module1_variant7}_${state}" 
+
+add_implementation $config
+set_attribute impl $config top             $top
+set_attribute impl $config implXDC         [list $xdcDir/nexys4ddr.xdc \
+                                                 $xdcDir/pblocks.xdc \
+                                                 $rtlDir/clk_manager/clk_manager.xdc \
+                                                 $rtlDir/ddr2_ctrl/constraints/ddr2_ctrl.xdc \
+                                                 $rtlDir/ddr2_ctrl/constraints/ddr2_ctrl_ooc.xdc \
+                                           ]
+set_attribute impl $config impl            ${run.prImpl} 
+set_attribute impl $config partitions      [list [list $static           $top          $state   ] \
+                                                 [list $module1_variant7 $module1_inst implement] \
+                                           ]
+set_attribute impl $config pr.impl         1 
+set_attribute impl $config impl            ${run.prImpl} 
+set_attribute impl $config verify            ${run.prVerify} 
+set_attribute impl $config bitstream         ${run.writeBitstream} 
+set_attribute impl $config bitstream_settings  [list "BITSTREAM.GENERAL.COMPRESS        TRUE" \
+                                               ]
+set_attribute impl $config bitstream_options   [list "-bin_file" \
+                                               ]
+
+########################################################################
+### Configuration (Implementation) Definition - Replicate for each Config
+########################################################################
+set state "import"
+set config "config_${module1_variant8}_${state}" 
+
+add_implementation $config
+set_attribute impl $config top             $top
+set_attribute impl $config implXDC         [list $xdcDir/nexys4ddr.xdc \
+                                                 $xdcDir/pblocks.xdc \
+                                                 $rtlDir/clk_manager/clk_manager.xdc \
+                                                 $rtlDir/ddr2_ctrl/constraints/ddr2_ctrl.xdc \
+                                                 $rtlDir/ddr2_ctrl/constraints/ddr2_ctrl_ooc.xdc \
+                                           ]
+set_attribute impl $config impl            ${run.prImpl} 
+set_attribute impl $config partitions      [list [list $static           $top          $state   ] \
+                                                 [list $module1_variant8 $module1_inst implement] \
+                                           ]
+set_attribute impl $config pr.impl         1
+set_attribute impl $config impl            ${run.prImpl} 
+set_attribute impl $config verify            ${run.prVerify} 
+set_attribute impl $config bitstream         ${run.writeBitstream} 
+set_attribute impl $config bitstream_settings  [list "BITSTREAM.GENERAL.COMPRESS        TRUE" \
+                                               ]
+set_attribute impl $config bitstream_options   [list "-bin_file" \
+                                               ]
+
 ########################################################################
 ### Task / flow portion
 ########################################################################
