@@ -193,7 +193,7 @@ set_attribute module $static synth         ${run.topSynth}
 ####################################################################
 set module1 "recon_matrix"
 
-set module1_variant1 "recon_matmul_3b_4x4"
+set module1_variant1 "recon_matmul_float_3b_4x4"
 set variant $module1_variant1
 add_module $variant
 set_attribute module $variant moduleName   $module1
@@ -209,7 +209,7 @@ set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MATMUL.vhd 
                                            ]
 set_attribute module $variant synth        ${run.rmSynth}
 
-set module1_variant2 "recon_matmul_3b_16x16"
+set module1_variant2 "recon_matmul_float_3b_16x16"
 set variant $module1_variant2
 add_module $variant
 set_attribute module $variant moduleName   $module1
@@ -225,7 +225,7 @@ set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MATMUL.vhd 
                                            ]
 set_attribute module $variant synth        ${run.rmSynth}
 
-set module1_variant3 "recon_matmul_3b_32x32"
+set module1_variant3 "recon_matmul_float_3b_32x32"
 set variant $module1_variant3
 add_module $variant
 set_attribute module $variant moduleName   $module1
@@ -241,8 +241,47 @@ set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MATMUL.vhd 
                                            ]
 set_attribute module $variant synth        ${run.rmSynth}
 
-set module1_variant4 "recon_minver_1b_4x4"
+set module1_variant4 "recon_matmul_int_3b_4x4"
 set variant $module1_variant4
+add_module $variant
+set_attribute module $variant moduleName   $module1
+set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MATMUL.vhd work \
+                                                 $rtlDir/recon_matmul_3b.vhd work \
+                                                 $rtlDir/bram_tdp.vhd work \
+                                                 $rtlDir/n_bank_matmul.vhd work \
+                                                 $rtlDir/matmul_int_3b_4x4/matmul_hw.vhd work \
+                                                 $rtlDir/matmul_int_3b_4x4/matmul_hw_mul_32sbkb.vhd work \
+                                           ]
+set_attribute module $variant synth        ${run.rmSynth}
+
+set module1_variant5 "recon_matmul_int_3b_16x16"
+set variant $module1_variant5
+add_module $variant
+set_attribute module $variant moduleName   $module1
+set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MATMUL.vhd work \
+                                                 $rtlDir/recon_matmul_3b.vhd work \
+                                                 $rtlDir/bram_tdp.vhd work \
+                                                 $rtlDir/n_bank_matmul.vhd work \
+                                                 $rtlDir/matmul_int_3b_16x16/matmul_hw.vhd work \
+                                                 $rtlDir/matmul_int_3b_16x16/matmul_hw_mul_32sbkb.vhd work \
+                                           ]
+set_attribute module $variant synth        ${run.rmSynth}
+
+set module1_variant6 "recon_matmul_int_3b_32x32"
+set variant $module1_variant6
+add_module $variant
+set_attribute module $variant moduleName   $module1
+set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MATMUL.vhd work \
+                                                 $rtlDir/recon_matmul_3b.vhd work \
+                                                 $rtlDir/bram_tdp.vhd work \
+                                                 $rtlDir/n_bank_matmul.vhd work \
+                                                 $rtlDir/matmul_int_3b_32x32/matmul_hw.vhd work \
+                                                 $rtlDir/matmul_int_3b_32x32/matmul_hw_mul_32sbkb.vhd work \
+                                           ]
+set_attribute module $variant synth        ${run.rmSynth}
+
+set module1_variant7 "recon_minver_1b_4x4"
+set variant $module1_variant7
 add_module $variant
 set_attribute module $variant moduleName   $module1
 set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MINVER.vhd work \
@@ -266,8 +305,8 @@ set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MINVER.vhd 
                                            ]
 set_attribute module $variant synth        ${run.rmSynth}
 
-set module1_variant5 "recon_minver_1b_16x16"
-set variant $module1_variant5
+set module1_variant8 "recon_minver_1b_16x16"
+set variant $module1_variant8
 add_module $variant
 set_attribute module $variant moduleName   $module1
 set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MINVER.vhd work \
@@ -291,8 +330,8 @@ set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MINVER.vhd 
                                            ]
 set_attribute module $variant synth        ${run.rmSynth}
 
-set module1_variant6 "recon_minver_1b_32x32"
-set variant $module1_variant6
+set module1_variant9 "recon_minver_1b_32x32"
+set variant $module1_variant9
 add_module $variant
 set_attribute module $variant moduleName   $module1
 set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MINVER.vhd work \
@@ -316,8 +355,8 @@ set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MINVER.vhd 
                                            ]
 set_attribute module $variant synth        ${run.rmSynth}
 
-set module1_variant7 "filterbank"
-set variant $module1_variant7
+set module1_variant10 "filterbank"
+set variant $module1_variant10
 add_module $variant
 set_attribute module $variant moduleName   $module1
 set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_FILTERBANK.vhd work \
@@ -336,8 +375,8 @@ set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_FILTERBANK.
                                            ]
 set_attribute module $variant synth        ${run.rmSynth}
 
-set module1_variant8 "fir2dim"
-set variant $module1_variant8
+set module1_variant11 "fir2dim"
+set variant $module1_variant11
 add_module $variant
 set_attribute module $variant moduleName   $module1
 set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_FIR2DIM.vhd work \
@@ -561,6 +600,89 @@ set_attribute impl $config implXDC         [list $xdcDir/nexys4ddr.xdc \
 set_attribute impl $config impl            ${run.prImpl} 
 set_attribute impl $config partitions      [list [list $static           $top          $state   ] \
                                                  [list $module1_variant8 $module1_inst implement] \
+                                           ]
+set_attribute impl $config pr.impl         1
+set_attribute impl $config impl            ${run.prImpl} 
+set_attribute impl $config verify            ${run.prVerify} 
+set_attribute impl $config bitstream         ${run.writeBitstream} 
+set_attribute impl $config bitstream_settings  [list "BITSTREAM.GENERAL.COMPRESS        TRUE" \
+                                               ]
+set_attribute impl $config bitstream_options   [list "-bin_file" \
+                                               ]
+
+
+########################################################################
+### Configuration (Implementation) Definition - Replicate for each Config
+########################################################################
+set state "import"
+set config "config_${module1_variant9}_${state}" 
+
+add_implementation $config
+set_attribute impl $config top             $top
+set_attribute impl $config implXDC         [list $xdcDir/nexys4ddr.xdc \
+                                                 $xdcDir/pblocks.xdc \
+                                                 $rtlDir/clk_manager/clk_manager.xdc \
+                                                 $rtlDir/ddr2_ctrl/constraints/ddr2_ctrl.xdc \
+                                                 $rtlDir/ddr2_ctrl/constraints/ddr2_ctrl_ooc.xdc \
+                                           ]
+set_attribute impl $config impl            ${run.prImpl} 
+set_attribute impl $config partitions      [list [list $static           $top          $state   ] \
+                                                 [list $module1_variant9 $module1_inst implement] \
+                                           ]
+set_attribute impl $config pr.impl         1
+set_attribute impl $config impl            ${run.prImpl} 
+set_attribute impl $config verify            ${run.prVerify} 
+set_attribute impl $config bitstream         ${run.writeBitstream} 
+set_attribute impl $config bitstream_settings  [list "BITSTREAM.GENERAL.COMPRESS        TRUE" \
+                                               ]
+set_attribute impl $config bitstream_options   [list "-bin_file" \
+                                               ]
+
+########################################################################
+### Configuration (Implementation) Definition - Replicate for each Config
+########################################################################
+set state "import"
+set config "config_${module1_variant10}_${state}" 
+
+add_implementation $config
+set_attribute impl $config top             $top
+set_attribute impl $config implXDC         [list $xdcDir/nexys4ddr.xdc \
+                                                 $xdcDir/pblocks.xdc \
+                                                 $rtlDir/clk_manager/clk_manager.xdc \
+                                                 $rtlDir/ddr2_ctrl/constraints/ddr2_ctrl.xdc \
+                                                 $rtlDir/ddr2_ctrl/constraints/ddr2_ctrl_ooc.xdc \
+                                           ]
+set_attribute impl $config impl            ${run.prImpl} 
+set_attribute impl $config partitions      [list [list $static           $top          $state   ] \
+                                                 [list $module1_variant10 $module1_inst implement] \
+                                           ]
+set_attribute impl $config pr.impl         1
+set_attribute impl $config impl            ${run.prImpl} 
+set_attribute impl $config verify            ${run.prVerify} 
+set_attribute impl $config bitstream         ${run.writeBitstream} 
+set_attribute impl $config bitstream_settings  [list "BITSTREAM.GENERAL.COMPRESS        TRUE" \
+                                               ]
+set_attribute impl $config bitstream_options   [list "-bin_file" \
+                                               ]
+
+
+########################################################################
+### Configuration (Implementation) Definition - Replicate for each Config
+########################################################################
+set state "import"
+set config "config_${module1_variant11}_${state}" 
+
+add_implementation $config
+set_attribute impl $config top             $top
+set_attribute impl $config implXDC         [list $xdcDir/nexys4ddr.xdc \
+                                                 $xdcDir/pblocks.xdc \
+                                                 $rtlDir/clk_manager/clk_manager.xdc \
+                                                 $rtlDir/ddr2_ctrl/constraints/ddr2_ctrl.xdc \
+                                                 $rtlDir/ddr2_ctrl/constraints/ddr2_ctrl_ooc.xdc \
+                                           ]
+set_attribute impl $config impl            ${run.prImpl} 
+set_attribute impl $config partitions      [list [list $static           $top          $state   ] \
+                                                 [list $module1_variant11 $module1_inst implement] \
                                            ]
 set_attribute impl $config pr.impl         1
 set_attribute impl $config impl            ${run.prImpl} 

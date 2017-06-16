@@ -25,8 +25,8 @@ Static Logic:
        RAMB18E1/FIFO18E1 Usage....................: 8.09523% (17 of 210)
        RAMB36E1 Usage.............................: 60.9523% (64 of 105)
        DSP48E1 Usage..............................: 2% (4 of 200)
-       SLICE Usage................................: 23.1428% (3321 of 14350)
-           LUT Usage..............................: 15.2891% (8776 of 57400)
+       SLICE Usage................................: 22.6550% (3251 of 14350)
+           LUT Usage..............................: 15.2857% (8774 of 57400)
            FF Usage...............................: 6.63327% (7615 of 114800)
            Carry4 Usage...........................: 3.67247% (527 of 14350)
    HD Inserted LUT1 Info:
@@ -61,17 +61,17 @@ Reconfigurable Module: recon_matrix_inst_0
        RAMB18E1/FIFO18E1 Usage....................: 1.66666% (1 of 60)
        RAMB36E1 Usage.............................: 3.33333% (1 of 30)
        DSP48E1 Usage..............................: 12.5% (5 of 40)
-       SLICE Usage................................: 90.4666% (1357 of 1500)
-           LUT Usage..............................: 56.5666% (3394 of 6000)
+       SLICE Usage................................: 88.7999% (1332 of 1500)
+           LUT Usage..............................: 56.6833% (3401 of 6000)
            FF Usage...............................: 34.3500% (4122 of 12000)
            Carry4 Usage...........................: 18.0666% (271 of 1500)
    PPLOCs Info:
        Number of PPLOCs...........................: 83
            Number of PPLOCs in INT Tile...........: 82
            Number of PPLOCs in CLK Tile...........: 1
-       Number of INT Tiles with PPLOCs............: 53
+       Number of INT Tiles with PPLOCs............: 50
        Number of INT Tiles in PBLOCK..............: 1000
-       Average Number of PPLOCs per INT Tile......: 1.54
+       Average Number of PPLOCs per INT Tile......: 1.63
        Maximum Number of PPLOCs per INT Tile......: 5
    HD Inserted LUT1 Info:
        Number of Inserted LUT1s...................: 5

@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.4 (lin64) Build 1733598 Wed Dec 14 22:35:42 MST 2016
-| Date         : Mon Jun 12 10:00:09 2017
+| Date         : Fri Jun 16 18:59:41 2017
 | Host         : andreas-W54xEU running 64-bit Ubuntu 16.04.2 LTS
 | Command      : report_drc -ruledeck bitstream_checks -name patmos_top -file ./implement/config_recon_minver_1b_4x4_import/reports/patmos_top_drc_bitstream_checks.rpt
 | Design       : patmos_top

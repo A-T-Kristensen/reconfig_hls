@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.4 (lin64) Build 1733598 Wed Dec 14 22:35:42 MST 2016
-| Date         : Mon Jun 12 09:47:25 2017
+| Date         : Fri Jun 16 18:35:41 2017
 | Host         : andreas-W54xEU running 64-bit Ubuntu 16.04.2 LTS
 | Command      : report_utilization -file ./synth/recon_minver_1b_32x32/recon_matrix_utilization_synth.rpt
 | Design       : recon_matrix

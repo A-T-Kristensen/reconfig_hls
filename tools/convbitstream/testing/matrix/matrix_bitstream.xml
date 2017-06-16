@@ -7,9 +7,12 @@
 	<bitfile id="recon_matmul_3b_4x4_pblock" file="./sample_bitstream/recon_matmul_3b_4x4_pblock.bin" />
 	<bitfile id="recon_matmul_3b_16x16_pblock" file="./sample_bitstream/recon_matmul_3b_16x16_pblock.bin" />
 	<bitfile id="recon_matmul_3b_32x32_pblock" file="./sample_bitstream/recon_matmul_3b_32x32_pblock.bin" />
-	<bitfile id="recon_minver_1b_4x4_pblock" file="./sample_bitstream/recon_minver_1b_4x4_pblock.bin" />	
+	<bitfile id="recon_matmul_int_3b_4x4_pblock" file="./sample_bitstream/recon_matmul_int_3b_4x4_pblock.bin" />
+	<bitfile id="recon_matmul_int_3b_16x16_pblock" file="./sample_bitstream/recon_matmul_int_3b_16x16_pblock.bin" />
+	<bitfile id="recon_matmul_int_3b_32x32_pblock" file="./sample_bitstream/recon_matmul_int_3b_32x32_pblock.bin" />
+	<bitfile id="recon_minver_1b_4x4_pblock" file="./sample_bitstream/recon_minver_1b_4x4_pblock.bin" />
 	<bitfile id="recon_minver_1b_16x16_pblock" file="./sample_bitstream/recon_minver_1b_16x16_pblock.bin" />
-	<bitfile id="recon_minver_1b_32x32_pblock" file="./sample_bitstream/recon_minver_1b_32x32_pblock.bin" />	
+	<bitfile id="recon_minver_1b_32x32_pblock" file="./sample_bitstream/recon_minver_1b_32x32_pblock.bin" />
 	<bitfile id="config_filterbank_pblock" file="./sample_bitstream/config_filterbank_pblock.bin" />
-	<bitfile id="config_fir2dim_pblock" file="./sample_bitstream/config_fir2dim_pblock.bin" />		
+	<bitfile id="config_fir2dim_pblock" file="./sample_bitstream/config_fir2dim_pblock.bin" />
 </bitfiles>

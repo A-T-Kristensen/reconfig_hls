@@ -1,0 +1,381 @@
+Command: synth_design -mode out_of_context -flatten_hierarchy rebuilt -top recon_matrix -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 13353 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:26:11 ; elapsed = 01:03:16 . Memory (MB): peak = 3495.238 ; gain = 2564.750 ; free physical = 1319 ; free virtual = 11319
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'recon_matrix' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/recon_matmul_3b.vhd:35]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/recon_matmul_3b.vhd:87]
+INFO: [Synth 8-3491] module 'n_bank' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_matmul.vhd:15' bound to instance 'n_bank_inst_0' of component 'n_bank' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/recon_matmul_3b.vhd:110]
+INFO: [Synth 8-638] synthesizing module 'n_bank' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_matmul.vhd:31]
+INFO: [Synth 8-3491] module 'bram_tdp' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/bram_tdp.vhd:41' bound to instance 'bram_array' of component 'bram_tdp' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_matmul.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'bram_tdp' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/bram_tdp.vhd:64]
+INFO: [Synth 8-256] done synthesizing module 'bram_tdp' (1#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/bram_tdp.vhd:64]
+INFO: [Synth 8-3491] module 'bram_tdp' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/bram_tdp.vhd:41' bound to instance 'bram_array' of component 'bram_tdp' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_matmul.vhd:72]
+INFO: [Synth 8-3491] module 'bram_tdp' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/bram_tdp.vhd:41' bound to instance 'bram_array' of component 'bram_tdp' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_matmul.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'n_bank' (2#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_matmul.vhd:31]
+INFO: [Synth 8-3491] module 'matmul_hw' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/matmul_float_3b_4x4/matmul_hw.vhd:12' bound to instance 'matrixmul_inst_0' of component 'matmul_hw' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/recon_matmul_3b.vhd:124]
+INFO: [Synth 8-638] synthesizing module 'matmul_hw' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/matmul_float_3b_4x4/matmul_hw.vhd:44]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/matmul_float_3b_4x4/matmul_hw.vhd:80]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/matmul_float_3b_4x4/matmul_hw.vhd:83]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/matmul_float_3b_4x4/matmul_hw.vhd:90]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/matmul_float_3b_4x4/matmul_hw.vhd:107]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/matmul_float_3b_4x4/matmul_hw.vhd:109]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/matmul_float_3b_4x4/matmul_hw.vhd:111]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/matmul_float_3b_4x4/matmul_hw.vhd:172]
+INFO: [Synth 8-3491] module 'matmul_hw_fadd_32bkb' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/matmul_float_3b_4x4/matmul_hw_fadd_32bkb.vhd:11' bound to instance 'matmul_hw_fadd_32bkb_U1' of component 'matmul_hw_fadd_32bkb' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/matmul_float_3b_4x4/matmul_hw.vhd:212]
+INFO: [Synth 8-638] synthesizing module 'matmul_hw_fadd_32bkb' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/matmul_float_3b_4x4/matmul_hw_fadd_32bkb.vhd:29]
+INFO: [Synth 8-3491] module 'matmul_hw_ap_fadd_3_full_dsp_32' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/matmul_hw_ap_fadd_3_full_dsp_32/synth/matmul_hw_ap_fadd_3_full_dsp_32.vhd:59' bound to instance 'matmul_hw_ap_fadd_3_full_dsp_32_u' of component 'matmul_hw_ap_fadd_3_full_dsp_32' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/matmul_float_3b_4x4/matmul_hw_fadd_32bkb.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'matmul_hw_ap_fadd_3_full_dsp_32' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/matmul_hw_ap_fadd_3_full_dsp_32/synth/matmul_hw_ap_fadd_3_full_dsp_32.vhd:72]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_3' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/matmul_hw_ap_fadd_3_full_dsp_32/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_3' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/matmul_hw_ap_fadd_3_full_dsp_32/synth/matmul_hw_ap_fadd_3_full_dsp_32.vhd:197]
+INFO: [Synth 8-256] done synthesizing module 'matmul_hw_ap_fadd_3_full_dsp_32' (20#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/matmul_hw_ap_fadd_3_full_dsp_32/synth/matmul_hw_ap_fadd_3_full_dsp_32.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'matmul_hw_fadd_32bkb' (21#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/matmul_float_3b_4x4/matmul_hw_fadd_32bkb.vhd:29]
+INFO: [Synth 8-3491] module 'matmul_hw_fmul_32cud' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/matmul_float_3b_4x4/matmul_hw_fmul_32cud.vhd:11' bound to instance 'matmul_hw_fmul_32cud_U2' of component 'matmul_hw_fmul_32cud' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/matmul_float_3b_4x4/matmul_hw.vhd:227]
+INFO: [Synth 8-638] synthesizing module 'matmul_hw_fmul_32cud' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/matmul_float_3b_4x4/matmul_hw_fmul_32cud.vhd:29]
+INFO: [Synth 8-3491] module 'matmul_hw_ap_fmul_2_max_dsp_32' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/matmul_hw_ap_fmul_2_max_dsp_32/synth/matmul_hw_ap_fmul_2_max_dsp_32.vhd:59' bound to instance 'matmul_hw_ap_fmul_2_max_dsp_32_u' of component 'matmul_hw_ap_fmul_2_max_dsp_32' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/matmul_float_3b_4x4/matmul_hw_fmul_32cud.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'matmul_hw_ap_fmul_2_max_dsp_32' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/matmul_hw_ap_fmul_2_max_dsp_32/synth/matmul_hw_ap_fmul_2_max_dsp_32.vhd:72]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_3' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/matmul_hw_ap_fadd_3_full_dsp_32/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_3' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/matmul_hw_ap_fmul_2_max_dsp_32/synth/matmul_hw_ap_fmul_2_max_dsp_32.vhd:197]
+INFO: [Synth 8-256] done synthesizing module 'matmul_hw_ap_fmul_2_max_dsp_32' (29#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/matmul_hw_ap_fmul_2_max_dsp_32/synth/matmul_hw_ap_fmul_2_max_dsp_32.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'matmul_hw_fmul_32cud' (30#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/matmul_float_3b_4x4/matmul_hw_fmul_32cud.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'matmul_hw' (31#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/matmul_float_3b_4x4/matmul_hw.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'recon_matrix' (32#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/recon_matmul_3b.vhd:35]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[11]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[10]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[9]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[8]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DIVIDE_BY_ZERO_IN
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized244 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized244 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized244 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized244 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized244 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized242 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized242 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized242 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized242 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized242 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized240 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized240 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized240 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized240 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized240 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized238 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized238 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized238 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized238 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized238 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized236 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized236 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized236 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized236 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized236 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized234 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized234 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized234 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized234 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized234 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized232 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized232 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized232 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized232 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized232 has unconnected port SINIT
+WARNING: [Synth 8-3331] design dsp48e1_wrapper__parameterized3 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized246 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized246 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized246 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized246 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized246 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized254 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized254 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized254 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized254 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized254 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized252 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized252 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized252 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized252 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized252 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized250 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized250 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized250 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized250 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized250 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized248 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized248 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized248 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized248 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized248 has unconnected port SINIT
+WARNING: [Synth 8-3331] design flt_round_dsp_opt_full has unconnected port SIGN
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized184 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized184 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized184 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized184 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized184 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized230 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized230 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized230 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized230 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized230 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized228 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized228 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized228 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized228 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized228 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized226 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized226 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized226 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized226 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized226 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized224 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized224 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized224 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized224 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized224 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized222 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized222 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized222 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized222 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized222 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized220 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized220 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized220 has unconnected port SINIT
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:26:17 ; elapsed = 01:03:21 . Memory (MB): peak = 3495.238 ; gain = 2564.750 ; free physical = 1322 ; free virtual = 11318
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:26:17 ; elapsed = 01:03:21 . Memory (MB): peak = 3495.238 ; gain = 2564.750 ; free physical = 1322 ; free virtual = 11318
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:26:17 ; elapsed = 01:03:21 . Memory (MB): peak = 3495.238 ; gain = 2564.750 ; free physical = 1322 ; free virtual = 11318
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "det_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state_int_up" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "exitcond_fu_228_p2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "exitcond_flatten_fu_210_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3971] The signal mem_reg was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:26:18 ; elapsed = 01:03:23 . Memory (MB): peak = 3495.238 ; gain = 2564.750 ; free physical = 1325 ; free virtual = 11321
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3971] The signal n_bank_inst_0/bram_gen[2].bram_array/mem_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3886] merging instance 'matrixmul_inst_0/matmul_hw_fadd_32bkb_U1/matmul_hw_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[8]' (FDE) to 'matrixmul_inst_0/matmul_hw_fadd_32bkb_U1/matmul_hw_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg[9]'
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_3_viv.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[3].pipe_reg[3][0]) is unused and will be removed from module floating_point_v7_1_3_viv.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized1.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:26:21 ; elapsed = 01:03:26 . Memory (MB): peak = 3495.238 ; gain = 2564.750 ; free physical = 1326 ; free virtual = 11322
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:26:21 ; elapsed = 01:03:26 . Memory (MB): peak = 3495.238 ; gain = 2564.750 ; free physical = 1326 ; free virtual = 11322
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance n_bank_inst_0/bram_gen[2].bram_array/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance n_bank_inst_0/bram_gen[1].bram_array/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance n_bank_inst_0/bram_gen[0].bram_array/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:26:22 ; elapsed = 01:03:26 . Memory (MB): peak = 3495.238 ; gain = 2564.750 ; free physical = 1327 ; free virtual = 11322
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:26:22 ; elapsed = 01:03:27 . Memory (MB): peak = 3495.238 ; gain = 2564.750 ; free physical = 1327 ; free virtual = 11322
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:26:22 ; elapsed = 01:03:27 . Memory (MB): peak = 3495.238 ; gain = 2564.750 ; free physical = 1327 ; free virtual = 11322
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:26:22 ; elapsed = 01:03:27 . Memory (MB): peak = 3495.238 ; gain = 2564.750 ; free physical = 1327 ; free virtual = 11322
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:26:22 ; elapsed = 01:03:27 . Memory (MB): peak = 3495.238 ; gain = 2564.750 ; free physical = 1327 ; free virtual = 11322
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:26:22 ; elapsed = 01:03:27 . Memory (MB): peak = 3495.238 ; gain = 2564.750 ; free physical = 1327 ; free virtual = 11322
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:26:22 ; elapsed = 01:03:27 . Memory (MB): peak = 3495.238 ; gain = 2564.750 ; free physical = 1327 ; free virtual = 11322
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |     3|
+|2     |DSP48E1  |     5|
+|3     |LUT1     |    84|
+|4     |LUT2     |    51|
+|5     |LUT3     |   117|
+|6     |LUT4     |    77|
+|7     |LUT5     |   129|
+|8     |LUT6     |   184|
+|9     |MUXCY    |    74|
+|10    |RAMB36E1 |     3|
+|11    |SRL16E   |    38|
+|12    |XORCY    |    25|
+|13    |FDE      |     3|
+|14    |FDRE     |   666|
+|15    |FDSE     |     1|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:26:22 ; elapsed = 01:03:27 . Memory (MB): peak = 3495.238 ; gain = 2564.750 ; free physical = 1327 ; free virtual = 11322
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 949 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3495.238 ; gain = 0.000 ; free physical = 1327 ; free virtual = 11322
+Synthesis Optimization Complete : Time (s): cpu = 00:26:22 ; elapsed = 01:03:27 . Memory (MB): peak = 3495.238 ; gain = 2564.750 ; free physical = 1329 ; free virtual = 11324
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 113 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 23 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 20 instances
+  FDE => FDRE: 3 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+1264 Infos, 567 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 3495.238 ; gain = 0.000 ; free physical = 1329 ; free virtual = 11325

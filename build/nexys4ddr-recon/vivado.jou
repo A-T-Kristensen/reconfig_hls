@@ -2,13 +2,54 @@
 # Vivado v2016.4 (64-bit)
 # SW Build 1733598 on Wed Dec 14 22:35:42 MST 2016
 # IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
-# Start of session at: Tue Jun 13 13:19:08 2017
-# Process ID: 7758
+# Start of session at: Fri Jun 16 17:27:41 2017
+# Process ID: 11897
 # Current directory: /home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon
 # Command line: vivado -mode tcl
 # Log file: /home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/vivado.log
 # Journal file: /home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/vivado.jou
 #-----------------------------------------------------------
-source design_filters.tcl -notrace
-source design_filters.tcl -notrace
-git status
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+source design_thesis.tcl -notrace
+exist()

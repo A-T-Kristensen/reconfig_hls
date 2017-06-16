@@ -11,9 +11,9 @@ Parameters:
   - compression = enabled
   - bitswapped = enabled
 
-There are 8 bitfile/s to process.
+There are 11 bitfile/s to process.
 
-Processing bitfile 1 of 8:
+Processing bitfile 1 of 11:
   - id = recon_matmul_3b_4x4_pblock
   - file = ./sample_bitstream/recon_matmul_3b_4x4_pblock.bin
   - raw bitfile size = 458980 bytes
@@ -24,7 +24,7 @@ Processing bitfile 1 of 8:
   - BRAM-stream WCET = 123941 clock cycles
   - CPU-stream WCET = 161792 clock cycles
 
-Processing bitfile 2 of 8:
+Processing bitfile 2 of 11:
   - id = recon_matmul_3b_16x16_pblock
   - file = ./sample_bitstream/recon_matmul_3b_16x16_pblock.bin
   - raw bitfile size = 469740 bytes
@@ -35,7 +35,7 @@ Processing bitfile 2 of 8:
   - BRAM-stream WCET = 127094 clock cycles
   - CPU-stream WCET = 176171 clock cycles
 
-Processing bitfile 3 of 8:
+Processing bitfile 3 of 11:
   - id = recon_matmul_3b_32x32_pblock
   - file = ./sample_bitstream/recon_matmul_3b_32x32_pblock.bin
   - raw bitfile size = 484796 bytes
@@ -46,7 +46,40 @@ Processing bitfile 3 of 8:
   - BRAM-stream WCET = 131177 clock cycles
   - CPU-stream WCET = 194927 clock cycles
 
-Processing bitfile 4 of 8:
+Processing bitfile 4 of 11:
+  - id = recon_matmul_int_3b_4x4_pblock
+  - file = ./sample_bitstream/recon_matmul_int_3b_4x4_pblock.bin
+  - raw bitfile size = 388248 bytes
+  - 32-bit based entropy = 2.339478 bit
+  - optimum compression = 92.7 percent
+  - compressed bitfile size = 116332 bytes
+  - real compression = 70.0 percent
+  - BRAM-stream WCET = 105558 clock cycles
+  - CPU-stream WCET = 138804 clock cycles
+
+Processing bitfile 5 of 11:
+  - id = recon_matmul_int_3b_16x16_pblock
+  - file = ./sample_bitstream/recon_matmul_int_3b_16x16_pblock.bin
+  - raw bitfile size = 419152 bytes
+  - 32-bit based entropy = 2.986948 bit
+  - optimum compression = 90.7 percent
+  - compressed bitfile size = 151924 bytes
+  - real compression = 63.8 percent
+  - BRAM-stream WCET = 114001 clock cycles
+  - CPU-stream WCET = 156375 clock cycles
+
+Processing bitfile 6 of 11:
+  - id = recon_matmul_int_3b_32x32_pblock
+  - file = ./sample_bitstream/recon_matmul_int_3b_32x32_pblock.bin
+  - raw bitfile size = 378492 bytes
+  - 32-bit based entropy = 3.353019 bit
+  - optimum compression = 89.5 percent
+  - compressed bitfile size = 151680 bytes
+  - real compression = 59.9 percent
+  - BRAM-stream WCET = 103593 clock cycles
+  - CPU-stream WCET = 145809 clock cycles
+
+Processing bitfile 7 of 11:
   - id = recon_minver_1b_4x4_pblock
   - file = ./sample_bitstream/recon_minver_1b_4x4_pblock.bin
   - raw bitfile size = 480312 bytes
@@ -57,7 +90,7 @@ Processing bitfile 4 of 8:
   - BRAM-stream WCET = 129141 clock cycles
   - CPU-stream WCET = 187992 clock cycles
 
-Processing bitfile 5 of 8:
+Processing bitfile 8 of 11:
   - id = recon_minver_1b_16x16_pblock
   - file = ./sample_bitstream/recon_minver_1b_16x16_pblock.bin
   - raw bitfile size = 480380 bytes
@@ -68,37 +101,11 @@ Processing bitfile 5 of 8:
   - BRAM-stream WCET = 130156 clock cycles
   - CPU-stream WCET = 205431 clock cycles
 
-Processing bitfile 6 of 8:
+Processing bitfile 9 of 11:
   - id = recon_minver_1b_32x32_pblock
   - file = ./sample_bitstream/recon_minver_1b_32x32_pblock.bin
   - raw bitfile size = 480024 bytes
   - 32-bit based entropy = 7.566761 bit
   - optimum compression = 76.4 percent
   - compressed bitfile size = 345900 bytes
-  - real compression = 27.9 percent
-  - BRAM-stream WCET = 129208 clock cycles
-  - CPU-stream WCET = 219771 clock cycles
-
-Processing bitfile 7 of 8:
-  - id = config_filterbank_pblock
-  - file = ./sample_bitstream/config_filterbank_pblock.bin
-  - raw bitfile size = 499640 bytes
-  - 32-bit based entropy = 9.908681 bit
-  - optimum compression = 69.0 percent
-  - compressed bitfile size = 378656 bytes
-  - real compression = 24.2 percent
-  - BRAM-stream WCET = 132152 clock cycles
-  - CPU-stream WCET = 229975 clock cycles
-
-Processing bitfile 8 of 8:
-  - id = config_fir2dim_pblock
-  - file = ./sample_bitstream/config_fir2dim_pblock.bin
-  - raw bitfile size = 490896 bytes
-  - 32-bit based entropy = 4.771710 bit
-  - optimum compression = 85.1 percent
-  - compressed bitfile size = 239444 bytes
-  - real compression = 51.2 percent
-  - BRAM-stream WCET = 132098 clock cycles
-  - CPU-stream WCET = 196289 clock cycles
-
-End of convbitfile.
+  - real compression = 27.9 pe
