@@ -12,112 +12,112 @@
 	#HD: Parsing log file "./synth/Static/temp.log":
 
 
-	#HD: Parsing log file "./synth/recon_matmul_float_3b_4x4/create_project.log":
+	#HD: Parsing log file "./synth/recon_matmul_float_9b_4x4/create_project.log":
 
 
-	#HD: Parsing log file "./synth/recon_matmul_float_3b_4x4/recon_matrix_synth_design.rds":
+	#HD: Parsing log file "./synth/recon_matmul_float_9b_4x4/recon_matrix_synth_design.rds":
 
 
-	#HD: Parsing log file "./synth/recon_matmul_float_3b_4x4/temp.log":
+	#HD: Parsing log file "./synth/recon_matmul_float_9b_4x4/temp.log":
 
 
-	#HD: Parsing log file "./synth/recon_matmul_float_3b_4x4/temp.log":
+	#HD: Parsing log file "./synth/recon_matmul_float_9b_4x4/temp.log":
 
 
-	#HD: Parsing log file "./synth/recon_matmul_float_3b_16x16/create_project.log":
+	#HD: Parsing log file "./synth/recon_matmul_float_9b_16x16/create_project.log":
 
 
-	#HD: Parsing log file "./synth/recon_matmul_float_3b_16x16/recon_matrix_synth_design.rds":
+	#HD: Parsing log file "./synth/recon_matmul_float_9b_16x16/recon_matrix_synth_design.rds":
 
 
-	#HD: Parsing log file "./synth/recon_matmul_float_3b_16x16/temp.log":
+	#HD: Parsing log file "./synth/recon_matmul_float_9b_16x16/temp.log":
 
 
-	#HD: Parsing log file "./synth/recon_matmul_float_3b_16x16/temp.log":
+	#HD: Parsing log file "./synth/recon_matmul_float_9b_16x16/temp.log":
 
 
-	#HD: Parsing log file "./synth/recon_matmul_float_3b_32x32/create_project.log":
+	#HD: Parsing log file "./synth/recon_matmul_float_9b_32x32/create_project.log":
 
 
-	#HD: Parsing log file "./synth/recon_matmul_float_3b_32x32/recon_matrix_synth_design.rds":
+	#HD: Parsing log file "./synth/recon_matmul_float_9b_32x32/recon_matrix_synth_design.rds":
 
 
-	#HD: Parsing log file "./synth/recon_matmul_float_3b_32x32/temp.log":
+	#HD: Parsing log file "./synth/recon_matmul_float_9b_32x32/temp.log":
 
 
-	#HD: Parsing log file "./synth/recon_matmul_float_3b_32x32/temp.log":
+	#HD: Parsing log file "./synth/recon_matmul_float_9b_32x32/temp.log":
 
 
-	#HD: Parsing log file "./synth/recon_matmul_int_3b_4x4/create_project.log":
+	#HD: Parsing log file "./synth/recon_matmul_int_9b_4x4/create_project.log":
 
 
-	#HD: Parsing log file "./synth/recon_matmul_int_3b_4x4/recon_matrix_synth_design.rds":
+	#HD: Parsing log file "./synth/recon_matmul_int_9b_4x4/recon_matrix_synth_design.rds":
 
 
-	#HD: Parsing log file "./synth/recon_matmul_int_3b_4x4/temp.log":
+	#HD: Parsing log file "./synth/recon_matmul_int_9b_4x4/temp.log":
 
 
-	#HD: Parsing log file "./synth/recon_matmul_int_3b_4x4/temp.log":
+	#HD: Parsing log file "./synth/recon_matmul_int_9b_4x4/temp.log":
 
 
-	#HD: Parsing log file "./synth/recon_matmul_int_3b_16x16/create_project.log":
+	#HD: Parsing log file "./synth/recon_matmul_int_9b_16x16/create_project.log":
 
 
-	#HD: Parsing log file "./synth/recon_matmul_int_3b_16x16/recon_matrix_synth_design.rds":
+	#HD: Parsing log file "./synth/recon_matmul_int_9b_16x16/recon_matrix_synth_design.rds":
 
 
-	#HD: Parsing log file "./synth/recon_matmul_int_3b_16x16/temp.log":
+	#HD: Parsing log file "./synth/recon_matmul_int_9b_16x16/temp.log":
 
 
-	#HD: Parsing log file "./synth/recon_matmul_int_3b_16x16/temp.log":
+	#HD: Parsing log file "./synth/recon_matmul_int_9b_16x16/temp.log":
 
 
-	#HD: Parsing log file "./synth/recon_matmul_int_3b_32x32/create_project.log":
+	#HD: Parsing log file "./synth/recon_matmul_int_9b_32x32/create_project.log":
 
 
-	#HD: Parsing log file "./synth/recon_matmul_int_3b_32x32/recon_matrix_synth_design.rds":
+	#HD: Parsing log file "./synth/recon_matmul_int_9b_32x32/recon_matrix_synth_design.rds":
 
 
-	#HD: Parsing log file "./synth/recon_matmul_int_3b_32x32/temp.log":
+	#HD: Parsing log file "./synth/recon_matmul_int_9b_32x32/temp.log":
 
 
-	#HD: Parsing log file "./synth/recon_matmul_int_3b_32x32/temp.log":
+	#HD: Parsing log file "./synth/recon_matmul_int_9b_32x32/temp.log":
 
 
-	#HD: Parsing log file "./synth/recon_minver_1b_4x4/create_project.log":
+	#HD: Parsing log file "./synth/recon_minver_4b_4x4/create_project.log":
 
 
-	#HD: Parsing log file "./synth/recon_minver_1b_4x4/recon_matrix_synth_design.rds":
+	#HD: Parsing log file "./synth/recon_minver_4b_4x4/recon_matrix_synth_design.rds":
 
 
-	#HD: Parsing log file "./synth/recon_minver_1b_4x4/temp.log":
+	#HD: Parsing log file "./synth/recon_minver_4b_4x4/temp.log":
 
 
-	#HD: Parsing log file "./synth/recon_minver_1b_4x4/temp.log":
+	#HD: Parsing log file "./synth/recon_minver_4b_4x4/temp.log":
 
 
-	#HD: Parsing log file "./synth/recon_minver_1b_16x16/create_project.log":
+	#HD: Parsing log file "./synth/recon_minver_4b_16x16/create_project.log":
 
 
-	#HD: Parsing log file "./synth/recon_minver_1b_16x16/recon_matrix_synth_design.rds":
+	#HD: Parsing log file "./synth/recon_minver_4b_16x16/recon_matrix_synth_design.rds":
 
 
-	#HD: Parsing log file "./synth/recon_minver_1b_16x16/temp.log":
+	#HD: Parsing log file "./synth/recon_minver_4b_16x16/temp.log":
 
 
-	#HD: Parsing log file "./synth/recon_minver_1b_16x16/temp.log":
+	#HD: Parsing log file "./synth/recon_minver_4b_16x16/temp.log":
 
 
-	#HD: Parsing log file "./synth/recon_minver_1b_32x32/create_project.log":
+	#HD: Parsing log file "./synth/recon_minver_4b_32x32/create_project.log":
 
 
-	#HD: Parsing log file "./synth/recon_minver_1b_32x32/recon_matrix_synth_design.rds":
+	#HD: Parsing log file "./synth/recon_minver_4b_32x32/recon_matrix_synth_design.rds":
 
 
-	#HD: Parsing log file "./synth/recon_minver_1b_32x32/temp.log":
+	#HD: Parsing log file "./synth/recon_minver_4b_32x32/temp.log":
 
 
-	#HD: Parsing log file "./synth/recon_minver_1b_32x32/temp.log":
+	#HD: Parsing log file "./synth/recon_minver_4b_32x32/temp.log":
 
 
 	#HD: Parsing log file "./synth/filterbank/create_project.log":
@@ -144,742 +144,20 @@
 	#HD: Parsing log file "./synth/fir2dim/temp.log":
 
 
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_4x4_implement/create_project.log":
+	#HD: Parsing log file "./implement/config_recon_matmul_float_9b_4x4_implement/create_project.log":
 
 
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_link_design.log":
+	#HD: Parsing log file "./implement/config_recon_matmul_float_9b_4x4_implement/patmos_top_link_design.log":
 	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
 	CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-through [get_pins -hier -filter {NAME =~ */u_iodelay_ctrl/sys_rst}]'. [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/ddr2_ctrl/constraints/ddr2_ctrl.xdc:330]
 
 
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_4x4_implement/read_checkpoint_recon_matmul_float_3b_4x4_recon_matrix_inst_0.log":
+	#HD: Parsing log file "./implement/config_recon_matmul_float_9b_4x4_implement/read_checkpoint_recon_matmul_float_9b_4x4_recon_matrix_inst_0.log":
 
 
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_4x4_implement/temp.log":
+	#HD: Parsing log file "./implement/config_recon_matmul_float_9b_4x4_implement/temp.log":
 
 
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_opt_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_4x4_implement/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_place_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_4x4_implement/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_phys_opt_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_4x4_implement/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_route_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_4x4_implement/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_4x4_implement/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_4x4_implement/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_4x4_implement/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_4x4_implement/reports/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_4x4_implement/reports/patmos_top_design_status.rpt":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_4x4_implement/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_4x4_implement/carve_recon_matrix_inst_0.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_4x4_implement/lock_design_patmos_top.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_4x4_implement/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_16x16_import/create_project.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_16x16_import/patmos_top_link_design.log":
-	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_16x16_import/read_checkpoint_recon_matmul_float_3b_16x16_recon_matrix_inst_0.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_16x16_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_16x16_import/patmos_top_opt_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_16x16_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_16x16_import/patmos_top_place_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_16x16_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_16x16_import/patmos_top_phys_opt_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_16x16_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_16x16_import/patmos_top_route_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_16x16_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_16x16_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_16x16_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_16x16_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_16x16_import/reports/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_16x16_import/reports/patmos_top_design_status.rpt":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_16x16_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_32x32_import/create_project.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_32x32_import/patmos_top_link_design.log":
-	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_32x32_import/read_checkpoint_recon_matmul_float_3b_32x32_recon_matrix_inst_0.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_32x32_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_32x32_import/patmos_top_opt_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_32x32_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_32x32_import/patmos_top_place_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_32x32_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_32x32_import/patmos_top_phys_opt_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_32x32_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_32x32_import/patmos_top_route_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_32x32_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_32x32_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_32x32_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_32x32_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_32x32_import/reports/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_32x32_import/reports/patmos_top_design_status.rpt":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_float_3b_32x32_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_4x4_import/create_project.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_4x4_import/patmos_top_link_design.log":
-	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_4x4_import/read_checkpoint_recon_matmul_int_3b_4x4_recon_matrix_inst_0.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_4x4_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_4x4_import/patmos_top_opt_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_4x4_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_4x4_import/patmos_top_place_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_4x4_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_4x4_import/patmos_top_phys_opt_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_4x4_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_4x4_import/patmos_top_route_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_4x4_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_4x4_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_4x4_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_4x4_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_4x4_import/reports/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_4x4_import/reports/patmos_top_design_status.rpt":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_4x4_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_16x16_import/create_project.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_16x16_import/patmos_top_link_design.log":
-	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_16x16_import/read_checkpoint_recon_matmul_int_3b_16x16_recon_matrix_inst_0.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_16x16_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_16x16_import/patmos_top_opt_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_16x16_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_16x16_import/patmos_top_place_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_16x16_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_16x16_import/patmos_top_phys_opt_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_16x16_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_16x16_import/patmos_top_route_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_16x16_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_16x16_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_16x16_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_16x16_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_16x16_import/reports/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_16x16_import/reports/patmos_top_design_status.rpt":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_16x16_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_32x32_import/create_project.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_32x32_import/patmos_top_link_design.log":
-	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_32x32_import/read_checkpoint_recon_matmul_int_3b_32x32_recon_matrix_inst_0.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_32x32_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_32x32_import/patmos_top_opt_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_32x32_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_32x32_import/patmos_top_place_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_32x32_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_32x32_import/patmos_top_phys_opt_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_32x32_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_32x32_import/patmos_top_route_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_32x32_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_32x32_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_32x32_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_32x32_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_32x32_import/reports/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_32x32_import/reports/patmos_top_design_status.rpt":
-
-
-	#HD: Parsing log file "./implement/config_recon_matmul_int_3b_32x32_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_4x4_import/create_project.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_4x4_import/patmos_top_link_design.log":
-	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_4x4_import/read_checkpoint_recon_minver_1b_4x4_recon_matrix_inst_0.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_4x4_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_4x4_import/patmos_top_opt_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_4x4_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_4x4_import/patmos_top_place_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_4x4_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_4x4_import/patmos_top_phys_opt_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_4x4_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_4x4_import/patmos_top_route_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_4x4_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_4x4_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_4x4_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_4x4_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_4x4_import/reports/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_4x4_import/reports/patmos_top_design_status.rpt":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_4x4_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_16x16_import/create_project.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_16x16_import/patmos_top_link_design.log":
-	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_16x16_import/read_checkpoint_recon_minver_1b_16x16_recon_matrix_inst_0.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_16x16_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_16x16_import/patmos_top_opt_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_16x16_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_16x16_import/patmos_top_place_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_16x16_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_16x16_import/patmos_top_phys_opt_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_16x16_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_16x16_import/patmos_top_route_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_16x16_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_16x16_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_16x16_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_16x16_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_16x16_import/reports/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_16x16_import/reports/patmos_top_design_status.rpt":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_16x16_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/create_project.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/patmos_top_link_design.log":
-	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/read_checkpoint_recon_minver_1b_32x32_recon_matrix_inst_0.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/patmos_top_opt_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/patmos_top_place_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/patmos_top_phys_opt_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/patmos_top_route_design.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/reports/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/reports/patmos_top_design_status.rpt":
-
-
-	#HD: Parsing log file "./implement/config_recon_minver_1b_32x32_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_filterbank_import/create_project.log":
-
-
-	#HD: Parsing log file "./implement/config_filterbank_import/patmos_top_link_design.log":
-	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-
-
-	#HD: Parsing log file "./implement/config_filterbank_import/read_checkpoint_filterbank_recon_matrix_inst_0.log":
-
-
-	#HD: Parsing log file "./implement/config_filterbank_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_filterbank_import/patmos_top_opt_design.log":
-
-
-	#HD: Parsing log file "./implement/config_filterbank_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_filterbank_import/patmos_top_place_design.log":
-
-
-	#HD: Parsing log file "./implement/config_filterbank_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_filterbank_import/patmos_top_phys_opt_design.log":
-
-
-	#HD: Parsing log file "./implement/config_filterbank_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_filterbank_import/patmos_top_route_design.log":
-
-
-	#HD: Parsing log file "./implement/config_filterbank_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_filterbank_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_filterbank_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_filterbank_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_filterbank_import/reports/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_filterbank_import/reports/patmos_top_design_status.rpt":
-
-
-	#HD: Parsing log file "./implement/config_filterbank_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_fir2dim_import/create_project.log":
-
-
-	#HD: Parsing log file "./implement/config_fir2dim_import/patmos_top_link_design.log":
-	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-
-
-	#HD: Parsing log file "./implement/config_fir2dim_import/read_checkpoint_fir2dim_recon_matrix_inst_0.log":
-
-
-	#HD: Parsing log file "./implement/config_fir2dim_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_fir2dim_import/patmos_top_opt_design.log":
-
-
-	#HD: Parsing log file "./implement/config_fir2dim_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_fir2dim_import/patmos_top_place_design.log":
-
-
-	#HD: Parsing log file "./implement/config_fir2dim_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_fir2dim_import/patmos_top_phys_opt_design.log":
-
-
-	#HD: Parsing log file "./implement/config_fir2dim_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_fir2dim_import/patmos_top_route_design.log":
-
-
-	#HD: Parsing log file "./implement/config_fir2dim_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_fir2dim_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_fir2dim_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_fir2dim_import/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_fir2dim_import/reports/temp.log":
-
-
-	#HD: Parsing log file "./implement/config_fir2dim_import/reports/patmos_top_design_status.rpt":
-
-
-	#HD: Parsing log file "./implement/config_fir2dim_import/temp.log":
-
-
-	#HD: Parsing log file "pr_verify_results.log":
-	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-
-
-	#HD: Parsing log file "./bitstreams/open_checkpoint_config_recon_matmul_float_3b_4x4_implement.log":
-	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-
-
-	#HD: Parsing log file "./bitstreams/config_recon_matmul_float_3b_4x4_implement.log":
-
-
-	#HD: Parsing log file "./bitstreams/temp.log":
-
-
-	#HD: Parsing log file "./bitstreams/open_checkpoint_config_recon_matmul_float_3b_16x16_import.log":
-	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-
-
-	#HD: Parsing log file "./bitstreams/config_recon_matmul_float_3b_16x16_import.log":
-
-
-	#HD: Parsing log file "./bitstreams/temp.log":
-
-
-	#HD: Parsing log file "./bitstreams/open_checkpoint_config_recon_matmul_float_3b_32x32_import.log":
-	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-
-
-	#HD: Parsing log file "./bitstreams/config_recon_matmul_float_3b_32x32_import.log":
-
-
-	#HD: Parsing log file "./bitstreams/temp.log":
-
-
-	#HD: Parsing log file "./bitstreams/open_checkpoint_config_recon_matmul_int_3b_4x4_import.log":
-	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-
-
-	#HD: Parsing log file "./bitstreams/config_recon_matmul_int_3b_4x4_import.log":
-
-
-	#HD: Parsing log file "./bitstreams/temp.log":
-
-
-	#HD: Parsing log file "./bitstreams/open_checkpoint_config_recon_matmul_int_3b_16x16_import.log":
-	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-
-
-	#HD: Parsing log file "./bitstreams/config_recon_matmul_int_3b_16x16_import.log":
-
-
-	#HD: Parsing log file "./bitstreams/temp.log":
-
-
-	#HD: Parsing log file "./bitstreams/open_checkpoint_config_recon_matmul_int_3b_32x32_import.log":
-	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-
-
-	#HD: Parsing log file "./bitstreams/config_recon_matmul_int_3b_32x32_import.log":
-
-
-	#HD: Parsing log file "./bitstreams/temp.log":
-
-
-	#HD: Parsing log file "./bitstreams/open_checkpoint_config_recon_minver_1b_4x4_import.log":
-	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-
-
-	#HD: Parsing log file "./bitstreams/config_recon_minver_1b_4x4_import.log":
-
-
-	#HD: Parsing log file "./bitstreams/temp.log":
-
-
-	#HD: Parsing log file "./bitstreams/open_checkpoint_config_recon_minver_1b_16x16_import.log":
-	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-
-
-	#HD: Parsing log file "./bitstreams/config_recon_minver_1b_16x16_import.log":
-
-
-	#HD: Parsing log file "./bitstreams/temp.log":
-
-
-	#HD: Parsing log file "./bitstreams/open_checkpoint_config_recon_minver_1b_32x32_import.log":
-	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-
-
-	#HD: Parsing log file "./bitstreams/config_recon_minver_1b_32x32_import.log":
-
-
-	#HD: Parsing log file "./bitstreams/temp.log":
-
-
-	#HD: Parsing log file "./bitstreams/open_checkpoint_config_filterbank_import.log":
-	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-
-
-	#HD: Parsing log file "./bitstreams/config_filterbank_import.log":
-
-
-	#HD: Parsing log file "./bitstreams/temp.log":
-
-
-	#HD: Parsing log file "./bitstreams/open_checkpoint_config_fir2dim_import.log":
-	CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-
-
-	#HD: Parsing log file "./bitstreams/config_fir2dim_import.log":
-
-
-	#HD: Parsing log file "./bitstreams/temp.log":
+	#HD: Parsing log file "./implement/config_recon_matmul_float_9b_4x4_implement/patmos_top_opt_design.log":
 
 

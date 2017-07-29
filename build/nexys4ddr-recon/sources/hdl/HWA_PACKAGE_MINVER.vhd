@@ -17,7 +17,7 @@ package HWA_PACKAGE_MINVER is
     -- Constants used for the memory (BRAM) between Patmos and the HwA
 
     -- Number of banks used by the currently active design.
-    constant NBANKS  : integer := 1; 
+    constant NBANKS  : integer := 4; 
 
     -- The number of entries for each the memory banks 
     constant MEM_SIZE : integer := 4096;

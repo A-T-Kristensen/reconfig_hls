@@ -1,0 +1,823 @@
+Command: synth_design -mode out_of_context -flatten_hierarchy rebuilt -top recon_matrix -part xc7a100tcsg324-1
+Starting synth_design
+WARNING: [Vivado_Tcl 4-393] The 'Synthesis' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
+/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_dcmp_0_no_dsp_64/minver_hwa_ap_dcmp_0_no_dsp_64.xci
+/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fcmp_0_no_dsp_32/minver_hwa_ap_fcmp_0_no_dsp_32.xci
+/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fdiv_14_no_dsp_32/minver_hwa_ap_fdiv_14_no_dsp_32.xci
+/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fmul_2_max_dsp_32/minver_hwa_ap_fmul_2_max_dsp_32.xci
+/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fpext_0_no_dsp_32/minver_hwa_ap_fpext_0_no_dsp_32.xci
+/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fsub_3_full_dsp_32/minver_hwa_ap_fsub_3_full_dsp_32.xci
+
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 13999 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:18:28 ; elapsed = 00:30:45 . Memory (MB): peak = 3129.828 ; gain = 2199.344 ; free physical = 142 ; free virtual = 6626
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'recon_matrix' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/recon_minver_4b.vhd:36]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/recon_minver_4b.vhd:95]
+INFO: [Synth 8-3491] module 'n_bank' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_minver.vhd:15' bound to instance 'n_bank_inst_0' of component 'n_bank' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/recon_minver_4b.vhd:118]
+INFO: [Synth 8-638] synthesizing module 'n_bank' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_minver.vhd:31]
+INFO: [Synth 8-3491] module 'bram_tdp' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/bram_tdp.vhd:41' bound to instance 'bram_array' of component 'bram_tdp' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_minver.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'bram_tdp' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/bram_tdp.vhd:64]
+INFO: [Synth 8-256] done synthesizing module 'bram_tdp' (1#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/bram_tdp.vhd:64]
+INFO: [Synth 8-3491] module 'bram_tdp' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/bram_tdp.vhd:41' bound to instance 'bram_array' of component 'bram_tdp' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_minver.vhd:72]
+INFO: [Synth 8-3491] module 'bram_tdp' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/bram_tdp.vhd:41' bound to instance 'bram_array' of component 'bram_tdp' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_minver.vhd:72]
+INFO: [Synth 8-3491] module 'bram_tdp' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/bram_tdp.vhd:41' bound to instance 'bram_array' of component 'bram_tdp' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_minver.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'n_bank' (2#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/n_bank_minver.vhd:31]
+WARNING: [Synth 8-5640] Port 'ap_return' is missing in component declaration [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/recon_minver_4b.vhd:54]
+INFO: [Synth 8-3491] module 'minver_hwa' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:12' bound to instance 'minver_hwa_inst_0' of component 'minver_hwa' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/recon_minver_4b.vhd:132]
+INFO: [Synth 8-638] synthesizing module 'minver_hwa' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:52]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:352]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:355]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:360]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:373]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:377]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:380]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:384]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:388]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:392]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:397]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:400]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:402]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:404]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:406]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:408]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:410]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:412]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:415]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:417]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:419]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:421]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:423]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:425]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:427]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:429]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:431]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:433]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:436]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:440]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:443]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:459]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:462]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:471]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:473]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:480]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:482]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:484]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:486]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:495]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:499]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:545]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:551]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:555]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:558]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:564]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:573]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:576]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:582]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:590]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:608]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:614]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:658]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:665]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:669]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:680]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:688]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:691]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:697]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:705]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:708]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:710]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:713]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:716]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:753]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:755]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:763]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:768]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:770]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:772]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:774]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:776]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:778]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:780]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:782]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:784]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:786]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:788]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:790]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:792]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:794]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:796]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:798]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:800]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:802]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:804]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:806]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:808]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:810]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:812]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:814]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:816]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:818]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:820]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:822]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:824]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:826]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:828]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:855]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:858]
+INFO: [Common 17-14] Message 'Synth 8-5534' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3491] module 'minver_hwa_work' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_work.vhd:107' bound to instance 'work_U' of component 'minver_hwa_work' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:1117]
+INFO: [Synth 8-638] synthesizing module 'minver_hwa_work' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_work.vhd:127]
+INFO: [Synth 8-3491] module 'minver_hwa_work_ram' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_work.vhd:13' bound to instance 'minver_hwa_work_ram_U' of component 'minver_hwa_work_ram' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_work.vhd:146]
+INFO: [Synth 8-638] synthesizing module 'minver_hwa_work_ram' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_work.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'minver_hwa_work_ram' (3#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_work.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'minver_hwa_work' (4#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_work.vhd:127]
+INFO: [Synth 8-3491] module 'aesl_mux_load_4_16_x' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/aesl_mux_load_4_16_x.vhd:12' bound to instance 'grp_aesl_mux_load_4_16_x_fu_770' of component 'aesl_mux_load_4_16_x' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:1136]
+INFO: [Synth 8-638] synthesizing module 'aesl_mux_load_4_16_x' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/aesl_mux_load_4_16_x.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'aesl_mux_load_4_16_x' (5#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/aesl_mux_load_4_16_x.vhd:48]
+INFO: [Synth 8-3491] module 'minver_hwa_fsub_3ncg' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_fsub_3ncg.vhd:11' bound to instance 'minver_hwa_fsub_3ncg_U4' of component 'minver_hwa_fsub_3ncg' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:1170]
+INFO: [Synth 8-638] synthesizing module 'minver_hwa_fsub_3ncg' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_fsub_3ncg.vhd:29]
+INFO: [Synth 8-3491] module 'minver_hwa_ap_fsub_3_full_dsp_32' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fsub_3_full_dsp_32/synth/minver_hwa_ap_fsub_3_full_dsp_32.vhd:59' bound to instance 'minver_hwa_ap_fsub_3_full_dsp_32_u' of component 'minver_hwa_ap_fsub_3_full_dsp_32' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_fsub_3ncg.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'minver_hwa_ap_fsub_3_full_dsp_32' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fsub_3_full_dsp_32/synth/minver_hwa_ap_fsub_3_full_dsp_32.vhd:72]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_3' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_dcmp_0_no_dsp_64/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_3' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fsub_3_full_dsp_32/synth/minver_hwa_ap_fsub_3_full_dsp_32.vhd:197]
+INFO: [Synth 8-256] done synthesizing module 'minver_hwa_ap_fsub_3_full_dsp_32' (23#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fsub_3_full_dsp_32/synth/minver_hwa_ap_fsub_3_full_dsp_32.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'minver_hwa_fsub_3ncg' (24#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_fsub_3ncg.vhd:29]
+INFO: [Synth 8-3491] module 'minver_hwa_fsub_3ncg' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_fsub_3ncg.vhd:11' bound to instance 'minver_hwa_fsub_3ncg_U5' of component 'minver_hwa_fsub_3ncg' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:1185]
+INFO: [Synth 8-3491] module 'minver_hwa_fsub_3ncg' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_fsub_3ncg.vhd:11' bound to instance 'minver_hwa_fsub_3ncg_U6' of component 'minver_hwa_fsub_3ncg' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:1200]
+INFO: [Synth 8-3491] module 'minver_hwa_fsub_3ncg' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_fsub_3ncg.vhd:11' bound to instance 'minver_hwa_fsub_3ncg_U7' of component 'minver_hwa_fsub_3ncg' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:1215]
+INFO: [Synth 8-3491] module 'minver_hwa_fmul_3ocq' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_fmul_3ocq.vhd:11' bound to instance 'minver_hwa_fmul_3ocq_U8' of component 'minver_hwa_fmul_3ocq' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:1230]
+INFO: [Synth 8-638] synthesizing module 'minver_hwa_fmul_3ocq' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_fmul_3ocq.vhd:29]
+INFO: [Synth 8-3491] module 'minver_hwa_ap_fmul_2_max_dsp_32' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fmul_2_max_dsp_32/synth/minver_hwa_ap_fmul_2_max_dsp_32.vhd:59' bound to instance 'minver_hwa_ap_fmul_2_max_dsp_32_u' of component 'minver_hwa_ap_fmul_2_max_dsp_32' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_fmul_3ocq.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'minver_hwa_ap_fmul_2_max_dsp_32' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fmul_2_max_dsp_32/synth/minver_hwa_ap_fmul_2_max_dsp_32.vhd:72]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_3' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_dcmp_0_no_dsp_64/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_3' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fmul_2_max_dsp_32/synth/minver_hwa_ap_fmul_2_max_dsp_32.vhd:197]
+INFO: [Synth 8-256] done synthesizing module 'minver_hwa_ap_fmul_2_max_dsp_32' (32#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fmul_2_max_dsp_32/synth/minver_hwa_ap_fmul_2_max_dsp_32.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'minver_hwa_fmul_3ocq' (33#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_fmul_3ocq.vhd:29]
+INFO: [Synth 8-3491] module 'minver_hwa_fmul_3ocq' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_fmul_3ocq.vhd:11' bound to instance 'minver_hwa_fmul_3ocq_U9' of component 'minver_hwa_fmul_3ocq' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:1245]
+INFO: [Synth 8-3491] module 'minver_hwa_fmul_3ocq' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_fmul_3ocq.vhd:11' bound to instance 'minver_hwa_fmul_3ocq_U10' of component 'minver_hwa_fmul_3ocq' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:1260]
+INFO: [Synth 8-3491] module 'minver_hwa_fmul_3ocq' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_fmul_3ocq.vhd:11' bound to instance 'minver_hwa_fmul_3ocq_U11' of component 'minver_hwa_fmul_3ocq' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:1275]
+INFO: [Synth 8-3491] module 'minver_hwa_fdiv_3pcA' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_fdiv_3pcA.vhd:11' bound to instance 'minver_hwa_fdiv_3pcA_U12' of component 'minver_hwa_fdiv_3pcA' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:1290]
+INFO: [Synth 8-638] synthesizing module 'minver_hwa_fdiv_3pcA' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_fdiv_3pcA.vhd:29]
+INFO: [Synth 8-3491] module 'minver_hwa_ap_fdiv_14_no_dsp_32' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fdiv_14_no_dsp_32/synth/minver_hwa_ap_fdiv_14_no_dsp_32.vhd:59' bound to instance 'minver_hwa_ap_fdiv_14_no_dsp_32_u' of component 'minver_hwa_ap_fdiv_14_no_dsp_32' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_fdiv_3pcA.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'minver_hwa_ap_fdiv_14_no_dsp_32' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fdiv_14_no_dsp_32/synth/minver_hwa_ap_fdiv_14_no_dsp_32.vhd:72]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_3' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_dcmp_0_no_dsp_64/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_3' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fdiv_14_no_dsp_32/synth/minver_hwa_ap_fdiv_14_no_dsp_32.vhd:197]
+INFO: [Synth 8-256] done synthesizing module 'minver_hwa_ap_fdiv_14_no_dsp_32' (40#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fdiv_14_no_dsp_32/synth/minver_hwa_ap_fdiv_14_no_dsp_32.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'minver_hwa_fdiv_3pcA' (41#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_fdiv_3pcA.vhd:29]
+INFO: [Synth 8-3491] module 'minver_hwa_fpext_qcK' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_fpext_qcK.vhd:11' bound to instance 'minver_hwa_fpext_qcK_U13' of component 'minver_hwa_fpext_qcK' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:1305]
+INFO: [Synth 8-638] synthesizing module 'minver_hwa_fpext_qcK' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_fpext_qcK.vhd:24]
+INFO: [Synth 8-3491] module 'minver_hwa_ap_fpext_0_no_dsp_32' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fpext_0_no_dsp_32/synth/minver_hwa_ap_fpext_0_no_dsp_32.vhd:59' bound to instance 'minver_hwa_ap_fpext_0_no_dsp_32_u' of component 'minver_hwa_ap_fpext_0_no_dsp_32' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_fpext_qcK.vhd:41]
+INFO: [Synth 8-638] synthesizing module 'minver_hwa_ap_fpext_0_no_dsp_32' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fpext_0_no_dsp_32/synth/minver_hwa_ap_fpext_0_no_dsp_32.vhd:68]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_3' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_dcmp_0_no_dsp_64/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_3' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fpext_0_no_dsp_32/synth/minver_hwa_ap_fpext_0_no_dsp_32.vhd:189]
+INFO: [Synth 8-256] done synthesizing module 'minver_hwa_ap_fpext_0_no_dsp_32' (44#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fpext_0_no_dsp_32/synth/minver_hwa_ap_fpext_0_no_dsp_32.vhd:68]
+INFO: [Synth 8-256] done synthesizing module 'minver_hwa_fpext_qcK' (45#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_fpext_qcK.vhd:24]
+INFO: [Synth 8-3491] module 'minver_hwa_fcmp_3rcU' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_fcmp_3rcU.vhd:11' bound to instance 'minver_hwa_fcmp_3rcU_U14' of component 'minver_hwa_fcmp_3rcU' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:1315]
+INFO: [Synth 8-638] synthesizing module 'minver_hwa_fcmp_3rcU' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_fcmp_3rcU.vhd:27]
+INFO: [Synth 8-3491] module 'minver_hwa_ap_fcmp_0_no_dsp_32' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fcmp_0_no_dsp_32/synth/minver_hwa_ap_fcmp_0_no_dsp_32.vhd:59' bound to instance 'minver_hwa_ap_fcmp_0_no_dsp_32_u' of component 'minver_hwa_ap_fcmp_0_no_dsp_32' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_fcmp_3rcU.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'minver_hwa_ap_fcmp_0_no_dsp_32' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fcmp_0_no_dsp_32/synth/minver_hwa_ap_fcmp_0_no_dsp_32.vhd:72]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_3' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_dcmp_0_no_dsp_64/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_3' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fcmp_0_no_dsp_32/synth/minver_hwa_ap_fcmp_0_no_dsp_32.vhd:197]
+INFO: [Synth 8-256] done synthesizing module 'minver_hwa_ap_fcmp_0_no_dsp_32' (49#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_fcmp_0_no_dsp_32/synth/minver_hwa_ap_fcmp_0_no_dsp_32.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'minver_hwa_fcmp_3rcU' (50#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_fcmp_3rcU.vhd:27]
+INFO: [Synth 8-3491] module 'minver_hwa_fcmp_3rcU' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_fcmp_3rcU.vhd:11' bound to instance 'minver_hwa_fcmp_3rcU_U15' of component 'minver_hwa_fcmp_3rcU' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:1328]
+INFO: [Synth 8-3491] module 'minver_hwa_dcmp_6sc4' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_dcmp_6sc4.vhd:11' bound to instance 'minver_hwa_dcmp_6sc4_U16' of component 'minver_hwa_dcmp_6sc4' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:1341]
+INFO: [Synth 8-638] synthesizing module 'minver_hwa_dcmp_6sc4' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_dcmp_6sc4.vhd:27]
+INFO: [Synth 8-3491] module 'minver_hwa_ap_dcmp_0_no_dsp_64' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_dcmp_0_no_dsp_64/synth/minver_hwa_ap_dcmp_0_no_dsp_64.vhd:59' bound to instance 'minver_hwa_ap_dcmp_0_no_dsp_64_u' of component 'minver_hwa_ap_dcmp_0_no_dsp_64' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_dcmp_6sc4.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'minver_hwa_ap_dcmp_0_no_dsp_64' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_dcmp_0_no_dsp_64/synth/minver_hwa_ap_dcmp_0_no_dsp_64.vhd:72]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_3' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_dcmp_0_no_dsp_64/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_3' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_dcmp_0_no_dsp_64/synth/minver_hwa_ap_dcmp_0_no_dsp_64.vhd:197]
+INFO: [Synth 8-256] done synthesizing module 'minver_hwa_ap_dcmp_0_no_dsp_64' (51#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_hwa_ap_dcmp_0_no_dsp_64/synth/minver_hwa_ap_dcmp_0_no_dsp_64.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'minver_hwa_dcmp_6sc4' (52#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_dcmp_6sc4.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'minver_hwa' (53#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'recon_matrix' (54#1) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/recon_minver_4b.vhd:36]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized674 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized674 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized674 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized674 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized674 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized672 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized672 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized672 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized672 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized672 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized670 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized670 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized670 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized670 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized670 has unconnected port SINIT
+WARNING: [Synth 8-3331] design compare_eq_im__parameterized9 has unconnected port CARRYS_OUT[0]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized668 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized668 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized668 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized668 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized668 has unconnected port SINIT
+WARNING: [Synth 8-3331] design compare_ne_im__parameterized1 has unconnected port CARRYS_OUT[0]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized666 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized666 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized666 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized666 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized666 has unconnected port SINIT
+WARNING: [Synth 8-3331] design compare_eq_im__parameterized8 has unconnected port CARRYS_OUT[0]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized664 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized664 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized664 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized664 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized664 has unconnected port SINIT
+WARNING: [Synth 8-3331] design compare_ne_im__parameterized0 has unconnected port CARRYS_OUT[0]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized662 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized662 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized662 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized662 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized662 has unconnected port SINIT
+WARNING: [Synth 8-3331] design compare_eq_im__parameterized7 has unconnected port CARRYS_OUT[0]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized682 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized682 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized682 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized682 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized682 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized680 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized680 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized680 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized680 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized680 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized678 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized678 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized678 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized678 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized678 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized676 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized676 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized676 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized676 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized676 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized696 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized696 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized696 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized696 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized696 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized694 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized694 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized694 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized694 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized694 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized692 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized692 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized692 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized692 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized692 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized690 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized690 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized690 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized690 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized690 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized688 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized688 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized688 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized688 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized688 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized686 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized686 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized686 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized686 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized686 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized684 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized684 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized684 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized684 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized684 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized660 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized660 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized660 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized660 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized660 has unconnected port SINIT
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:18:42 ; elapsed = 00:31:00 . Memory (MB): peak = 3129.828 ; gain = 2199.344 ; free physical = 402 ; free virtual = 6890
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:18:43 ; elapsed = 00:31:00 . Memory (MB): peak = 3129.828 ; gain = 2199.344 ; free physical = 402 ; free virtual = 6889
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:18:43 ; elapsed = 00:31:00 . Memory (MB): peak = 3129.828 ; gain = 2199.344 ; free physical = 402 ; free virtual = 6889
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "sel_tmp2_fu_132_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sel_tmp4_fu_138_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sel_tmp_fu_126_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "det_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state_int_up" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "chunk_is_zero_ip" won't be mapped to RAM because address size (36) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "chunk_is_zero_ip" won't be mapped to RAM because address size (36) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state_det" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_det" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_int_up" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "op_tdata" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "op_tdata" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4471] merging register 'a_1_addr_5_reg_2006_reg[5:0]' into 'a_0_addr_5_reg_2001_reg[5:0]' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:1725]
+INFO: [Synth 8-4471] merging register 'a_2_addr_5_reg_2011_reg[5:0]' into 'a_0_addr_5_reg_2001_reg[5:0]' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:1730]
+INFO: [Synth 8-4471] merging register 'a_3_addr_5_reg_2016_reg[5:0]' into 'a_0_addr_5_reg_2001_reg[5:0]' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:1735]
+INFO: [Synth 8-4471] merging register 'a_1_addr_1_reg_2528_reg[5:0]' into 'a_0_addr_1_reg_2523_reg[5:0]' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:1772]
+INFO: [Synth 8-4471] merging register 'a_2_addr_1_reg_2533_reg[5:0]' into 'a_0_addr_1_reg_2523_reg[5:0]' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:1773]
+INFO: [Synth 8-4471] merging register 'a_3_addr_1_reg_2538_reg[5:0]' into 'a_0_addr_1_reg_2523_reg[5:0]' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:1774]
+INFO: [Synth 8-4471] merging register 'a_1_addr_3_reg_2121_reg[5:0]' into 'a_0_addr_3_reg_2116_reg[5:0]' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:1783]
+INFO: [Synth 8-4471] merging register 'a_2_addr_3_reg_2126_reg[5:0]' into 'a_0_addr_3_reg_2116_reg[5:0]' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:1784]
+INFO: [Synth 8-4471] merging register 'a_3_addr_3_reg_2131_reg[5:0]' into 'a_0_addr_3_reg_2116_reg[5:0]' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:1785]
+INFO: [Synth 8-4471] merging register 'a_1_addr_reg_2508_reg[5:0]' into 'a_0_addr_reg_2503_reg[5:0]' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:1807]
+INFO: [Synth 8-4471] merging register 'a_2_addr_reg_2513_reg[5:0]' into 'a_0_addr_reg_2503_reg[5:0]' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:1808]
+INFO: [Synth 8-4471] merging register 'a_3_addr_reg_2518_reg[5:0]' into 'a_0_addr_reg_2503_reg[5:0]' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa.vhd:1809]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5545] ROM "notrhs2_fu_1393_p2" won't be mapped to RAM because address size (52) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "notlhs2_fu_1387_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond7_fu_981_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "exitcond6_fu_1125_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "exitcond5_fu_1415_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond4_fu_1475_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond3_fu_1616_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond1_fu_1773_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "notlhs_fu_1159_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "notrhs1_fu_1330_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_10_fu_1586_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_11_fu_1592_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_12_fu_1598_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_13_fu_1604_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_14_fu_1610_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_1_fu_1526_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_2_fu_1532_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_3_fu_1538_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_4_fu_1544_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_5_fu_1550_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_6_fu_1556_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_7_fu_1562_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_8_fu_1568_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_9_fu_1574_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_s_fu_1580_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_27_fu_1520_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "notrhs4_fu_1260_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "notlhs4_fu_1254_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "notrhs3_fu_1242_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "notlhs3_fu_1236_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "notrhs5_fu_1663_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "notlhs5_fu_1657_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "notrhs2_fu_1393_p2" won't be mapped to RAM because address size (52) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "notlhs2_fu_1387_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond7_fu_981_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "exitcond6_fu_1125_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "exitcond5_fu_1415_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond4_fu_1475_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond3_fu_1616_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond1_fu_1773_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "notlhs_fu_1159_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "notrhs1_fu_1330_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_10_fu_1586_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_11_fu_1592_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_12_fu_1598_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_13_fu_1604_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_14_fu_1610_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_1_fu_1526_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_2_fu_1532_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_3_fu_1538_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_4_fu_1544_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_5_fu_1550_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_6_fu_1556_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_7_fu_1562_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_8_fu_1568_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_9_fu_1574_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_20_s_fu_1580_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_27_fu_1520_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "notrhs4_fu_1260_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "notlhs4_fu_1254_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "notrhs3_fu_1242_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "notlhs3_fu_1236_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "notrhs5_fu_1663_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "notlhs5_fu_1657_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "grp_fu_835_opcode" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_1_reg_714" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-3971] The signal mem_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal ram_reg was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:18:50 ; elapsed = 00:31:07 . Memory (MB): peak = 3129.828 ; gain = 2199.344 ; free physical = 414 ; free virtual = 6899
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-4471] merging register 'minver_hwa_fmul_3ocq_U9/din0_buf1_reg[31:0]' into 'minver_hwa_fmul_3ocq_U8/din0_buf1_reg[31:0]' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_fmul_3ocq.vhd:72]
+INFO: [Synth 8-4471] merging register 'minver_hwa_fmul_3ocq_U10/din0_buf1_reg[31:0]' into 'minver_hwa_fmul_3ocq_U8/din0_buf1_reg[31:0]' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_fmul_3ocq.vhd:72]
+INFO: [Synth 8-4471] merging register 'minver_hwa_fmul_3ocq_U11/din0_buf1_reg[31:0]' into 'minver_hwa_fmul_3ocq_U8/din0_buf1_reg[31:0]' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_16x16/minver_hwa_fmul_3ocq.vhd:72]
+INFO: [Synth 8-5545] ROM "notrhs2_fu_1393_p2" won't be mapped to RAM because address size (52) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "exitcond6_fu_1125_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-3971] The signal n_bank_inst_0/bram_gen[3].bram_array/mem_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal n_bank_inst_0/bram_gen[2].bram_array/mem_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal n_bank_inst_0/bram_gen[1].bram_array/mem_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal n_bank_inst_0/bram_gen[0].bram_array/mem_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal work_U/minver_hwa_work_ram_U/ram_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/minver_hwa_fdiv_3pcA_U12/minver_hwa_ap_fdiv_14_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/MSB_DEL/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'minver_hwa_inst_0/minver_hwa_fdiv_3pcA_U12/minver_hwa_ap_fdiv_14_no_dsp_32_u/U0/i_synth/DIV_OP.SPD.OP/MANT_DIV/RT[1].Q_DEL/i_pipe/opt_has_pipe.first_q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_3_addr_7_reg_1984_reg[2]' (FDE) to 'minver_hwa_inst_0/tmp_34_reg_1995_reg[0]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_3_addr_9_reg_1979_reg[2]' (FDE) to 'minver_hwa_inst_0/tmp_34_reg_1995_reg[0]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_3_addr_11_reg_1974_reg[2]' (FDE) to 'minver_hwa_inst_0/tmp_34_reg_1995_reg[0]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_3_addr_13_reg_1969_reg[2]' (FDE) to 'minver_hwa_inst_0/tmp_34_reg_1995_reg[0]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_3_addr_8_reg_2269_reg[2]' (FDE) to 'minver_hwa_inst_0/tmp_80_reg_2249_reg[2]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_3_addr_10_reg_2309_reg[2]' (FDE) to 'minver_hwa_inst_0/a_2_addr_10_reg_2304_reg[2]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_3_addr_12_reg_2349_reg[2]' (FDE) to 'minver_hwa_inst_0/a_2_addr_12_reg_2344_reg[2]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_3_addr_14_reg_2389_reg[2]' (FDE) to 'minver_hwa_inst_0/a_2_addr_14_reg_2384_reg[2]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_3_addr_7_reg_1984_reg[3]' (FDE) to 'minver_hwa_inst_0/tmp_34_reg_1995_reg[1]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_3_addr_9_reg_1979_reg[3]' (FDE) to 'minver_hwa_inst_0/tmp_34_reg_1995_reg[1]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_3_addr_11_reg_1974_reg[3]' (FDE) to 'minver_hwa_inst_0/tmp_34_reg_1995_reg[1]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_3_addr_13_reg_1969_reg[3]' (FDE) to 'minver_hwa_inst_0/tmp_34_reg_1995_reg[1]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_3_addr_8_reg_2269_reg[3]' (FDE) to 'minver_hwa_inst_0/tmp_80_reg_2249_reg[3]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_3_addr_10_reg_2309_reg[3]' (FDE) to 'minver_hwa_inst_0/a_2_addr_10_reg_2304_reg[3]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_3_addr_12_reg_2349_reg[3]' (FDE) to 'minver_hwa_inst_0/a_2_addr_12_reg_2344_reg[3]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_3_addr_14_reg_2389_reg[3]' (FDE) to 'minver_hwa_inst_0/a_2_addr_14_reg_2384_reg[3]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_3_addr_7_reg_1984_reg[4]' (FDE) to 'minver_hwa_inst_0/arrayNo2_reg_1989_reg[0]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_3_addr_9_reg_1979_reg[4]' (FDE) to 'minver_hwa_inst_0/arrayNo2_reg_1989_reg[0]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_3_addr_11_reg_1974_reg[4]' (FDE) to 'minver_hwa_inst_0/arrayNo2_reg_1989_reg[0]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_3_addr_13_reg_1969_reg[4]' (FDE) to 'minver_hwa_inst_0/arrayNo2_reg_1989_reg[0]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_3_addr_8_reg_2269_reg[4]' (FDE) to 'minver_hwa_inst_0/tmp_80_reg_2249_reg[4]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_3_addr_10_reg_2309_reg[4]' (FDE) to 'minver_hwa_inst_0/a_2_addr_10_reg_2304_reg[4]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_3_addr_12_reg_2349_reg[4]' (FDE) to 'minver_hwa_inst_0/a_2_addr_12_reg_2344_reg[4]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_3_addr_14_reg_2389_reg[4]' (FDE) to 'minver_hwa_inst_0/a_2_addr_14_reg_2384_reg[4]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_3_addr_7_reg_1984_reg[5]' (FDE) to 'minver_hwa_inst_0/arrayNo2_reg_1989_reg[1]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_3_addr_9_reg_1979_reg[5]' (FDE) to 'minver_hwa_inst_0/arrayNo2_reg_1989_reg[1]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_3_addr_11_reg_1974_reg[5]' (FDE) to 'minver_hwa_inst_0/arrayNo2_reg_1989_reg[1]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_3_addr_13_reg_1969_reg[5]' (FDE) to 'minver_hwa_inst_0/arrayNo2_reg_1989_reg[1]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_3_addr_8_reg_2269_reg[5]' (FDE) to 'minver_hwa_inst_0/tmp_80_reg_2249_reg[5]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_3_addr_10_reg_2309_reg[5]' (FDE) to 'minver_hwa_inst_0/a_2_addr_10_reg_2304_reg[5]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_3_addr_12_reg_2349_reg[5]' (FDE) to 'minver_hwa_inst_0/a_2_addr_12_reg_2344_reg[5]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_3_addr_14_reg_2389_reg[5]' (FDE) to 'minver_hwa_inst_0/a_2_addr_14_reg_2384_reg[5]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_2_addr_7_reg_1964_reg[2]' (FDE) to 'minver_hwa_inst_0/tmp_34_reg_1995_reg[0]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_2_addr_9_reg_1959_reg[2]' (FDE) to 'minver_hwa_inst_0/tmp_34_reg_1995_reg[0]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_2_addr_11_reg_1954_reg[2]' (FDE) to 'minver_hwa_inst_0/tmp_34_reg_1995_reg[0]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_2_addr_13_reg_1949_reg[2]' (FDE) to 'minver_hwa_inst_0/tmp_34_reg_1995_reg[0]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_2_addr_8_reg_2264_reg[2]' (FDE) to 'minver_hwa_inst_0/tmp_80_reg_2249_reg[2]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_2_addr_10_reg_2304_reg[2]' (FDE) to 'minver_hwa_inst_0/a_1_addr_10_reg_2299_reg[2]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_2_addr_12_reg_2344_reg[2]' (FDE) to 'minver_hwa_inst_0/a_1_addr_12_reg_2339_reg[2]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_2_addr_14_reg_2384_reg[2]' (FDE) to 'minver_hwa_inst_0/a_1_addr_14_reg_2379_reg[2]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_2_addr_7_reg_1964_reg[3]' (FDE) to 'minver_hwa_inst_0/tmp_34_reg_1995_reg[1]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_2_addr_9_reg_1959_reg[3]' (FDE) to 'minver_hwa_inst_0/tmp_34_reg_1995_reg[1]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_2_addr_11_reg_1954_reg[3]' (FDE) to 'minver_hwa_inst_0/tmp_34_reg_1995_reg[1]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_2_addr_13_reg_1949_reg[3]' (FDE) to 'minver_hwa_inst_0/tmp_34_reg_1995_reg[1]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_2_addr_8_reg_2264_reg[3]' (FDE) to 'minver_hwa_inst_0/tmp_80_reg_2249_reg[3]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_2_addr_10_reg_2304_reg[3]' (FDE) to 'minver_hwa_inst_0/a_1_addr_10_reg_2299_reg[3]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_2_addr_12_reg_2344_reg[3]' (FDE) to 'minver_hwa_inst_0/a_1_addr_12_reg_2339_reg[3]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_2_addr_14_reg_2384_reg[3]' (FDE) to 'minver_hwa_inst_0/a_1_addr_14_reg_2379_reg[3]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_2_addr_7_reg_1964_reg[4]' (FDE) to 'minver_hwa_inst_0/arrayNo2_reg_1989_reg[0]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_2_addr_9_reg_1959_reg[4]' (FDE) to 'minver_hwa_inst_0/arrayNo2_reg_1989_reg[0]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_2_addr_11_reg_1954_reg[4]' (FDE) to 'minver_hwa_inst_0/arrayNo2_reg_1989_reg[0]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_2_addr_13_reg_1949_reg[4]' (FDE) to 'minver_hwa_inst_0/arrayNo2_reg_1989_reg[0]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_2_addr_8_reg_2264_reg[4]' (FDE) to 'minver_hwa_inst_0/tmp_80_reg_2249_reg[4]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_2_addr_10_reg_2304_reg[4]' (FDE) to 'minver_hwa_inst_0/a_1_addr_10_reg_2299_reg[4]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_2_addr_12_reg_2344_reg[4]' (FDE) to 'minver_hwa_inst_0/a_1_addr_12_reg_2339_reg[4]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_2_addr_14_reg_2384_reg[4]' (FDE) to 'minver_hwa_inst_0/a_1_addr_14_reg_2379_reg[4]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_2_addr_7_reg_1964_reg[5]' (FDE) to 'minver_hwa_inst_0/arrayNo2_reg_1989_reg[1]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_2_addr_9_reg_1959_reg[5]' (FDE) to 'minver_hwa_inst_0/arrayNo2_reg_1989_reg[1]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_2_addr_11_reg_1954_reg[5]' (FDE) to 'minver_hwa_inst_0/arrayNo2_reg_1989_reg[1]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_2_addr_13_reg_1949_reg[5]' (FDE) to 'minver_hwa_inst_0/arrayNo2_reg_1989_reg[1]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_2_addr_8_reg_2264_reg[5]' (FDE) to 'minver_hwa_inst_0/tmp_80_reg_2249_reg[5]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_2_addr_10_reg_2304_reg[5]' (FDE) to 'minver_hwa_inst_0/a_1_addr_10_reg_2299_reg[5]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_2_addr_12_reg_2344_reg[5]' (FDE) to 'minver_hwa_inst_0/a_1_addr_12_reg_2339_reg[5]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_2_addr_14_reg_2384_reg[5]' (FDE) to 'minver_hwa_inst_0/a_1_addr_14_reg_2379_reg[5]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_1_addr_7_reg_1944_reg[2]' (FDE) to 'minver_hwa_inst_0/tmp_34_reg_1995_reg[0]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_1_addr_9_reg_1939_reg[2]' (FDE) to 'minver_hwa_inst_0/tmp_34_reg_1995_reg[0]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_1_addr_11_reg_1934_reg[2]' (FDE) to 'minver_hwa_inst_0/tmp_34_reg_1995_reg[0]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_1_addr_13_reg_1929_reg[2]' (FDE) to 'minver_hwa_inst_0/tmp_34_reg_1995_reg[0]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_1_addr_8_reg_2259_reg[2]' (FDE) to 'minver_hwa_inst_0/tmp_80_reg_2249_reg[2]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_1_addr_10_reg_2299_reg[2]' (FDE) to 'minver_hwa_inst_0/a_0_addr_10_reg_2294_reg[2]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_1_addr_12_reg_2339_reg[2]' (FDE) to 'minver_hwa_inst_0/a_0_addr_12_reg_2334_reg[2]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_1_addr_14_reg_2379_reg[2]' (FDE) to 'minver_hwa_inst_0/a_0_addr_14_reg_2374_reg[2]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_1_addr_7_reg_1944_reg[3]' (FDE) to 'minver_hwa_inst_0/tmp_34_reg_1995_reg[1]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_1_addr_9_reg_1939_reg[3]' (FDE) to 'minver_hwa_inst_0/tmp_34_reg_1995_reg[1]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_1_addr_11_reg_1934_reg[3]' (FDE) to 'minver_hwa_inst_0/tmp_34_reg_1995_reg[1]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_1_addr_13_reg_1929_reg[3]' (FDE) to 'minver_hwa_inst_0/tmp_34_reg_1995_reg[1]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_1_addr_8_reg_2259_reg[3]' (FDE) to 'minver_hwa_inst_0/tmp_80_reg_2249_reg[3]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_1_addr_10_reg_2299_reg[3]' (FDE) to 'minver_hwa_inst_0/a_0_addr_10_reg_2294_reg[3]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_1_addr_12_reg_2339_reg[3]' (FDE) to 'minver_hwa_inst_0/a_0_addr_12_reg_2334_reg[3]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_1_addr_14_reg_2379_reg[3]' (FDE) to 'minver_hwa_inst_0/a_0_addr_14_reg_2374_reg[3]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_1_addr_7_reg_1944_reg[4]' (FDE) to 'minver_hwa_inst_0/arrayNo2_reg_1989_reg[0]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_1_addr_9_reg_1939_reg[4]' (FDE) to 'minver_hwa_inst_0/arrayNo2_reg_1989_reg[0]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_1_addr_11_reg_1934_reg[4]' (FDE) to 'minver_hwa_inst_0/arrayNo2_reg_1989_reg[0]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_1_addr_13_reg_1929_reg[4]' (FDE) to 'minver_hwa_inst_0/arrayNo2_reg_1989_reg[0]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_1_addr_8_reg_2259_reg[4]' (FDE) to 'minver_hwa_inst_0/tmp_80_reg_2249_reg[4]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_1_addr_10_reg_2299_reg[4]' (FDE) to 'minver_hwa_inst_0/a_0_addr_10_reg_2294_reg[4]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_1_addr_12_reg_2339_reg[4]' (FDE) to 'minver_hwa_inst_0/a_0_addr_12_reg_2334_reg[4]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_1_addr_14_reg_2379_reg[4]' (FDE) to 'minver_hwa_inst_0/a_0_addr_14_reg_2374_reg[4]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_1_addr_7_reg_1944_reg[5]' (FDE) to 'minver_hwa_inst_0/arrayNo2_reg_1989_reg[1]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_1_addr_9_reg_1939_reg[5]' (FDE) to 'minver_hwa_inst_0/arrayNo2_reg_1989_reg[1]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_1_addr_11_reg_1934_reg[5]' (FDE) to 'minver_hwa_inst_0/arrayNo2_reg_1989_reg[1]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_1_addr_13_reg_1929_reg[5]' (FDE) to 'minver_hwa_inst_0/arrayNo2_reg_1989_reg[1]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_1_addr_8_reg_2259_reg[5]' (FDE) to 'minver_hwa_inst_0/tmp_80_reg_2249_reg[5]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_1_addr_10_reg_2299_reg[5]' (FDE) to 'minver_hwa_inst_0/a_0_addr_10_reg_2294_reg[5]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_1_addr_12_reg_2339_reg[5]' (FDE) to 'minver_hwa_inst_0/a_0_addr_12_reg_2334_reg[5]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/a_1_addr_14_reg_2379_reg[5]' (FDE) to 'minver_hwa_inst_0/a_0_addr_14_reg_2374_reg[5]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (minver_hwa_inst_0/grp_aesl_mux_load_4_16_x_fu_770/\ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/work_addr_2_reg_2471_reg[2]' (FDE) to 'minver_hwa_inst_0/tmp_60_reg_2477_reg[0]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/work_addr_2_reg_2471_reg[3]' (FDE) to 'minver_hwa_inst_0/tmp_60_reg_2477_reg[1]'
+INFO: [Synth 8-3886] merging instance 'minver_hwa_inst_0/work_addr_2_reg_2471_reg[4]' (FDE) to 'minver_hwa_inst_0/tmp_60_reg_2477_reg[2]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (minver_hwa_inst_0/\tmp_5_reg_2065_reg[28] )
+WARNING: [Synth 8-3332] Sequential element (ap_CS_fsm_reg[0]) is unused and will be removed from module aesl_mux_load_4_16_x.
+WARNING: [Synth 8-3332] Sequential element (ap_enable_reg_pp0_iter1_reg) is unused and will be removed from module aesl_mux_load_4_16_x.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_3_viv__1.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[3].pipe_reg[3][0]) is unused and will be removed from module floating_point_v7_1_3_viv__1.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_3_viv__2.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[3].pipe_reg[3][0]) is unused and will be removed from module floating_point_v7_1_3_viv__2.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_3_viv__3.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[3].pipe_reg[3][0]) is unused and will be removed from module floating_point_v7_1_3_viv__3.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_3_viv.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[3].pipe_reg[3][0]) is unused and will be removed from module floating_point_v7_1_3_viv.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized1__1.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized1__2.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized1__3.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[3].pipe_reg[3][0]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[4].pipe_reg[4][0]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[5].pipe_reg[5][0]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[6].pipe_reg[6][0]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[7].pipe_reg[7][0]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[8].pipe_reg[8][0]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[9].pipe_reg[9][0]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[10].pipe_reg[10][0]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[11].pipe_reg[11][0]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[12].pipe_reg[12][0]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[13].pipe_reg[13][0]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[14].pipe_reg[14][0]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][3]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][2]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][1]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[3].pipe_reg[3][3]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[3].pipe_reg[3][2]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[3].pipe_reg[3][1]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[3].pipe_reg[3][0]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[4].pipe_reg[4][3]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[4].pipe_reg[4][2]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[4].pipe_reg[4][1]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[4].pipe_reg[4][0]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[5].pipe_reg[5][3]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[5].pipe_reg[5][2]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[5].pipe_reg[5][1]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[5].pipe_reg[5][0]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[6].pipe_reg[6][3]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[6].pipe_reg[6][2]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[6].pipe_reg[6][1]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[6].pipe_reg[6][0]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[7].pipe_reg[7][3]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[7].pipe_reg[7][2]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[7].pipe_reg[7][1]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[7].pipe_reg[7][0]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[8].pipe_reg[8][3]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[8].pipe_reg[8][2]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[8].pipe_reg[8][1]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[8].pipe_reg[8][0]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[9].pipe_reg[9][3]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[9].pipe_reg[9][2]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[9].pipe_reg[9][1]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[9].pipe_reg[9][0]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[10].pipe_reg[10][3]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[10].pipe_reg[10][2]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[10].pipe_reg[10][1]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[10].pipe_reg[10][0]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[11].pipe_reg[11][3]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[11].pipe_reg[11][2]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[11].pipe_reg[11][1]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[11].pipe_reg[11][0]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[12].pipe_reg[12][3]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[12].pipe_reg[12][2]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[12].pipe_reg[12][1]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/opt_has_pipe.i_pipe[12].pipe_reg[12][0]) is unused and will be removed from module floating_point_v7_1_3_viv__parameterized3.
+WARNING: [Synth 8-3332] Sequential element (tmp_5_reg_2065_reg[28]) is unused and will be removed from module minver_hwa.
+WARNING: [Synth 8-3332] Sequential element (ap_reg_grp_aesl_mux_load_4_16_x_fu_770_ap_start_reg) is unused and will be removed from module minver_hwa.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:19:16 ; elapsed = 00:31:34 . Memory (MB): peak = 3129.828 ; gain = 2199.344 ; free physical = 414 ; free virtual = 6895
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:19:16 ; elapsed = 00:31:34 . Memory (MB): peak = 3129.828 ; gain = 2199.344 ; free physical = 414 ; free virtual = 6895
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance n_bank_inst_0/bram_gen[3].bram_array/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance n_bank_inst_0/bram_gen[3].bram_array/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance n_bank_inst_0/bram_gen[2].bram_array/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance n_bank_inst_0/bram_gen[2].bram_array/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance n_bank_inst_0/bram_gen[1].bram_array/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance n_bank_inst_0/bram_gen[1].bram_array/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance n_bank_inst_0/bram_gen[0].bram_array/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance n_bank_inst_0/bram_gen[0].bram_array/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance minver_hwa_inst_0/work_U/minver_hwa_work_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance minver_hwa_inst_0/work_U/minver_hwa_work_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:19:19 ; elapsed = 00:31:37 . Memory (MB): peak = 3129.828 ; gain = 2199.344 ; free physical = 414 ; free virtual = 6895
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:19:20 ; elapsed = 00:31:37 . Memory (MB): peak = 3129.828 ; gain = 2199.344 ; free physical = 412 ; free virtual = 6893
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:19:20 ; elapsed = 00:31:38 . Memory (MB): peak = 3129.828 ; gain = 2199.344 ; free physical = 412 ; free virtual = 6893
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:19:20 ; elapsed = 00:31:38 . Memory (MB): peak = 3129.828 ; gain = 2199.344 ; free physical = 412 ; free virtual = 6893
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:19:21 ; elapsed = 00:31:39 . Memory (MB): peak = 3129.828 ; gain = 2199.344 ; free physical = 412 ; free virtual = 6893
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:19:21 ; elapsed = 00:31:39 . Memory (MB): peak = 3129.828 ; gain = 2199.344 ; free physical = 412 ; free virtual = 6893
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:19:21 ; elapsed = 00:31:39 . Memory (MB): peak = 3129.828 ; gain = 2199.344 ; free physical = 412 ; free virtual = 6893
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    26|
+|2     |DSP48E1  |    20|
+|3     |LUT1     |   131|
+|4     |LUT2     |   379|
+|5     |LUT3     |  1325|
+|6     |LUT4     |   467|
+|7     |LUT5     |   996|
+|8     |LUT6     |   718|
+|9     |MUXCY    |  1100|
+|10    |MUXF7    |     2|
+|11    |RAMB18E1 |     1|
+|12    |RAMB36E1 |     4|
+|13    |SRL16E   |    66|
+|14    |XORCY    |   781|
+|15    |FDE      |    12|
+|16    |FDRE     |  3753|
+|17    |FDSE     |     8|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:19:21 ; elapsed = 00:31:39 . Memory (MB): peak = 3129.828 ; gain = 2199.344 ; free physical = 412 ; free virtual = 6893
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2863 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 3129.828 ; gain = 0.000 ; free physical = 412 ; free virtual = 6893
+Synthesis Optimization Complete : Time (s): cpu = 00:19:21 ; elapsed = 00:31:39 . Memory (MB): peak = 3129.828 ; gain = 2199.344 ; free physical = 413 ; free virtual = 6895
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1944 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 323 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 311 instances
+  FDE => FDRE: 12 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+2931 Infos, 1614 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:04 ; elapsed = 00:01:04 . Memory (MB): peak = 3129.828 ; gain = 0.000 ; free physical = 431 ; free virtual = 6912

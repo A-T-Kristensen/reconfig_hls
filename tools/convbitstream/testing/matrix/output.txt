@@ -108,4 +108,30 @@ Processing bitfile 9 of 11:
   - 32-bit based entropy = 7.566761 bit
   - optimum compression = 76.4 percent
   - compressed bitfile size = 345900 bytes
-  - real compression = 27.9 pe
+  - real compression = 27.9 percent
+  - BRAM-stream WCET = 129208 clock cycles
+  - CPU-stream WCET = 219771 clock cycles
+
+Processing bitfile 10 of 11:
+  - id = config_filterbank_pblock
+  - file = ./sample_bitstream/config_filterbank_pblock.bin
+  - raw bitfile size = 499640 bytes
+  - 32-bit based entropy = 9.908681 bit
+  - optimum compression = 69.0 percent
+  - compressed bitfile size = 378656 bytes
+  - real compression = 24.2 percent
+  - BRAM-stream WCET = 132152 clock cycles
+  - CPU-stream WCET = 229975 clock cycles
+
+Processing bitfile 11 of 11:
+  - id = config_fir2dim_pblock
+  - file = ./sample_bitstream/config_fir2dim_pblock.bin
+  - raw bitfile size = 490896 bytes
+  - 32-bit based entropy = 4.771710 bit
+  - optimum compression = 85.1 percent
+  - compressed bitfile size = 239444 bytes
+  - real compression = 51.2 percent
+  - BRAM-stream WCET = 132098 clock cycles
+  - CPU-stream WCET = 196289 clock cycles
+
+End of convbitfile.

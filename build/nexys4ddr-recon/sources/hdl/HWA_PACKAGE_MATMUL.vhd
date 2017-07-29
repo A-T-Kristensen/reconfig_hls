@@ -17,7 +17,7 @@ package HWA_PACKAGE_MATMUL is
     -- Constants used for the memory (BRAM) between Patmos and the HwA
 
     -- Number of banks used by the currently active design.
-    constant NBANKS  : integer := 3; 
+    constant NBANKS  : integer := 9; 
 
     -- The number of entries for each the memory banks 
     constant MEM_SIZE : integer := 4096;

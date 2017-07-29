@@ -193,109 +193,110 @@ set_attribute module $static synth         ${run.topSynth}
 ####################################################################
 set module1 "recon_matrix"
 
-set module1_variant1 "recon_matmul_float_3b_4x4"
+set module1_variant1 "recon_matmul_float_9b_4x4"
 set variant $module1_variant1
 add_module $variant
 set_attribute module $variant moduleName   $module1
 set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MATMUL.vhd work \
-                                                 $rtlDir/recon_matmul_3b.vhd work \
+                                                 $rtlDir/recon_matmul_9b.vhd work \
                                                  $rtlDir/bram_tdp.vhd work \
                                                  $rtlDir/n_bank_matmul.vhd work \
-                                                 $rtlDir/matmul_float_3b_4x4/matmul_hw.vhd work \
-                                                 $rtlDir/matmul_float_3b_4x4/matmul_hw_fmul_32cud.vhd work \
-                                                 $rtlDir/matmul_float_3b_4x4/matmul_hw_fadd_32bkb.vhd work \
+                                                 $rtlDir/matmul_float_9b_4x4/matmul_hw.vhd work \
+                                                 $rtlDir/matmul_float_9b_4x4/matmul_hw_fmul_32g8j.vhd work \
+                                                 $rtlDir/matmul_float_9b_4x4/matmul_hw_fadd_32fYi.vhd work \
                                                  $rtlDir/matmul_hw_ap_fadd_3_full_dsp_32/matmul_hw_ap_fadd_3_full_dsp_32.xci work \
                                                  $rtlDir/matmul_hw_ap_fmul_2_max_dsp_32/matmul_hw_ap_fmul_2_max_dsp_32.xci work \
                                            ]
 set_attribute module $variant synth        ${run.rmSynth}
 
-set module1_variant2 "recon_matmul_float_3b_16x16"
+set module1_variant2 "recon_matmul_float_9b_16x16"
 set variant $module1_variant2
 add_module $variant
 set_attribute module $variant moduleName   $module1
 set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MATMUL.vhd work \
-                                                 $rtlDir/recon_matmul_3b.vhd work \
+                                                 $rtlDir/recon_matmul_9b.vhd work \
                                                  $rtlDir/bram_tdp.vhd work \
                                                  $rtlDir/n_bank_matmul.vhd work \
-                                                 $rtlDir/matmul_float_3b_16x16/matmul_hw.vhd work \
-                                                 $rtlDir/matmul_float_3b_16x16/matmul_hw_fmul_32cud.vhd work \
-                                                 $rtlDir/matmul_float_3b_16x16/matmul_hw_fadd_32bkb.vhd work \
+                                                 $rtlDir/matmul_float_9b_16x16/matmul_hw.vhd work \
+                                                 $rtlDir/matmul_float_9b_16x16/matmul_hw_fmul_32g8j.vhd work \
+                                                 $rtlDir/matmul_float_9b_16x16/matmul_hw_fadd_32fYi.vhd work \
                                                  $rtlDir/matmul_hw_ap_fadd_3_full_dsp_32/matmul_hw_ap_fadd_3_full_dsp_32.xci work \
                                                  $rtlDir/matmul_hw_ap_fmul_2_max_dsp_32/matmul_hw_ap_fmul_2_max_dsp_32.xci work \
                                            ]
 set_attribute module $variant synth        ${run.rmSynth}
 
-set module1_variant3 "recon_matmul_float_3b_32x32"
+set module1_variant3 "recon_matmul_float_9b_32x32"
 set variant $module1_variant3
 add_module $variant
 set_attribute module $variant moduleName   $module1
 set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MATMUL.vhd work \
-                                                 $rtlDir/recon_matmul_3b.vhd work \
+                                                 $rtlDir/recon_matmul_9b.vhd work \
                                                  $rtlDir/bram_tdp.vhd work \
                                                  $rtlDir/n_bank_matmul.vhd work \
-                                                 $rtlDir/matmul_float_3b_32x32/matmul_hw.vhd work \
-                                                 $rtlDir/matmul_float_3b_32x32/matmul_hw_fmul_32cud.vhd work \
-                                                 $rtlDir/matmul_float_3b_32x32/matmul_hw_fadd_32bkb.vhd work \
+                                                 $rtlDir/matmul_float_9b_32x32/matmul_hw.vhd work \
+                                                 $rtlDir/matmul_float_9b_32x32/matmul_hw_fadd_32fYi.vhd work \
+                                                 $rtlDir/matmul_float_9b_32x32/matmul_hw_fmul_32g8j.vhd work \
                                                  $rtlDir/matmul_hw_ap_fadd_3_full_dsp_32/matmul_hw_ap_fadd_3_full_dsp_32.xci work \
                                                  $rtlDir/matmul_hw_ap_fmul_2_max_dsp_32/matmul_hw_ap_fmul_2_max_dsp_32.xci work \
                                            ]
 set_attribute module $variant synth        ${run.rmSynth}
 
-set module1_variant4 "recon_matmul_int_3b_4x4"
+set module1_variant4 "recon_matmul_int_9b_4x4"
 set variant $module1_variant4
 add_module $variant
 set_attribute module $variant moduleName   $module1
 set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MATMUL.vhd work \
-                                                 $rtlDir/recon_matmul_3b.vhd work \
+                                                 $rtlDir/recon_matmul_9b.vhd work \
                                                  $rtlDir/bram_tdp.vhd work \
                                                  $rtlDir/n_bank_matmul.vhd work \
-                                                 $rtlDir/matmul_int_3b_4x4/matmul_hw.vhd work \
-                                                 $rtlDir/matmul_int_3b_4x4/matmul_hw_mul_32sbkb.vhd work \
+                                                 $rtlDir/matmul_int_9b_4x4/matmul_hw.vhd work \
+                                                 $rtlDir/matmul_int_9b_4x4/matmul_hw_mul_32sdEe.vhd work \
                                            ]
 set_attribute module $variant synth        ${run.rmSynth}
 
-set module1_variant5 "recon_matmul_int_3b_16x16"
+set module1_variant5 "recon_matmul_int_9b_16x16"
 set variant $module1_variant5
 add_module $variant
 set_attribute module $variant moduleName   $module1
 set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MATMUL.vhd work \
-                                                 $rtlDir/recon_matmul_3b.vhd work \
+                                                 $rtlDir/recon_matmul_9b.vhd work \
                                                  $rtlDir/bram_tdp.vhd work \
                                                  $rtlDir/n_bank_matmul.vhd work \
-                                                 $rtlDir/matmul_int_3b_16x16/matmul_hw.vhd work \
-                                                 $rtlDir/matmul_int_3b_16x16/matmul_hw_mul_32sbkb.vhd work \
+                                                 $rtlDir/matmul_int_9b_16x16/matmul_hw.vhd work \
+                                                 $rtlDir/matmul_int_9b_16x16/matmul_hw_mul_32sdEe.vhd work \
                                            ]
 set_attribute module $variant synth        ${run.rmSynth}
 
-set module1_variant6 "recon_matmul_int_3b_32x32"
+set module1_variant6 "recon_matmul_int_9b_32x32"
 set variant $module1_variant6
 add_module $variant
 set_attribute module $variant moduleName   $module1
 set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MATMUL.vhd work \
-                                                 $rtlDir/recon_matmul_3b.vhd work \
+                                                 $rtlDir/recon_matmul_9b.vhd work \
                                                  $rtlDir/bram_tdp.vhd work \
                                                  $rtlDir/n_bank_matmul.vhd work \
-                                                 $rtlDir/matmul_int_3b_32x32/matmul_hw.vhd work \
-                                                 $rtlDir/matmul_int_3b_32x32/matmul_hw_mul_32sbkb.vhd work \
+                                                 $rtlDir/matmul_int_9b_32x32/matmul_hw.vhd work \
+                                                 $rtlDir/matmul_int_9b_32x32/matmul_hw_mul_32sdEe.vhd work \
                                            ]
 set_attribute module $variant synth        ${run.rmSynth}
 
-set module1_variant7 "recon_minver_1b_4x4"
+set module1_variant7 "recon_minver_4b_4x4"
 set variant $module1_variant7
 add_module $variant
 set_attribute module $variant moduleName   $module1
 set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MINVER.vhd work \
-                                                 $rtlDir/recon_minver_1b.vhd work \
+                                                 $rtlDir/recon_minver_4b.vhd work \
                                                  $rtlDir/n_bank_minver.vhd work \
-                                                 $rtlDir/minver_float_1b_4x4/minver_hwa.vhd work \
-                                                 $rtlDir/minver_float_1b_4x4/minver_hwa_fcmp_3fYi.vhd work \
-                                                 $rtlDir/minver_float_1b_4x4/minver_hwa_fdiv_3dEe.vhd work \
-                                                 $rtlDir/minver_float_1b_4x4/minver_hwa_fmul_3cud.vhd work \
-                                                 $rtlDir/minver_float_1b_4x4/minver_hwa_fsub_3bkb.vhd work \
+                                                 $rtlDir/minver_float_4b_4x4/minver_hwa.vhd work \
+                                                 $rtlDir/minver_float_4b_4x4/aesl_mux_load_4_4_x_s.vhd work \
+                                                 $rtlDir/minver_float_4b_4x4/minver_hwa_fdiv_3pcA.vhd work \
+                                                 $rtlDir/minver_float_4b_4x4/minver_hwa_fsub_3ncg.vhd work \
+                                                 $rtlDir/minver_float_4b_4x4/minver_hwa_dcmp_6sc4.vhd work \
                                                  $rtlDir/bram_tdp.vhd work \
-                                                 $rtlDir/minver_float_1b_4x4/minver_hwa_work.vhd work \
-                                                 $rtlDir/minver_float_1b_4x4/minver_hwa_fpext_eOg.vhd work \
-                                                 $rtlDir/minver_float_1b_4x4/minver_hwa_dcmp_6g8j.vhd work \
+                                                 $rtlDir/minver_float_4b_4x4/minver_hwa_work.vhd work \
+                                                 $rtlDir/minver_float_4b_4x4/minver_hwa_fmul_3ocq.vhd work \
+                                                 $rtlDir/minver_float_4b_4x4/minver_hwa_fcmp_3rcU.vhd work \
+                                                 $rtlDir/minver_float_4b_4x4/minver_hwa_fpext_qcK.vhd work \
                                                  $rtlDir/minver_hwa_ap_dcmp_0_no_dsp_64/minver_hwa_ap_dcmp_0_no_dsp_64.xci work \
                                                  $rtlDir/minver_hwa_ap_fcmp_0_no_dsp_32/minver_hwa_ap_fcmp_0_no_dsp_32.xci work \
                                                  $rtlDir/minver_hwa_ap_fdiv_14_no_dsp_32/minver_hwa_ap_fdiv_14_no_dsp_32.xci work \
@@ -305,22 +306,23 @@ set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MINVER.vhd 
                                            ]
 set_attribute module $variant synth        ${run.rmSynth}
 
-set module1_variant8 "recon_minver_1b_16x16"
+set module1_variant8 "recon_minver_4b_16x16"
 set variant $module1_variant8
 add_module $variant
 set_attribute module $variant moduleName   $module1
 set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MINVER.vhd work \
-                                                 $rtlDir/recon_minver_1b.vhd work \
+                                                 $rtlDir/recon_minver_4b.vhd work \
                                                  $rtlDir/n_bank_minver.vhd work \
-                                                 $rtlDir/minver_float_1b_16x16/minver_hwa.vhd work \
-                                                 $rtlDir/minver_float_1b_16x16/minver_hwa_fcmp_3fYi.vhd work \
-                                                 $rtlDir/minver_float_1b_16x16/minver_hwa_fdiv_3dEe.vhd work \
-                                                 $rtlDir/minver_float_1b_16x16/minver_hwa_fmul_3cud.vhd work \
-                                                 $rtlDir/minver_float_1b_16x16/minver_hwa_fsub_3bkb.vhd work \
+                                                 $rtlDir/minver_float_4b_16x16/minver_hwa.vhd work \
+                                                 $rtlDir/minver_float_4b_16x16/aesl_mux_load_4_16_x.vhd work \
+                                                 $rtlDir/minver_float_4b_16x16/minver_hwa_fdiv_3pcA.vhd work \
+                                                 $rtlDir/minver_float_4b_16x16/minver_hwa_fsub_3ncg.vhd work \
+                                                 $rtlDir/minver_float_4b_16x16/minver_hwa_dcmp_6sc4.vhd work \
                                                  $rtlDir/bram_tdp.vhd work \
-                                                 $rtlDir/minver_float_1b_16x16/minver_hwa_work.vhd work \
-                                                 $rtlDir/minver_float_1b_16x16/minver_hwa_fpext_eOg.vhd work \
-                                                 $rtlDir/minver_float_1b_16x16/minver_hwa_dcmp_6g8j.vhd work \
+                                                 $rtlDir/minver_float_4b_16x16/minver_hwa_work.vhd work \
+                                                 $rtlDir/minver_float_4b_16x16/minver_hwa_fmul_3ocq.vhd work \
+                                                 $rtlDir/minver_float_4b_16x16/minver_hwa_fcmp_3rcU.vhd work \
+                                                 $rtlDir/minver_float_4b_16x16/minver_hwa_fpext_qcK.vhd work \
                                                  $rtlDir/minver_hwa_ap_dcmp_0_no_dsp_64/minver_hwa_ap_dcmp_0_no_dsp_64.xci work \
                                                  $rtlDir/minver_hwa_ap_fcmp_0_no_dsp_32/minver_hwa_ap_fcmp_0_no_dsp_32.xci work \
                                                  $rtlDir/minver_hwa_ap_fdiv_14_no_dsp_32/minver_hwa_ap_fdiv_14_no_dsp_32.xci work \
@@ -330,22 +332,23 @@ set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MINVER.vhd 
                                            ]
 set_attribute module $variant synth        ${run.rmSynth}
 
-set module1_variant9 "recon_minver_1b_32x32"
+set module1_variant9 "recon_minver_4b_32x32"
 set variant $module1_variant9
 add_module $variant
 set_attribute module $variant moduleName   $module1
 set_attribute module $variant vhdl         [list $rtlDir/HWA_PACKAGE_MINVER.vhd work \
-                                                 $rtlDir/recon_minver_1b.vhd work \
+                                                 $rtlDir/recon_minver_4b.vhd work \
                                                  $rtlDir/n_bank_minver.vhd work \
-                                                 $rtlDir/minver_float_1b_32x32/minver_hwa.vhd work \
-                                                 $rtlDir/minver_float_1b_32x32/minver_hwa_fcmp_3fYi.vhd work \
-                                                 $rtlDir/minver_float_1b_32x32/minver_hwa_fdiv_3dEe.vhd work \
-                                                 $rtlDir/minver_float_1b_32x32/minver_hwa_fmul_3cud.vhd work \
-                                                 $rtlDir/minver_float_1b_32x32/minver_hwa_fsub_3bkb.vhd work \
+                                                 $rtlDir/minver_float_4b_32x32/minver_hwa.vhd work \
+                                                 $rtlDir/minver_float_4b_32x32/aesl_mux_load_4_32_x.vhd work \
+                                                 $rtlDir/minver_float_4b_32x32/minver_hwa_fdiv_3pcA.vhd work \
+                                                 $rtlDir/minver_float_4b_32x32/minver_hwa_fsub_3ncg.vhd work \
+                                                 $rtlDir/minver_float_4b_32x32/minver_hwa_dcmp_6sc4.vhd work \
                                                  $rtlDir/bram_tdp.vhd work \
-                                                 $rtlDir/minver_float_1b_32x32/minver_hwa_work.vhd work \
-                                                 $rtlDir/minver_float_1b_32x32/minver_hwa_fpext_eOg.vhd work \
-                                                 $rtlDir/minver_float_1b_32x32/minver_hwa_dcmp_6g8j.vhd work \
+                                                 $rtlDir/minver_float_4b_32x32/minver_hwa_work.vhd work \
+                                                 $rtlDir/minver_float_4b_32x32/minver_hwa_fmul_3ocq.vhd work \
+                                                 $rtlDir/minver_float_4b_32x32/minver_hwa_fcmp_3rcU.vhd work \
+                                                 $rtlDir/minver_float_4b_32x32/minver_hwa_fpext_qcK.vhd work \
                                                  $rtlDir/minver_hwa_ap_dcmp_0_no_dsp_64/minver_hwa_ap_dcmp_0_no_dsp_64.xci work \
                                                  $rtlDir/minver_hwa_ap_fcmp_0_no_dsp_32/minver_hwa_ap_fcmp_0_no_dsp_32.xci work \
                                                  $rtlDir/minver_hwa_ap_fdiv_14_no_dsp_32/minver_hwa_ap_fdiv_14_no_dsp_32.xci work \
