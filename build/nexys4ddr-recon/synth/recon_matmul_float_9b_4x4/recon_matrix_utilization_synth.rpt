@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.4 (lin64) Build 1733598 Wed Dec 14 22:35:42 MST 2016
-| Date         : Sat Jul 29 16:25:55 2017
+| Date         : Mon Jul 31 11:39:08 2017
 | Host         : andreas-W54xEU running 64-bit Ubuntu 16.04.2 LTS
 | Command      : report_utilization -file ./synth/recon_matmul_float_9b_4x4/recon_matrix_utilization_synth.rpt
 | Design       : recon_matrix

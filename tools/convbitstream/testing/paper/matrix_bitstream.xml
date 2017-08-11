@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<bitfiles>
+	<description>Bitstreams for generating results for the bsc thesis of Andreas.</description>
+
+	<parameters datasize="32" compression="true" bitswapped="true"/>
+	<bitfile id="config_recon_matmul_float_9b_16x16_import_pblock_recon_matrix_inst_0_partial" file="./sample_bitstream/config_recon_matmul_float_9b_16x16_import_pblock_recon_matrix_inst_0_partial.bin" />
+	<bitfile id="config_recon_matmul_float_9b_32x32_import_pblock_recon_matrix_inst_0_partial" file="./sample_bitstream/config_recon_matmul_float_9b_32x32_import_pblock_recon_matrix_inst_0_partial.bin" />
+	<bitfile id="config_recon_matmul_float_9b_4x4_implement_pblock_recon_matrix_inst_0_partial" file="./sample_bitstream/config_recon_matmul_float_9b_4x4_implement_pblock_recon_matrix_inst_0_partial.bin" />
+	<bitfile id="config_recon_matmul_int_9b_16x16_import_pblock_recon_matrix_inst_0_partial" file="./sample_bitstream/config_recon_matmul_int_9b_16x16_import_pblock_recon_matrix_inst_0_partial.bin" />
+	<bitfile id="config_recon_matmul_int_9b_32x32_import_pblock_recon_matrix_inst_0_partial" file="./sample_bitstream/config_recon_matmul_int_9b_32x32_import_pblock_recon_matrix_inst_0_partial.bin" />
+	<bitfile id="config_recon_matmul_int_9b_4x4_import_pblock_recon_matrix_inst_0_partial" file="./sample_bitstream/config_recon_matmul_int_9b_4x4_import_pblock_recon_matrix_inst_0_partial.bin" />
+	<bitfile id="config_recon_minver_4b_16x16_import_pblock_recon_matrix_inst_0_partial" file="./sample_bitstream/config_recon_minver_4b_16x16_import_pblock_recon_matrix_inst_0_partial.bin" />
+	<bitfile id="config_recon_minver_4b_32x32_import_pblock_recon_matrix_inst_0_partial" file="./sample_bitstream/config_recon_minver_4b_32x32_import_pblock_recon_matrix_inst_0_partial.bin" />
+	<bitfile id="config_recon_minver_4b_4x4_import_pblock_recon_matrix_inst_0_partial" file="./sample_bitstream/config_recon_minver_4b_4x4_import_pblock_recon_matrix_inst_0_partial.bin" />
+</bitfiles>

@@ -11,9 +11,9 @@ WARNING: [Vivado_Tcl 4-393] The 'Synthesis' target of the following IPs are stal
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 13623 
+INFO: Helper process launched with PID 2833 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:17:46 ; elapsed = 00:30:03 . Memory (MB): peak = 3121.824 ; gain = 2191.340 ; free physical = 294 ; free virtual = 6911
+Starting Synthesize : Time (s): cpu = 01:28:43 ; elapsed = 00:58:49 . Memory (MB): peak = 3621.691 ; gain = 2691.203 ; free physical = 166 ; free virtual = 6861
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'recon_matrix' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/recon_minver_4b.vhd:36]
 INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/recon_minver_4b.vhd:95]
@@ -84,15 +84,11 @@ INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andre
 INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_4x4/minver_hwa.vhd:528]
 INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_4x4/minver_hwa.vhd:530]
 INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_4x4/minver_hwa.vhd:532]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_4x4/minver_hwa.vhd:534]
 INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_4x4/minver_hwa.vhd:544]
 INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_4x4/minver_hwa.vhd:548]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_4x4/minver_hwa.vhd:550]
 INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_4x4/minver_hwa.vhd:552]
 INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_4x4/minver_hwa.vhd:554]
 INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_4x4/minver_hwa.vhd:561]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_4x4/minver_hwa.vhd:564]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_4x4/minver_hwa.vhd:567]
 INFO: [Synth 8-3491] module 'minver_hwa_work' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_4x4/minver_hwa_work.vhd:107' bound to instance 'work_U' of component 'minver_hwa_work' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_4x4/minver_hwa.vhd:770]
 INFO: [Synth 8-638] synthesizing module 'minver_hwa_work' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_4x4/minver_hwa_work.vhd:127]
 INFO: [Synth 8-3491] module 'minver_hwa_work_ram' declared at '/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_4x4/minver_hwa_work.vhd:13' bound to instance 'minver_hwa_work_ram_U' of component 'minver_hwa_work_ram' [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/minver_float_4b_4x4/minver_hwa_work.vhd:146]
@@ -251,17 +247,17 @@ WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized660 has unconn
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_3_viv__parameterized660 has unconnected port SINIT
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:17:58 ; elapsed = 00:30:15 . Memory (MB): peak = 3121.824 ; gain = 2191.340 ; free physical = 283 ; free virtual = 6907
+Finished Synthesize : Time (s): cpu = 01:28:55 ; elapsed = 00:59:01 . Memory (MB): peak = 3621.691 ; gain = 2691.203 ; free physical = 181 ; free virtual = 6868
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:17:58 ; elapsed = 00:30:15 . Memory (MB): peak = 3121.824 ; gain = 2191.340 ; free physical = 284 ; free virtual = 6908
+Finished Constraint Validation : Time (s): cpu = 01:28:56 ; elapsed = 00:59:02 . Memory (MB): peak = 3621.691 ; gain = 2691.203 ; free physical = 180 ; free virtual = 6868
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:17:58 ; elapsed = 00:30:15 . Memory (MB): peak = 3121.824 ; gain = 2191.340 ; free physical = 284 ; free virtual = 6908
+Finished Loading Part and Timing Information : Time (s): cpu = 01:28:56 ; elapsed = 00:59:02 . Memory (MB): peak = 3621.691 ; gain = 2691.203 ; free physical = 180 ; free virtual = 6868
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "sel_tmp4_fu_132_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "sel_tmp2_fu_119_p2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
@@ -373,7 +369,7 @@ INFO: [Synth 8-5544] ROM "r_1_reg_358" won't be mapped to Block RAM because addr
 INFO: [Synth 8-3971] The signal mem_reg was recognized as a true dual port RAM template.
 INFO: [Synth 8-3971] The signal ram_reg was recognized as a true dual port RAM template.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:18:04 ; elapsed = 00:30:21 . Memory (MB): peak = 3121.824 ; gain = 2191.340 ; free physical = 279 ; free virtual = 6914
+Finished RTL Optimization Phase 2 : Time (s): cpu = 01:29:02 ; elapsed = 00:59:08 . Memory (MB): peak = 3621.691 ; gain = 2691.203 ; free physical = 170 ; free virtual = 6874
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -557,7 +553,7 @@ INFO: [Synth 8-3332] Sequential element (DIV_OP.SPD.OP/EXP/FLOW_UP_DEL/i_pipe/op
 WARNING: [Synth 8-3332] Sequential element (minver_hwa_inst_0/tmp_5_reg_1118_reg[28]) is unused and will be removed from module recon_matrix.
 WARNING: [Synth 8-3332] Sequential element (minver_hwa_inst_0/ap_reg_grp_aesl_mux_load_4_4_x_s_fu_414_ap_start_reg) is unused and will be removed from module recon_matrix.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:18:12 ; elapsed = 00:30:30 . Memory (MB): peak = 3121.824 ; gain = 2191.340 ; free physical = 258 ; free virtual = 6901
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 01:29:12 ; elapsed = 00:59:18 . Memory (MB): peak = 3621.691 ; gain = 2691.203 ; free physical = 192 ; free virtual = 6887
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -570,7 +566,7 @@ Start Timing Optimization
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:18:12 ; elapsed = 00:30:30 . Memory (MB): peak = 3121.824 ; gain = 2191.340 ; free physical = 260 ; free virtual = 6903
+Finished Timing Optimization : Time (s): cpu = 01:29:12 ; elapsed = 00:59:18 . Memory (MB): peak = 3621.691 ; gain = 2691.203 ; free physical = 192 ; free virtual = 6887
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -592,7 +588,7 @@ INFO: [Synth 8-4480] The timing for the instance n_bank_inst_0/bram_gen[0].bram_
 INFO: [Synth 8-4480] The timing for the instance minver_hwa_inst_0/work_U/minver_hwa_work_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance minver_hwa_inst_0/work_U/minver_hwa_work_ram_U/ram_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:18:14 ; elapsed = 00:30:32 . Memory (MB): peak = 3121.824 ; gain = 2191.340 ; free physical = 247 ; free virtual = 6895
+Finished Technology Mapping : Time (s): cpu = 01:29:13 ; elapsed = 00:59:19 . Memory (MB): peak = 3621.691 ; gain = 2691.203 ; free physical = 194 ; free virtual = 6887
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -616,7 +612,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:18:15 ; elapsed = 00:30:33 . Memory (MB): peak = 3121.824 ; gain = 2191.340 ; free physical = 226 ; free virtual = 6888
+Finished IO Insertion : Time (s): cpu = 01:29:14 ; elapsed = 00:59:20 . Memory (MB): peak = 3621.691 ; gain = 2691.203 ; free physical = 195 ; free virtual = 6887
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -629,7 +625,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:18:15 ; elapsed = 00:30:33 . Memory (MB): peak = 3121.824 ; gain = 2191.340 ; free physical = 226 ; free virtual = 6888
+Finished Renaming Generated Instances : Time (s): cpu = 01:29:14 ; elapsed = 00:59:20 . Memory (MB): peak = 3621.691 ; gain = 2691.203 ; free physical = 195 ; free virtual = 6887
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -641,25 +637,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:18:15 ; elapsed = 00:30:33 . Memory (MB): peak = 3121.824 ; gain = 2191.340 ; free physical = 225 ; free virtual = 6888
+Finished Rebuilding User Hierarchy : Time (s): cpu = 01:29:14 ; elapsed = 00:59:21 . Memory (MB): peak = 3621.691 ; gain = 2691.203 ; free physical = 195 ; free virtual = 6887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:18:15 ; elapsed = 00:30:33 . Memory (MB): peak = 3121.824 ; gain = 2191.340 ; free physical = 225 ; free virtual = 6888
+Finished Renaming Generated Ports : Time (s): cpu = 01:29:14 ; elapsed = 00:59:21 . Memory (MB): peak = 3621.691 ; gain = 2691.203 ; free physical = 195 ; free virtual = 6887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:18:15 ; elapsed = 00:30:33 . Memory (MB): peak = 3121.824 ; gain = 2191.340 ; free physical = 225 ; free virtual = 6887
+Finished Handling Custom Attributes : Time (s): cpu = 01:29:15 ; elapsed = 00:59:21 . Memory (MB): peak = 3621.691 ; gain = 2691.203 ; free physical = 195 ; free virtual = 6887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:18:16 ; elapsed = 00:30:33 . Memory (MB): peak = 3121.824 ; gain = 2191.340 ; free physical = 225 ; free virtual = 6887
+Finished Renaming Generated Nets : Time (s): cpu = 01:29:15 ; elapsed = 00:59:21 . Memory (MB): peak = 3621.691 ; gain = 2691.203 ; free physical = 195 ; free virtual = 6887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -693,11 +689,11 @@ Report Cell Usage:
 |16    |FDSE     |     8|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:18:16 ; elapsed = 00:30:33 . Memory (MB): peak = 3121.824 ; gain = 2191.340 ; free physical = 225 ; free virtual = 6887
+Finished Writing Synthesis Report : Time (s): cpu = 01:29:15 ; elapsed = 00:59:21 . Memory (MB): peak = 3621.691 ; gain = 2691.203 ; free physical = 195 ; free virtual = 6887
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 2547 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 3121.824 ; gain = 0.000 ; free physical = 225 ; free virtual = 6887
-Synthesis Optimization Complete : Time (s): cpu = 00:18:16 ; elapsed = 00:30:33 . Memory (MB): peak = 3121.824 ; gain = 2191.340 ; free physical = 226 ; free virtual = 6888
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 3621.691 ; gain = 0.000 ; free physical = 195 ; free virtual = 6887
+Synthesis Optimization Complete : Time (s): cpu = 01:29:15 ; elapsed = 00:59:21 . Memory (MB): peak = 3621.691 ; gain = 2691.203 ; free physical = 197 ; free virtual = 6889
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 1614 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -709,6 +705,6 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDE => FDRE: 3 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-2399 Infos, 1502 Warnings, 2 Critical Warnings and 0 Errors encountered.
+2394 Infos, 1502 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 3121.824 ; gain = 0.000 ; free physical = 199 ; free virtual = 6875
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 3621.691 ; gain = 0.000 ; free physical = 179 ; free virtual = 6886

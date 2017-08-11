@@ -1,433 +1,392 @@
-Command: pr_verify -full_check -initial ./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_route_design.dcp -additional {./implement/config_recon_matmul_float_3b_16x16_import/patmos_top_route_design.dcp ./implement/config_recon_matmul_float_3b_32x32_import/patmos_top_route_design.dcp ./implement/config_recon_matmul_int_3b_4x4_import/patmos_top_route_design.dcp ./implement/config_recon_matmul_int_3b_16x16_import/patmos_top_route_design.dcp ./implement/config_recon_matmul_int_3b_32x32_import/patmos_top_route_design.dcp ./implement/config_recon_minver_1b_4x4_import/patmos_top_route_design.dcp ./implement/config_recon_minver_1b_16x16_import/patmos_top_route_design.dcp ./implement/config_recon_minver_1b_32x32_import/patmos_top_route_design.dcp ./implement/config_filterbank_import/patmos_top_route_design.dcp ./implement/config_fir2dim_import/patmos_top_route_design.dcp}
-INFO: [Netlist 29-17] Analyzing 776 Unisim elements for replacement
+Command: pr_verify -full_check -initial ./implement/config_recon_matmul_float_9b_4x4_implement/patmos_top_route_design.dcp -additional {./implement/config_recon_matmul_float_9b_16x16_import/patmos_top_route_design.dcp ./implement/config_recon_matmul_float_9b_32x32_import/patmos_top_route_design.dcp ./implement/config_recon_matmul_int_9b_4x4_import/patmos_top_route_design.dcp ./implement/config_recon_matmul_int_9b_16x16_import/patmos_top_route_design.dcp ./implement/config_recon_matmul_int_9b_32x32_import/patmos_top_route_design.dcp ./implement/config_recon_minver_4b_4x4_import/patmos_top_route_design.dcp ./implement/config_recon_minver_4b_16x16_import/patmos_top_route_design.dcp ./implement/config_recon_minver_4b_32x32_import/patmos_top_route_design.dcp ./implement/config_fir2dim_import/patmos_top_route_design.dcp}
+INFO: [Netlist 29-17] Analyzing 859 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2016.4
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
-Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
-Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top.xdc]
+Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
+Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
+Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top.xdc]
 CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
 New: create_clock -period 10.000 [get_ports clk_in], [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:56]
 Previous: create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_ports clk_in], [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/xdc/pblocks.xdc:1344]
 Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
 INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:57]
 INFO: [Timing 38-2] Deriving generated clocks [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:57]
-Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top.xdc]
+Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top.xdc]
 Reading XDEF placement.
 Reading placer database...
 Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3767.363 ; gain = 0.000 ; free physical = 672 ; free virtual = 11300
-Restored from archive | CPU: 1.400000 secs | Memory: 21.674675 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3767.363 ; gain = 0.000 ; free physical = 672 ; free virtual = 11300
+Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3773.766 ; gain = 0.000 ; free physical = 130 ; free virtual = 5381
+Restored from archive | CPU: 1.580000 secs | Memory: 23.865829 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3773.766 ; gain = 0.000 ; free physical = 130 ; free virtual = 5381
 INFO: [Project 1-604] Checkpoint was created with Vivado v2016.4 (64-bit) build 1733598
-INFO: [Vivado 12-3501] pr_verify ./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_route_design.dcp ./implement/config_recon_matmul_float_3b_16x16_import/patmos_top_route_design.dcp
-INFO: [Netlist 29-17] Analyzing 776 Unisim elements for replacement
+INFO: [Vivado 12-3501] pr_verify ./implement/config_recon_matmul_float_9b_4x4_implement/patmos_top_route_design.dcp ./implement/config_recon_matmul_float_9b_16x16_import/patmos_top_route_design.dcp
+INFO: [Netlist 29-17] Analyzing 860 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2016.4
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
-Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
-Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top.xdc]
+Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
+Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
+Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top.xdc]
 CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
 New: create_clock -period 10.000 [get_ports clk_in], [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:56]
 Previous: create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_ports clk_in], [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/xdc/pblocks.xdc:1344]
 Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
 INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:57]
 INFO: [Timing 38-2] Deriving generated clocks [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:57]
-Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top.xdc]
+Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top.xdc]
 Reading XDEF placement.
 Reading placer database...
 Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3767.363 ; gain = 0.000 ; free physical = 666 ; free virtual = 11298
-Restored from archive | CPU: 1.470000 secs | Memory: 22.915985 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3767.363 ; gain = 0.000 ; free physical = 666 ; free virtual = 11298
-INFO: [Project 1-604] Checkpoint was created with Vivado v2016.4 (64-bit) build 1733598
-INFO: [Constraints 18-1020] PR Verify Summary:
-DCP1: ./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_route_design.dcp
-  Number of reconfigurable modules compared = 1
-  Number of partition pins compared         = 83
-  Number of static tiles compared           = 2499
-  Number of static sites compared           = 3654
-  Number of static cells compared           = 20114
-  Number of static routed nodes compared    = 285894
-  Number of static routed pips compared     = 267201
-
-DCP2: ./implement/config_recon_matmul_float_3b_16x16_import/patmos_top_route_design.dcp
-  Number of reconfigurable modules compared = 1
-  Number of partition pins compared         = 83
-  Number of static tiles compared           = 2499
-  Number of static sites compared           = 3654
-  Number of static cells compared           = 20114
-  Number of static routed nodes compared    = 285894
-  Number of static routed pips compared     = 267201
-INFO: [Vivado 12-3253] PR_VERIFY: check points ./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_route_design.dcp and ./implement/config_recon_matmul_float_3b_16x16_import/patmos_top_route_design.dcp are compatible
-INFO: [Vivado 12-3501] pr_verify ./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_route_design.dcp ./implement/config_recon_matmul_float_3b_32x32_import/patmos_top_route_design.dcp
-INFO: [Netlist 29-17] Analyzing 778 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2016.4
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
-Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
-Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top.xdc]
-CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-New: create_clock -period 10.000 [get_ports clk_in], [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:56]
-Previous: create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_ports clk_in], [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/xdc/pblocks.xdc:1344]
-Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
-INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:57]
-INFO: [Timing 38-2] Deriving generated clocks [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:57]
-Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top.xdc]
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 3767.363 ; gain = 0.000 ; free physical = 662 ; free virtual = 11296
-Restored from archive | CPU: 1.500000 secs | Memory: 24.281487 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 3767.363 ; gain = 0.000 ; free physical = 662 ; free virtual = 11296
+Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3773.766 ; gain = 0.000 ; free physical = 140 ; free virtual = 5366
+Restored from archive | CPU: 1.680000 secs | Memory: 25.798103 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3773.766 ; gain = 0.000 ; free physical = 140 ; free virtual = 5366
 INFO: [Project 1-604] Checkpoint was created with Vivado v2016.4 (64-bit) build 1733598
 INFO: [Constraints 18-1020] PR Verify Summary:
-DCP1: ./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_route_design.dcp
+DCP1: ./implement/config_recon_matmul_float_9b_4x4_implement/patmos_top_route_design.dcp
   Number of reconfigurable modules compared = 1
   Number of partition pins compared         = 83
   Number of static tiles compared           = 2499
-  Number of static sites compared           = 3654
+  Number of static sites compared           = 3728
   Number of static cells compared           = 20114
-  Number of static routed nodes compared    = 285894
-  Number of static routed pips compared     = 267201
+  Number of static routed nodes compared    = 290359
+  Number of static routed pips compared     = 271649
 
-DCP2: ./implement/config_recon_matmul_float_3b_32x32_import/patmos_top_route_design.dcp
+DCP2: ./implement/config_recon_matmul_float_9b_16x16_import/patmos_top_route_design.dcp
   Number of reconfigurable modules compared = 1
   Number of partition pins compared         = 83
   Number of static tiles compared           = 2499
-  Number of static sites compared           = 3654
+  Number of static sites compared           = 3728
   Number of static cells compared           = 20114
-  Number of static routed nodes compared    = 285894
-  Number of static routed pips compared     = 267201
-INFO: [Vivado 12-3253] PR_VERIFY: check points ./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_route_design.dcp and ./implement/config_recon_matmul_float_3b_32x32_import/patmos_top_route_design.dcp are compatible
-INFO: [Vivado 12-3501] pr_verify ./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_route_design.dcp ./implement/config_recon_matmul_int_3b_4x4_import/patmos_top_route_design.dcp
-INFO: [Netlist 29-17] Analyzing 759 Unisim elements for replacement
+  Number of static routed nodes compared    = 290359
+  Number of static routed pips compared     = 271649
+INFO: [Vivado 12-3253] PR_VERIFY: check points ./implement/config_recon_matmul_float_9b_4x4_implement/patmos_top_route_design.dcp and ./implement/config_recon_matmul_float_9b_16x16_import/patmos_top_route_design.dcp are compatible
+INFO: [Vivado 12-3501] pr_verify ./implement/config_recon_matmul_float_9b_4x4_implement/patmos_top_route_design.dcp ./implement/config_recon_matmul_float_9b_32x32_import/patmos_top_route_design.dcp
+INFO: [Netlist 29-17] Analyzing 862 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2016.4
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
-Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
-Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top.xdc]
+Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
+Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
+Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top.xdc]
 CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
 New: create_clock -period 10.000 [get_ports clk_in], [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:56]
 Previous: create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_ports clk_in], [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/xdc/pblocks.xdc:1344]
 Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
 INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:57]
 INFO: [Timing 38-2] Deriving generated clocks [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:57]
-Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top.xdc]
+Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top.xdc]
 Reading XDEF placement.
 Reading placer database...
 Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3951.062 ; gain = 15.672 ; free physical = 609 ; free virtual = 11234
-Restored from archive | CPU: 1.330000 secs | Memory: 21.376984 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3951.062 ; gain = 15.672 ; free physical = 609 ; free virtual = 11234
+Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3773.766 ; gain = 0.000 ; free physical = 133 ; free virtual = 5385
+Restored from archive | CPU: 1.740000 secs | Memory: 27.966614 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3773.766 ; gain = 0.000 ; free physical = 133 ; free virtual = 5385
 INFO: [Project 1-604] Checkpoint was created with Vivado v2016.4 (64-bit) build 1733598
 INFO: [Constraints 18-1020] PR Verify Summary:
-DCP1: ./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_route_design.dcp
+DCP1: ./implement/config_recon_matmul_float_9b_4x4_implement/patmos_top_route_design.dcp
   Number of reconfigurable modules compared = 1
   Number of partition pins compared         = 83
   Number of static tiles compared           = 2499
-  Number of static sites compared           = 3654
+  Number of static sites compared           = 3728
   Number of static cells compared           = 20114
-  Number of static routed nodes compared    = 285894
-  Number of static routed pips compared     = 267201
+  Number of static routed nodes compared    = 290359
+  Number of static routed pips compared     = 271649
 
-DCP2: ./implement/config_recon_matmul_int_3b_4x4_import/patmos_top_route_design.dcp
+DCP2: ./implement/config_recon_matmul_float_9b_32x32_import/patmos_top_route_design.dcp
   Number of reconfigurable modules compared = 1
   Number of partition pins compared         = 83
   Number of static tiles compared           = 2499
-  Number of static sites compared           = 3654
+  Number of static sites compared           = 3728
   Number of static cells compared           = 20114
-  Number of static routed nodes compared    = 285894
-  Number of static routed pips compared     = 267201
-INFO: [Vivado 12-3253] PR_VERIFY: check points ./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_route_design.dcp and ./implement/config_recon_matmul_int_3b_4x4_import/patmos_top_route_design.dcp are compatible
-INFO: [Vivado 12-3501] pr_verify ./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_route_design.dcp ./implement/config_recon_matmul_int_3b_16x16_import/patmos_top_route_design.dcp
-INFO: [Netlist 29-17] Analyzing 783 Unisim elements for replacement
+  Number of static routed nodes compared    = 290359
+  Number of static routed pips compared     = 271649
+INFO: [Vivado 12-3253] PR_VERIFY: check points ./implement/config_recon_matmul_float_9b_4x4_implement/patmos_top_route_design.dcp and ./implement/config_recon_matmul_float_9b_32x32_import/patmos_top_route_design.dcp are compatible
+INFO: [Vivado 12-3501] pr_verify ./implement/config_recon_matmul_float_9b_4x4_implement/patmos_top_route_design.dcp ./implement/config_recon_matmul_int_9b_4x4_import/patmos_top_route_design.dcp
+INFO: [Netlist 29-17] Analyzing 768 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2016.4
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
-Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
-Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top.xdc]
+Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
+Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
+Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top.xdc]
 CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
 New: create_clock -period 10.000 [get_ports clk_in], [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:56]
 Previous: create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_ports clk_in], [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/xdc/pblocks.xdc:1344]
 Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
 INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:57]
 INFO: [Timing 38-2] Deriving generated clocks [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:57]
-Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top.xdc]
+Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top.xdc]
 Reading XDEF placement.
 Reading placer database...
 Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 4257.766 ; gain = 16.672 ; free physical = 456 ; free virtual = 11060
-Restored from archive | CPU: 1.360000 secs | Memory: 22.218132 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 4257.766 ; gain = 16.672 ; free physical = 456 ; free virtual = 11060
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3953.461 ; gain = 17.672 ; free physical = 152 ; free virtual = 5340
+Restored from archive | CPU: 1.350000 secs | Memory: 22.026657 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3953.461 ; gain = 17.672 ; free physical = 152 ; free virtual = 5340
 INFO: [Project 1-604] Checkpoint was created with Vivado v2016.4 (64-bit) build 1733598
 INFO: [Constraints 18-1020] PR Verify Summary:
-DCP1: ./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_route_design.dcp
+DCP1: ./implement/config_recon_matmul_float_9b_4x4_implement/patmos_top_route_design.dcp
   Number of reconfigurable modules compared = 1
   Number of partition pins compared         = 83
   Number of static tiles compared           = 2499
-  Number of static sites compared           = 3654
+  Number of static sites compared           = 3728
   Number of static cells compared           = 20114
-  Number of static routed nodes compared    = 285894
-  Number of static routed pips compared     = 267201
+  Number of static routed nodes compared    = 290359
+  Number of static routed pips compared     = 271649
 
-DCP2: ./implement/config_recon_matmul_int_3b_16x16_import/patmos_top_route_design.dcp
+DCP2: ./implement/config_recon_matmul_int_9b_4x4_import/patmos_top_route_design.dcp
   Number of reconfigurable modules compared = 1
   Number of partition pins compared         = 83
   Number of static tiles compared           = 2499
-  Number of static sites compared           = 3654
+  Number of static sites compared           = 3728
   Number of static cells compared           = 20114
-  Number of static routed nodes compared    = 285894
-  Number of static routed pips compared     = 267201
-INFO: [Vivado 12-3253] PR_VERIFY: check points ./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_route_design.dcp and ./implement/config_recon_matmul_int_3b_16x16_import/patmos_top_route_design.dcp are compatible
-INFO: [Vivado 12-3501] pr_verify ./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_route_design.dcp ./implement/config_recon_matmul_int_3b_32x32_import/patmos_top_route_design.dcp
-INFO: [Netlist 29-17] Analyzing 793 Unisim elements for replacement
+  Number of static routed nodes compared    = 290359
+  Number of static routed pips compared     = 271649
+INFO: [Vivado 12-3253] PR_VERIFY: check points ./implement/config_recon_matmul_float_9b_4x4_implement/patmos_top_route_design.dcp and ./implement/config_recon_matmul_int_9b_4x4_import/patmos_top_route_design.dcp are compatible
+INFO: [Vivado 12-3501] pr_verify ./implement/config_recon_matmul_float_9b_4x4_implement/patmos_top_route_design.dcp ./implement/config_recon_matmul_int_9b_16x16_import/patmos_top_route_design.dcp
+INFO: [Netlist 29-17] Analyzing 816 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2016.4
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
-Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
-Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top.xdc]
+Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
+Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
+Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top.xdc]
 CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
 New: create_clock -period 10.000 [get_ports clk_in], [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:56]
 Previous: create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_ports clk_in], [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/xdc/pblocks.xdc:1344]
 Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
 INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:57]
 INFO: [Timing 38-2] Deriving generated clocks [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:57]
-Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top.xdc]
+Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top.xdc]
 Reading XDEF placement.
 Reading placer database...
 Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 4566.469 ; gain = 18.672 ; free physical = 320 ; free virtual = 10880
-Restored from archive | CPU: 1.400000 secs | Memory: 22.261055 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 4566.469 ; gain = 18.672 ; free physical = 320 ; free virtual = 10880
+Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 4266.164 ; gain = 19.672 ; free physical = 130 ; free virtual = 5138
+Restored from archive | CPU: 1.510000 secs | Memory: 24.246529 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 4266.164 ; gain = 19.672 ; free physical = 130 ; free virtual = 5138
 INFO: [Project 1-604] Checkpoint was created with Vivado v2016.4 (64-bit) build 1733598
 INFO: [Constraints 18-1020] PR Verify Summary:
-DCP1: ./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_route_design.dcp
+DCP1: ./implement/config_recon_matmul_float_9b_4x4_implement/patmos_top_route_design.dcp
   Number of reconfigurable modules compared = 1
   Number of partition pins compared         = 83
   Number of static tiles compared           = 2499
-  Number of static sites compared           = 3654
+  Number of static sites compared           = 3728
   Number of static cells compared           = 20114
-  Number of static routed nodes compared    = 285894
-  Number of static routed pips compared     = 267201
+  Number of static routed nodes compared    = 290359
+  Number of static routed pips compared     = 271649
 
-DCP2: ./implement/config_recon_matmul_int_3b_32x32_import/patmos_top_route_design.dcp
+DCP2: ./implement/config_recon_matmul_int_9b_16x16_import/patmos_top_route_design.dcp
   Number of reconfigurable modules compared = 1
   Number of partition pins compared         = 83
   Number of static tiles compared           = 2499
-  Number of static sites compared           = 3654
+  Number of static sites compared           = 3728
   Number of static cells compared           = 20114
-  Number of static routed nodes compared    = 285894
-  Number of static routed pips compared     = 267201
-INFO: [Vivado 12-3253] PR_VERIFY: check points ./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_route_design.dcp and ./implement/config_recon_matmul_int_3b_32x32_import/patmos_top_route_design.dcp are compatible
-INFO: [Vivado 12-3501] pr_verify ./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_route_design.dcp ./implement/config_recon_minver_1b_4x4_import/patmos_top_route_design.dcp
+  Number of static routed nodes compared    = 290359
+  Number of static routed pips compared     = 271649
+INFO: [Vivado 12-3253] PR_VERIFY: check points ./implement/config_recon_matmul_float_9b_4x4_implement/patmos_top_route_design.dcp and ./implement/config_recon_matmul_int_9b_16x16_import/patmos_top_route_design.dcp are compatible
+INFO: [Vivado 12-3501] pr_verify ./implement/config_recon_matmul_float_9b_4x4_implement/patmos_top_route_design.dcp ./implement/config_recon_matmul_int_9b_32x32_import/patmos_top_route_design.dcp
+INFO: [Netlist 29-17] Analyzing 858 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
+Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
+Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top.xdc]
+CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
+New: create_clock -period 10.000 [get_ports clk_in], [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:56]
+Previous: create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_ports clk_in], [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/xdc/pblocks.xdc:1344]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:57]
+Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 4587.828 ; gain = 20.672 ; free physical = 170 ; free virtual = 4931
+Restored from archive | CPU: 1.660000 secs | Memory: 26.104408 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 4587.828 ; gain = 20.672 ; free physical = 170 ; free virtual = 4931
+INFO: [Project 1-604] Checkpoint was created with Vivado v2016.4 (64-bit) build 1733598
+INFO: [Constraints 18-1020] PR Verify Summary:
+DCP1: ./implement/config_recon_matmul_float_9b_4x4_implement/patmos_top_route_design.dcp
+  Number of reconfigurable modules compared = 1
+  Number of partition pins compared         = 83
+  Number of static tiles compared           = 2499
+  Number of static sites compared           = 3728
+  Number of static cells compared           = 20114
+  Number of static routed nodes compared    = 290359
+  Number of static routed pips compared     = 271649
+
+DCP2: ./implement/config_recon_matmul_int_9b_32x32_import/patmos_top_route_design.dcp
+  Number of reconfigurable modules compared = 1
+  Number of partition pins compared         = 83
+  Number of static tiles compared           = 2499
+  Number of static sites compared           = 3728
+  Number of static cells compared           = 20114
+  Number of static routed nodes compared    = 290359
+  Number of static routed pips compared     = 271649
+INFO: [Vivado 12-3253] PR_VERIFY: check points ./implement/config_recon_matmul_float_9b_4x4_implement/patmos_top_route_design.dcp and ./implement/config_recon_matmul_int_9b_32x32_import/patmos_top_route_design.dcp are compatible
+INFO: [Vivado 12-3501] pr_verify ./implement/config_recon_matmul_float_9b_4x4_implement/patmos_top_route_design.dcp ./implement/config_recon_minver_4b_4x4_import/patmos_top_route_design.dcp
 INFO: [Netlist 29-17] Analyzing 1012 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2016.4
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
-Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
-Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top.xdc]
+Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
+Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
+Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top.xdc]
 CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
 New: create_clock -period 10.000 [get_ports clk_in], [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:56]
 Previous: create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_ports clk_in], [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/xdc/pblocks.xdc:1344]
 Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
 INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:57]
 INFO: [Timing 38-2] Deriving generated clocks [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:57]
-Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top.xdc]
+Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top.xdc]
 Reading XDEF placement.
 Reading placer database...
 Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 4899.172 ; gain = 19.672 ; free physical = 181 ; free virtual = 10692
-Restored from archive | CPU: 1.490000 secs | Memory: 24.185287 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 4899.172 ; gain = 19.672 ; free physical = 181 ; free virtual = 10692
+Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 4923.492 ; gain = 19.672 ; free physical = 146 ; free virtual = 4718
+Restored from archive | CPU: 1.560000 secs | Memory: 24.710854 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 4923.492 ; gain = 19.672 ; free physical = 146 ; free virtual = 4718
 INFO: [Project 1-604] Checkpoint was created with Vivado v2016.4 (64-bit) build 1733598
 INFO: [Constraints 18-1020] PR Verify Summary:
-DCP1: ./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_route_design.dcp
+DCP1: ./implement/config_recon_matmul_float_9b_4x4_implement/patmos_top_route_design.dcp
   Number of reconfigurable modules compared = 1
   Number of partition pins compared         = 83
   Number of static tiles compared           = 2499
-  Number of static sites compared           = 3654
+  Number of static sites compared           = 3728
   Number of static cells compared           = 20114
-  Number of static routed nodes compared    = 285894
-  Number of static routed pips compared     = 267201
+  Number of static routed nodes compared    = 290359
+  Number of static routed pips compared     = 271649
 
-DCP2: ./implement/config_recon_minver_1b_4x4_import/patmos_top_route_design.dcp
+DCP2: ./implement/config_recon_minver_4b_4x4_import/patmos_top_route_design.dcp
   Number of reconfigurable modules compared = 1
   Number of partition pins compared         = 83
   Number of static tiles compared           = 2499
-  Number of static sites compared           = 3654
+  Number of static sites compared           = 3728
   Number of static cells compared           = 20114
-  Number of static routed nodes compared    = 285894
-  Number of static routed pips compared     = 267201
-INFO: [Vivado 12-3253] PR_VERIFY: check points ./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_route_design.dcp and ./implement/config_recon_minver_1b_4x4_import/patmos_top_route_design.dcp are compatible
-INFO: [Vivado 12-3501] pr_verify ./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_route_design.dcp ./implement/config_recon_minver_1b_16x16_import/patmos_top_route_design.dcp
-INFO: [Netlist 29-17] Analyzing 1012 Unisim elements for replacement
+  Number of static routed nodes compared    = 290359
+  Number of static routed pips compared     = 271649
+INFO: [Vivado 12-3253] PR_VERIFY: check points ./implement/config_recon_matmul_float_9b_4x4_implement/patmos_top_route_design.dcp and ./implement/config_recon_minver_4b_4x4_import/patmos_top_route_design.dcp are compatible
+INFO: [Vivado 12-3501] pr_verify ./implement/config_recon_matmul_float_9b_4x4_implement/patmos_top_route_design.dcp ./implement/config_recon_minver_4b_16x16_import/patmos_top_route_design.dcp
+INFO: [Netlist 29-17] Analyzing 1096 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2016.4
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
-Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
-Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top.xdc]
+Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
+Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
+Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top.xdc]
 CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
 New: create_clock -period 10.000 [get_ports clk_in], [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:56]
 Previous: create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_ports clk_in], [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/xdc/pblocks.xdc:1344]
 Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
 INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:57]
 INFO: [Timing 38-2] Deriving generated clocks [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:57]
-Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top.xdc]
+Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top.xdc]
 Reading XDEF placement.
 Reading placer database...
 Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 5236.844 ; gain = 19.672 ; free physical = 179 ; free virtual = 10505
-Restored from archive | CPU: 1.590000 secs | Memory: 25.749496 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 5236.844 ; gain = 19.672 ; free physical = 179 ; free virtual = 10505
+Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 5280.156 ; gain = 21.672 ; free physical = 128 ; free virtual = 4429
+Restored from archive | CPU: 1.890000 secs | Memory: 28.203133 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 5280.156 ; gain = 21.672 ; free physical = 128 ; free virtual = 4429
 INFO: [Project 1-604] Checkpoint was created with Vivado v2016.4 (64-bit) build 1733598
 INFO: [Constraints 18-1020] PR Verify Summary:
-DCP1: ./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_route_design.dcp
+DCP1: ./implement/config_recon_matmul_float_9b_4x4_implement/patmos_top_route_design.dcp
   Number of reconfigurable modules compared = 1
   Number of partition pins compared         = 83
   Number of static tiles compared           = 2499
-  Number of static sites compared           = 3654
+  Number of static sites compared           = 3728
   Number of static cells compared           = 20114
-  Number of static routed nodes compared    = 285894
-  Number of static routed pips compared     = 267201
+  Number of static routed nodes compared    = 290359
+  Number of static routed pips compared     = 271649
 
-DCP2: ./implement/config_recon_minver_1b_16x16_import/patmos_top_route_design.dcp
+DCP2: ./implement/config_recon_minver_4b_16x16_import/patmos_top_route_design.dcp
   Number of reconfigurable modules compared = 1
   Number of partition pins compared         = 83
   Number of static tiles compared           = 2499
-  Number of static sites compared           = 3654
+  Number of static sites compared           = 3728
   Number of static cells compared           = 20114
-  Number of static routed nodes compared    = 285894
-  Number of static routed pips compared     = 267201
-INFO: [Vivado 12-3253] PR_VERIFY: check points ./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_route_design.dcp and ./implement/config_recon_minver_1b_16x16_import/patmos_top_route_design.dcp are compatible
-INFO: [Vivado 12-3501] pr_verify ./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_route_design.dcp ./implement/config_recon_minver_1b_32x32_import/patmos_top_route_design.dcp
-INFO: [Netlist 29-17] Analyzing 1024 Unisim elements for replacement
+  Number of static routed nodes compared    = 290359
+  Number of static routed pips compared     = 271649
+INFO: [Vivado 12-3253] PR_VERIFY: check points ./implement/config_recon_matmul_float_9b_4x4_implement/patmos_top_route_design.dcp and ./implement/config_recon_minver_4b_16x16_import/patmos_top_route_design.dcp are compatible
+INFO: [Vivado 12-3501] pr_verify ./implement/config_recon_matmul_float_9b_4x4_implement/patmos_top_route_design.dcp ./implement/config_recon_minver_4b_32x32_import/patmos_top_route_design.dcp
+INFO: [Netlist 29-17] Analyzing 1096 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2016.4
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
-Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
-Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top.xdc]
+Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
+Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
+Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top.xdc]
 CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
 New: create_clock -period 10.000 [get_ports clk_in], [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:56]
 Previous: create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_ports clk_in], [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/xdc/pblocks.xdc:1344]
 Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
 INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:57]
 INFO: [Timing 38-2] Deriving generated clocks [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:57]
-Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top.xdc]
+Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top.xdc]
 Reading XDEF placement.
 Reading placer database...
 Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 5580.516 ; gain = 22.672 ; free physical = 160 ; free virtual = 10309
-Restored from archive | CPU: 1.690000 secs | Memory: 27.758423 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 5580.516 ; gain = 22.672 ; free physical = 160 ; free virtual = 10309
+Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 5639.820 ; gain = 23.672 ; free physical = 135 ; free virtual = 4233
+Restored from archive | CPU: 2.000000 secs | Memory: 29.318649 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 5639.820 ; gain = 23.672 ; free physical = 135 ; free virtual = 4233
 INFO: [Project 1-604] Checkpoint was created with Vivado v2016.4 (64-bit) build 1733598
 INFO: [Constraints 18-1020] PR Verify Summary:
-DCP1: ./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_route_design.dcp
+DCP1: ./implement/config_recon_matmul_float_9b_4x4_implement/patmos_top_route_design.dcp
   Number of reconfigurable modules compared = 1
   Number of partition pins compared         = 83
   Number of static tiles compared           = 2499
-  Number of static sites compared           = 3654
+  Number of static sites compared           = 3728
   Number of static cells compared           = 20114
-  Number of static routed nodes compared    = 285894
-  Number of static routed pips compared     = 267201
+  Number of static routed nodes compared    = 290359
+  Number of static routed pips compared     = 271649
 
-DCP2: ./implement/config_recon_minver_1b_32x32_import/patmos_top_route_design.dcp
+DCP2: ./implement/config_recon_minver_4b_32x32_import/patmos_top_route_design.dcp
   Number of reconfigurable modules compared = 1
   Number of partition pins compared         = 83
   Number of static tiles compared           = 2499
-  Number of static sites compared           = 3654
+  Number of static sites compared           = 3728
   Number of static cells compared           = 20114
-  Number of static routed nodes compared    = 285894
-  Number of static routed pips compared     = 267201
-INFO: [Vivado 12-3253] PR_VERIFY: check points ./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_route_design.dcp and ./implement/config_recon_minver_1b_32x32_import/patmos_top_route_design.dcp are compatible
-INFO: [Vivado 12-3501] pr_verify ./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_route_design.dcp ./implement/config_filterbank_import/patmos_top_route_design.dcp
+  Number of static routed nodes compared    = 290359
+  Number of static routed pips compared     = 271649
+INFO: [Vivado 12-3253] PR_VERIFY: check points ./implement/config_recon_matmul_float_9b_4x4_implement/patmos_top_route_design.dcp and ./implement/config_recon_minver_4b_32x32_import/patmos_top_route_design.dcp are compatible
+INFO: [Vivado 12-3501] pr_verify ./implement/config_recon_matmul_float_9b_4x4_implement/patmos_top_route_design.dcp ./implement/config_fir2dim_import/patmos_top_route_design.dcp
 INFO: [Netlist 29-17] Analyzing 804 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2016.4
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
-Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
-Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top.xdc]
+Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
+Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
+Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top.xdc]
 CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
 New: create_clock -period 10.000 [get_ports clk_in], [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:56]
 Previous: create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_ports clk_in], [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/xdc/pblocks.xdc:1344]
 Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
 INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:57]
 INFO: [Timing 38-2] Deriving generated clocks [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:57]
-Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top.xdc]
+Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-1738-andreas-W54xEU/dcp_2/patmos_top.xdc]
 Reading XDEF placement.
 Reading placer database...
 Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 5927.602 ; gain = 27.070 ; free physical = 166 ; free virtual = 10091
-Restored from archive | CPU: 1.980000 secs | Memory: 33.032440 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 5927.602 ; gain = 27.070 ; free physical = 166 ; free virtual = 10091
+Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 5964.484 ; gain = 19.672 ; free physical = 120 ; free virtual = 4111
+Restored from archive | CPU: 1.560000 secs | Memory: 24.685944 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 5964.484 ; gain = 19.672 ; free physical = 120 ; free virtual = 4111
 INFO: [Project 1-604] Checkpoint was created with Vivado v2016.4 (64-bit) build 1733598
 INFO: [Constraints 18-1020] PR Verify Summary:
-DCP1: ./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_route_design.dcp
+DCP1: ./implement/config_recon_matmul_float_9b_4x4_implement/patmos_top_route_design.dcp
   Number of reconfigurable modules compared = 1
   Number of partition pins compared         = 83
   Number of static tiles compared           = 2499
-  Number of static sites compared           = 3654
+  Number of static sites compared           = 3728
   Number of static cells compared           = 20114
-  Number of static routed nodes compared    = 285894
-  Number of static routed pips compared     = 267201
-
-DCP2: ./implement/config_filterbank_import/patmos_top_route_design.dcp
-  Number of reconfigurable modules compared = 1
-  Number of partition pins compared         = 83
-  Number of static tiles compared           = 2499
-  Number of static sites compared           = 3654
-  Number of static cells compared           = 20114
-  Number of static routed nodes compared    = 285894
-  Number of static routed pips compared     = 267201
-INFO: [Vivado 12-3253] PR_VERIFY: check points ./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_route_design.dcp and ./implement/config_filterbank_import/patmos_top_route_design.dcp are compatible
-INFO: [Vivado 12-3501] pr_verify ./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_route_design.dcp ./implement/config_fir2dim_import/patmos_top_route_design.dcp
-INFO: [Netlist 29-17] Analyzing 804 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2016.4
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
-Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top_early.xdc]
-Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top.xdc]
-CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_in' completely overrides clock 'sys_clk_pin'.
-New: create_clock -period 10.000 [get_ports clk_in], [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:56]
-Previous: create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_ports clk_in], [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/xdc/pblocks.xdc:1344]
-Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
-INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:57]
-INFO: [Timing 38-2] Deriving generated clocks [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/sources/hdl/clk_manager/clk_manager.xdc:57]
-Finished Parsing XDC File [/home/andreas/t-crest/reconfig_hls/build/nexys4ddr-recon/.Xil/Vivado-11897-andreas-W54xEU/dcp_2/patmos_top.xdc]
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 6252.273 ; gain = 20.672 ; free physical = 186 ; free virtual = 9914
-Restored from archive | CPU: 1.510000 secs | Memory: 24.603294 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 6252.273 ; gain = 20.672 ; free physical = 186 ; free virtual = 9914
-INFO: [Project 1-604] Checkpoint was created with Vivado v2016.4 (64-bit) build 1733598
-INFO: [Constraints 18-1020] PR Verify Summary:
-DCP1: ./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_route_design.dcp
-  Number of reconfigurable modules compared = 1
-  Number of partition pins compared         = 83
-  Number of static tiles compared           = 2499
-  Number of static sites compared           = 3654
-  Number of static cells compared           = 20114
-  Number of static routed nodes compared    = 285894
-  Number of static routed pips compared     = 267201
+  Number of static routed nodes compared    = 290359
+  Number of static routed pips compared     = 271649
 
 DCP2: ./implement/config_fir2dim_import/patmos_top_route_design.dcp
   Number of reconfigurable modules compared = 1
   Number of partition pins compared         = 83
   Number of static tiles compared           = 2499
-  Number of static sites compared           = 3654
+  Number of static sites compared           = 3728
   Number of static cells compared           = 20114
-  Number of static routed nodes compared    = 285894
-  Number of static routed pips compared     = 267201
-INFO: [Vivado 12-3253] PR_VERIFY: check points ./implement/config_recon_matmul_float_3b_4x4_implement/patmos_top_route_design.dcp and ./implement/config_fir2dim_import/patmos_top_route_design.dcp are compatible
-pr_verify: Time (s): cpu = 00:03:39 ; elapsed = 00:03:09 . Memory (MB): peak = 6335.234 ; gain = 2567.871 ; free physical = 174 ; free virtual = 9831
+  Number of static routed nodes compared    = 290359
+  Number of static routed pips compared     = 271649
+INFO: [Vivado 12-3253] PR_VERIFY: check points ./implement/config_recon_matmul_float_9b_4x4_implement/patmos_top_route_design.dcp and ./implement/config_fir2dim_import/patmos_top_route_design.dcp are compatible
+pr_verify: Time (s): cpu = 00:03:42 ; elapsed = 00:03:18 . Memory (MB): peak = 6049.445 ; gain = 2275.680 ; free physical = 138 ; free virtual = 4043

@@ -1,0 +1,115 @@
+
+-------------------------------------------------------------------------
+-                      convbitstream application 1.0 :-)                -
+-                                 by LucaPezza                          -
+-------------------------------------------------------------------------
+
+Description: Bitstreams for generating results for the bsc thesis of Andreas.
+
+Parameters:
+  - datasize = 32
+  - compression = enabled
+  - bitswapped = enabled
+
+There are 9 bitfile/s to process.
+
+Processing bitfile 1 of 9:
+  - id = config_recon_matmul_float_9b_16x16_import_pblock_recon_matrix_inst_0_partial
+  - file = ./sample_bitstream/config_recon_matmul_float_9b_16x16_import_pblock_recon_matrix_inst_0_partial.bin
+  - raw bitfile size = 481060 bytes
+  - 32-bit based entropy = 5.483845 bit
+  - optimum compression = 82.9 percent
+  - compressed bitfile size = 280908 bytes
+  - real compression = 41.6 percent
+  - BRAM-stream WCET = 130786 clock cycles
+  - CPU-stream WCET = 206031 clock cycles
+
+Processing bitfile 2 of 9:
+  - id = config_recon_matmul_float_9b_32x32_import_pblock_recon_matrix_inst_0_partial
+  - file = ./sample_bitstream/config_recon_matmul_float_9b_32x32_import_pblock_recon_matrix_inst_0_partial.bin
+  - raw bitfile size = 493752 bytes
+  - 32-bit based entropy = 6.825452 bit
+  - optimum compression = 78.7 percent
+  - compressed bitfile size = 335996 bytes
+  - real compression = 32.0 percent
+  - BRAM-stream WCET = 133823 clock cycles
+  - CPU-stream WCET = 222603 clock cycles
+
+Processing bitfile 3 of 9:
+  - id = config_recon_matmul_float_9b_4x4_implement_pblock_recon_matrix_inst_0_partial
+  - file = ./sample_bitstream/config_recon_matmul_float_9b_4x4_implement_pblock_recon_matrix_inst_0_partial.bin
+  - raw bitfile size = 493756 bytes
+  - 32-bit based entropy = 3.943054 bit
+  - optimum compression = 87.7 percent
+  - compressed bitfile size = 214280 bytes
+  - real compression = 56.6 percent
+  - BRAM-stream WCET = 133436 clock cycles
+  - CPU-stream WCET = 191875 clock cycles
+
+Processing bitfile 4 of 9:
+  - id = config_recon_matmul_int_9b_16x16_import_pblock_recon_matrix_inst_0_partial
+  - file = ./sample_bitstream/config_recon_matmul_int_9b_16x16_import_pblock_recon_matrix_inst_0_partial.bin
+  - raw bitfile size = 488460 bytes
+  - 32-bit based entropy = 4.015314 bit
+  - optimum compression = 87.5 percent
+  - compressed bitfile size = 216944 bytes
+  - real compression = 55.6 percent
+  - BRAM-stream WCET = 131852 clock cycles
+  - CPU-stream WCET = 190640 clock cycles
+
+Processing bitfile 5 of 9:
+  - id = config_recon_matmul_int_9b_32x32_import_pblock_recon_matrix_inst_0_partial
+  - file = ./sample_bitstream/config_recon_matmul_int_9b_32x32_import_pblock_recon_matrix_inst_0_partial.bin
+  - raw bitfile size = 488988 bytes
+  - 32-bit based entropy = 5.517807 bit
+  - optimum compression = 82.8 percent
+  - compressed bitfile size = 295416 bytes
+  - real compression = 39.6 percent
+  - BRAM-stream WCET = 132918 clock cycles
+  - CPU-stream WCET = 211476 clock cycles
+
+Processing bitfile 6 of 9:
+  - id = config_recon_matmul_int_9b_4x4_import_pblock_recon_matrix_inst_0_partial
+  - file = ./sample_bitstream/config_recon_matmul_int_9b_4x4_import_pblock_recon_matrix_inst_0_partial.bin
+  - raw bitfile size = 436432 bytes
+  - 32-bit based entropy = 2.432204 bit
+  - optimum compression = 92.4 percent
+  - compressed bitfile size = 136236 bytes
+  - real compression = 68.8 percent
+  - BRAM-stream WCET = 118159 clock cycles
+  - CPU-stream WCET = 156698 clock cycles
+
+Processing bitfile 7 of 9:
+  - id = config_recon_minver_4b_16x16_import_pblock_recon_matrix_inst_0_partial
+  - file = ./sample_bitstream/config_recon_minver_4b_16x16_import_pblock_recon_matrix_inst_0_partial.bin
+  - raw bitfile size = 488992 bytes
+  - 32-bit based entropy = 7.351464 bit
+  - optimum compression = 77.0 percent
+  - compressed bitfile size = 344156 bytes
+  - real compression = 29.6 percent
+  - BRAM-stream WCET = 131885 clock cycles
+  - CPU-stream WCET = 222315 clock cycles
+
+Processing bitfile 8 of 9:
+  - id = config_recon_minver_4b_32x32_import_pblock_recon_matrix_inst_0_partial
+  - file = ./sample_bitstream/config_recon_minver_4b_32x32_import_pblock_recon_matrix_inst_0_partial.bin
+  - raw bitfile size = 488932 bytes
+  - 32-bit based entropy = 8.393345 bit
+  - optimum compression = 73.8 percent
+  - compressed bitfile size = 363012 bytes
+  - real compression = 25.8 percent
+  - BRAM-stream WCET = 130071 clock cycles
+  - CPU-stream WCET = 224364 clock cycles
+
+Processing bitfile 9 of 9:
+  - id = config_recon_minver_4b_4x4_import_pblock_recon_matrix_inst_0_partial
+  - file = ./sample_bitstream/config_recon_minver_4b_4x4_import_pblock_recon_matrix_inst_0_partial.bin
+  - raw bitfile size = 488728 bytes
+  - 32-bit based entropy = 4.775256 bit
+  - optimum compression = 85.1 percent
+  - compressed bitfile size = 223088 bytes
+  - real compression = 54.4 percent
+  - BRAM-stream WCET = 130772 clock cycles
+  - CPU-stream WCET = 190653 clock cycles
+
+End of convbitfile.
